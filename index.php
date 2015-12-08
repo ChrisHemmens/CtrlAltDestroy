@@ -4,12 +4,14 @@
 
 <head>
     <title>CtrlAtlDestroy</title>
+			  <link rel="shortcut icon" type="image/jpg" href="awhyeah2.jpg">
+
 </head>
 
-<body>
+<body background="awhyeah.jpg">
 
    AWH YEAH
-<img src="awhyeah.jpg" alt="Nope" >
+
 </body>
 
 </html>
