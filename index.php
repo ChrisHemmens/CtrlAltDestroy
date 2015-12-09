@@ -66,6 +66,7 @@ echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br /
 <table cellspacing="0" cellpadding="0">
   <tr>
     <th><b>Rank</b></th>
+	<th><b>Logo</b></th>
 	<th><b>Naam</b></th>
     <th><b>Rol</b></th> 
 	<th><b>Level</b></th>
@@ -109,6 +110,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 
 	echo "<tr>";
 		echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['clanRank'] . "</td>";
+		echo "<td><img src='" . $jsonArray['clanDetails']['results']['memberList'][$i]['leagueBadgeImg']['l'] . "'/></td>";
 		echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['name'] . "</td>"; 
 		echo "<td>" . $rol . "</td>";
 		echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['expLevel'] . "</td>";
