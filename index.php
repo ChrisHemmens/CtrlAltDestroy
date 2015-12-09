@@ -115,6 +115,117 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 						break;
 	}
 	
+	if ($positie == 5)
+	{
+		$DonAantal5 = $donated;
+		$DonNaam5 = $name;
+	}
+	
+	if ($positie == 4)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $donated;
+		$DonNaam4 = $name;
+	}
+	if ($positie == 3)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $DonAantal3;
+		$DonNaam4 = $DonNaam3;
+		$DonAantal3 = $donated;
+		$DonNaam3 = $name;
+	}
+	if ($positie == 2)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $DonAantal3;
+		$DonNaam4 = $DonNaam3;
+		$DonAantal3 = $DonAantal2;
+		$DonNaam3 = $DonNaam2;
+		$DonAantal2 = $donated;
+		$DonNaam2 = $name;
+	}
+	if ($positie == 1)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $DonAantal3;
+		$DonNaam4 = $DonNaam3;
+		$DonAantal3 = $DonAantal2;
+		$DonNaam3 = $DonNaam2;
+		$DonAantal2 = $DonAantal1;
+		$DonNaam2 = $DonNaam1;
+		$DonAantal1 = $donated;
+		$DonNaam1 = $name;			
+	}
+	
+	
+	if ($ratio > $RatAantal5){
+	$rpositie = 5;
+	}
+	if ($ratio > $RatAantal4){
+	$rpositie = 4;
+	}
+	if ($ratio > $RatAantal3){
+	$rpositie = 3;
+	}
+	if ($ratio > $RatAantal2){
+	$rpositie = 2;
+	}
+	if ($ratio > $RatAantal1){
+	$rpositie = 1;
+	}
+	
+	if ($rpositie == 5)
+	{
+		$RatAantal5 = $ratio;
+		$RatNaam5 = $name;
+	}
+	
+	if ($rpositie == 4)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $ratio;
+		$RatNaam4 = $name;
+	}
+	if ($rpositie == 3)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $RatAantal3;
+		$RatNaam4 = $RatNaam3;
+		$RatAantal3 = $ratio;
+		$RatNaam3 = $name;
+	}
+	if ($rpositie == 2)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $RatAantal3;
+		$RatNaam4 = $RatNaam3;
+		$RatAantal3 = $RatAantal2;
+		$RatNaam3 = $RatNaam2;
+		$RatAantal2 = $ratio;
+		$RatNaam2 = $name;
+	}
+	if ($rpositie == 1)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $RatAantal3;
+		$RatNaam4 = $RatNaam3;
+		$RatAantal3 = $RatAantal2;
+		$RatNaam3 = $RatNaam2;
+		$RatAantal2 = $RatAantal1;
+		$RatNaam2 = $RatNaam1;
+		$RatAantal1 = $ratio;
+		$RatNaam1 = $name;		
+	}
+	
 	echo "<tr>";
 		echo "<td>" . $rank . "</td>";
 		echo "<td><img src='" . $jsonArray['clanDetails']['results']['memberList'][$i]['leagueBadgeImg']['l'] . "'/></td>";
