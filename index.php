@@ -13,6 +13,14 @@ html {
         background-size: cover;
 }
 
+#Logo{ 
+position:absolute;
+    width:300px;
+    height:200px;
+    z-index:15;
+    left:50%;
+    margin:0px 0 0 -150px;
+}
 
 </style>
 <head>
@@ -37,15 +45,23 @@ $context = stream_context_create(array(
 $contents = file_get_contents('https://set7z18fgf.execute-api.us-east-1.amazonaws.com/prod/?route=getClanDetails&clanTag=%232CRCJU2V', false, $context);
 
 $jsonArray = json_decode($contents, true);
-
-echo "<img src='" . $jsonArray['clanDetails']['results']['clanBadgeImg']['l'] . "'><br />";
+?>
+<div id="Logo">
+<?php
+echo "<img src='" . $jsonArray['clanDetails']['results']['clanBadgeImg']['l'] . "' ALIGN=MIDDLE><br />";
+?>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br />
+<?php
 echo "Clan: " . $jsonArray['clanDetails']['results']['name'] . "<br />";
 echo "Clan level: " . $jsonArray['clanDetails']['results']['clanLevel'] . "<br />";
 echo "Gewonnen oorlogen: " . $jsonArray['clanDetails']['results']['warWins'] . "<br />";
+echo "Leden: " . $jsonArray['clanDetails']['results']['members'] . "<br />";
 echo "Uitleg: " . $jsonArray['clanDetails']['results']['description'] . "<br />";
 echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br />";
-
 ?>
+</div>
+
 <div id="log">
 <table cellspacing="0" cellpadding="0">
   <tr>
