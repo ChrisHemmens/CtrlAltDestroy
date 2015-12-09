@@ -218,8 +218,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 	{
 		$RatAantal5 = $ratio;
 		$RatNaam5 = $name;
-		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr5" . "<br>";
-
 	}
 	
 	if ($rpositie == 4)
@@ -228,7 +226,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$RatNaam5 = $RatNaam4;
 		$RatAantal4 = $ratio;
 		$RatNaam4 = $name;
-		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr4" . "<br>";
 	}
 	if ($rpositie == 3)
 	{
@@ -238,8 +235,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$RatNaam4 = $RatNaam3;
 		$RatAantal3 = $ratio;
 		$RatNaam3 = $name;
-		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr3" . "<br>";
-
 	}
 	if ($rpositie == 2)
 	{
@@ -251,8 +246,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$RatNaam3 = $RatNaam2;
 		$RatAantal2 = $ratio;
 		$RatNaam2 = $name;
-		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr2" . "<br>";
-
 	}
 	if ($rpositie == 1)
 	{
@@ -265,9 +258,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$RatAantal2 = $RatAantal1;
 		$RatNaam2 = $RatNaam1;
 		$RatAantal1 = $ratio;
-		$RatNaam1 = $name;	
-		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr1" . "<br>";
-		
+		$RatNaam1 = $name;		
 	}
 	
 		
