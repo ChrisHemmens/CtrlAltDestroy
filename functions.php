@@ -1,5 +1,5 @@
 <?php
-function donationRatio($jsonArray) {
+function donationRatio($jsonArray) {{
 	$RatAantal1 = 0;
 	$RatAantal1 = 0;
 	$RatAantal2 = 0;
@@ -84,8 +84,43 @@ function donationRatio($jsonArray) {
 	$RatNaam4 . ":  " . $RatAantal4, "<br>", 
 	$RatNaam5 . ":  " . $RatAantal5;
 }
-
-function donationCount($jsonArray) {
+?>
+<div id="log">
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <th><b>Rank</b></th>
+	<th><b>Naam</b></th>
+    <th><b>Ratio</b></th> 
+	</tr>
+	<tr>
+	<td>1</td>
+	<td><?php echo $RatNaam1;?> </td>
+	<td><?php echo number_format((float)$RatAantal1, 2, '.', '');?> </td>
+	</tr>
+	<tr>
+	<td>2</td>
+	<td><?php echo $RatNaam2;?> </td>
+	<td><?php echo number_format((float)$RatAantal2, 2, '.', '');?> </td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td><?php echo $RatNaam3;?> </td>
+	<td><?php echo number_format((float)$RatAantal3, 2, '.', '');?> </td>
+	</tr>
+	<tr>
+	<td>4</td>
+	<td><?php echo $RatNaam4;?> </td>
+	<td><?php echo number_format((float)$RatAantal4, 2, '.', '');?> </td>
+	</tr>
+	<tr>
+	<td>5</td>
+	<td><?php echo $RatNaam5;?> </td>
+	<td><?php echo number_format((float)$RatAantal5, 2, '.', '');?> </td>
+	</tr>
+  </div>
+  <?php } ?>
+<?php
+function donationCount($jsonArray) {{
 	$DonAantal1 = 1;
 	$DonAantal2 = 1;
 	$DonAantal3 = 1;
@@ -168,3 +203,37 @@ function donationCount($jsonArray) {
 	"<br>";
 }
 ?>
+<div id="log">
+<table cellspacing="0" cellpadding="0" width="50%">
+  <tr>
+    <th><b>Rank</b></th>
+	<th><b>Naam</b></th>
+    <th><b>Gedoneerd</b></th> 
+	</tr>
+	<tr>
+	<td>1</td>
+	<td><?php echo $DonNaam1;?> </td>
+	<td><?php echo $DonAantal1;?> </td>
+	</tr>
+	<tr>
+	<td>2</td>
+	<td><?php echo $DonNaam2;?> </td>
+	<td><?php echo $DonAantal2;?> </td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td><?php echo $DonNaam3;?> </td>
+	<td><?php echo $DonAantal3;?> </td>
+	</tr>
+	<tr>
+	<td>4</td>
+	<td><?php echo $DonNaam4;?> </td>
+	<td><?php echo $DonAantal4;?> </td>
+	</tr>
+	<tr>
+	<td>5</td>
+	<td><?php echo $DonNaam5;?> </td>
+	<td><?php echo $DonAantal5;?> </td>
+	</tr>
+  </div>
+  <?php } ?>

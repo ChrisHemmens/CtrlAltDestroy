@@ -21,6 +21,9 @@ position:absolute;
     left:50%;
     margin: 0px 0 0 -105px;
 }
+#nte{ 
+    width:300px;
+}
 
 </style>
 <head>
@@ -46,15 +49,10 @@ $jsonArray = json_decode($contents, true);
 echo "<img src='" . $jsonArray['clanDetails']['results']['clanBadgeImg']['l'] . "'><br />";
 ?>
 </div>
-<br /><br /><br /><br /><br /><br />
 
-<?php 
-donationRatio($jsonArray);
-echo "<br /><br /><br />";
-donationCount($jsonArray); 
-?>
+<br /><br /><br /><br /><br /></br></br></br>
 
-<br /><br /><br /><br /><br />
+
 <?php
 echo "Clan: " . $jsonArray['clanDetails']['results']['name'] . "<br />";
 echo "Clan level: " . $jsonArray['clanDetails']['results']['clanLevel'] . "<br />";
@@ -63,6 +61,17 @@ echo "Aantal leden: " . $jsonArray['clanDetails']['results']['members'] . "<br /
 echo "Uitleg: " . $jsonArray['clanDetails']['results']['description'] . "<br />";
 echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br />";
 ?>
+
+
+<br /><br />
+
+<div id = "log">
+<?php 
+donationRatio($jsonArray);
+echo "<br /><br /><br />";
+donationCount($jsonArray); 
+?>
+</div>
 
 <div id="log">
 <table cellspacing="0" cellpadding="0">
@@ -79,7 +88,7 @@ echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br /
   </tr>
   </div>
   
- 
+ <div>
 <?php
 
 for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
@@ -129,6 +138,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 
 
 ?>
+</div>
 </table>
 
 </body>
