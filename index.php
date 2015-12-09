@@ -89,8 +89,21 @@ $DonNaam2 = 'GhostN00b';
 $DonNaam3 = 'GhostN00b';
 $DonNaam4 = 'GhostN00b';
 $DonNaam5 = 'GhostN00b';
+$RatAantal1 = 0;
+$RatAantal2 = 0;
+$RatAantal3 = 0;
+$RatAantal4 = 0;
+$RatAantal5 = 0;
+$RatNaam1 = 'GhostN00b';
+$RatNaam2 = 'GhostN00b';
+$RatNaam3 = 'GhostN00b';
+$RatNaam4 = 'GhostN00b';
+$RatNaam5 = 'GhostN00b';
+
 
 for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
+	$positie = 6;
+	$Rpositie = 6;
 	$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
 	$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
 	$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
@@ -120,8 +133,25 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 							$rol = 'Onbekende shizzle';
 						break;
 					}
-					
-	if ($donated > $DonAantal5)
+		
+
+	if ($donated > $DonAantal5){
+	$positie = 5;
+	}
+	if ($donated > $DonAantal4){
+	$positie = 4;
+	}
+	if ($donated > $DonAantal3){
+	$positie = 3;
+	}
+	if ($donated > $DonAantal2){
+	$positie = 2;
+	}
+	if ($donated > $DonAantal1){
+	$positie = 1;
+	}
+	
+	if ($positie == 5)
 	{
 		$DonAantal5 = $donated;
 		$DonNaam5 = $name;
@@ -129,7 +159,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 
 	}
 	
-	if ($donated > $DonAantal4)
+	if ($positie == 4)
 	{
 		$DonAantal5 = $DonAantal4;
 		$DonNaam5 = $DonNaam4;
@@ -138,7 +168,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr4" . "<br>";
 
 	}
-	if ($donated > $DonAantal3)
+	if ($positie == 3)
 	{
 		$DonAantal5 = $DonAantal4;
 		$DonNaam5 = $DonNaam4;
@@ -149,7 +179,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr3" . "<br>";
 
 	}
-	if ($donated > $DonAantal2)
+	if ($positie == 2)
 	{
 		$DonAantal5 = $DonAantal4;
 		$DonNaam5 = $DonNaam4;
@@ -162,7 +192,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr2" . "<br>";
 
 	}
-	if ($donated > $DonAantal1)
+	if ($positie == 1)
 	{
 		$DonAantal5 = $DonAantal4;
 		$DonNaam5 = $DonNaam4;
@@ -179,6 +209,78 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 	}
 	
 	
+	if ($ratio > $RatAantal5){
+	$rpositie = 5;
+	}
+	if ($ratio > $RatAantal4){
+	$rpositie = 4;
+	}
+	if ($ratio > $RatAantal3){
+	$rpositie = 3;
+	}
+	if ($ratio > $RatAantal2){
+	$rpositie = 2;
+	}
+	if ($ratio > $RatAantal1){
+	$rpositie = 1;
+	}
+	
+	if ($rpositie == 5)
+	{
+		$RatAantal5 = $ratio;
+		$RatNaam5 = $name;
+		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr5" . "<br>";
+
+	}
+	
+	if ($rpositie == 4)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $ratio;
+		$RatNaam4 = $name;
+		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr4" . "<br>";
+	}
+	if ($rpositie == 3)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $RatAantal3;
+		$RatNaam4 = $RatNaam3;
+		$RatAantal3 = $ratio;
+		$RatNaam3 = $name;
+		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr3" . "<br>";
+
+	}
+	if ($rpositie == 2)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $RatAantal3;
+		$RatNaam4 = $RatNaam3;
+		$RatAantal3 = $RatAantal2;
+		$RatNaam3 = $RatNaam2;
+		$RatAantal2 = $ratio;
+		$RatNaam2 = $name;
+		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr2" . "<br>";
+
+	}
+	if ($rpositie == 1)
+	{
+		$RatAantal5 = $RatAantal4;
+		$RatNaam5 = $RatNaam4;
+		$RatAantal4 = $RatAantal3;
+		$RatNaam4 = $RatNaam3;
+		$RatAantal3 = $RatAantal2;
+		$RatNaam3 = $RatNaam2;
+		$RatAantal2 = $RatAantal1;
+		$RatNaam2 = $RatNaam1;
+		$RatAantal1 = $ratio;
+		$RatNaam1 = $name;	
+		echo $RatNaam5, $RatAantal5, $RatNaam4, $RatAantal4, $RatNaam3, $RatAantal3, $RatNaam2, $RatAantal2, $RatNaam1, $RatAantal1, "nr1" . "<br>";
+		
+	}
+	
 		
 
 	echo "<tr>";
@@ -193,11 +295,14 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		echo "<td bgcolor=\"". $ratioColor . "\">" .  number_format((float)$ratio, 2, '.', '') . "</td>";
 	echo "</tr>";
 }
+
+
 ?>
 </table>
 
 <?php
-echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1;
+echo $DonNaam1, $DonAantal1, "<br>", $DonNaam2, $DonAantal2, "<br>", $DonNaam3, $DonAantal3, "<br>", $DonNaam4, $DonAantal4, "<br>", $DonNaam5, $DonAantal5, "<br>", "<br>";
+echo $RatNaam1, $RatAantal1, "<br>", $RatNaam2, $RatAantal2, "<br>", $RatNaam3, $RatAantal3, "<br>", $RatNaam4, $RatAantal4, "<br>", $RatNaam5, $RatAantal5;
 ?>
 </body>
 
