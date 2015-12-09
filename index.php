@@ -19,7 +19,7 @@ position:absolute;
     height:200px;
     z-index:15;
     left:50%;
-    margin:0px 0 0 -150px;
+    margin: 0px 0 0 -105px;
 }
 
 </style>
@@ -48,7 +48,7 @@ $jsonArray = json_decode($contents, true);
 ?>
 <div id="Logo">
 <?php
-echo "<img src='" . $jsonArray['clanDetails']['results']['clanBadgeImg']['l'] . "' ALIGN=MIDDLE><br />";
+echo "<img src='" . $jsonArray['clanDetails']['results']['clanBadgeImg']['l'] . "'><br />";
 ?>
 </div>
 <br /><br /><br /><br /><br /><br /><br /><br />
