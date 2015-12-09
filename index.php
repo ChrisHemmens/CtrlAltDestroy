@@ -16,7 +16,7 @@ html {
 
 </style>
 <head>
-    <title>CtrlAtlDestroy</title>
+    <title>CtrlAltDestroy</title>
 	<meta name="MobileOptimized" content="width"  />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
