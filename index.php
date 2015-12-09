@@ -65,14 +65,14 @@ echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br /
 <div id="log">
 <table cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>Rank</b></td>
-	<td><b>Naam</b></td>
-    <td><b>Rol</b></td> 
-	<td><b>Level</b></td>
-    <td><b>Trophies</b></td>
-	<td><b>Donaties</b></td>
-	<td><b>Ontvangen</b></td>
-	<td><b>Ratio</b></td>
+    <th><b>Rank</b></th>
+	<th><b>Naam</b></th>
+    <th><b>Rol</b></th> 
+	<th><b>Level</b></th>
+    <th><b>Trophies</b></th>
+	<th><b>Donaties</b></th>
+	<th><b>Ontvangen</b></th>
+	<th><b>Ratio</b></th>
   </tr>
   </div>
   
