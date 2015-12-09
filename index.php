@@ -60,7 +60,6 @@ echo "Aantal leden: " . $jsonArray['clanDetails']['results']['members'] . "<br /
 echo "Uitleg: " . $jsonArray['clanDetails']['results']['description'] . "<br />";
 echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br />";
 ?>
-</div>
 
 <div id="log">
 <table cellspacing="0" cellpadding="0">
@@ -103,7 +102,7 @@ $RatNaam5 = 'GhostN00b';
 
 for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 	$positie = 6;
-	$Rpositie = 6;
+	$rpositie = 6;
 	$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
 	$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
 	$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
@@ -155,8 +154,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 	{
 		$DonAantal5 = $donated;
 		$DonNaam5 = $name;
-		echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr5" . "<br>";
-
 	}
 	
 	if ($positie == 4)
@@ -165,8 +162,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonNaam5 = $DonNaam4;
 		$DonAantal4 = $donated;
 		$DonNaam4 = $name;
-				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr4" . "<br>";
-
 	}
 	if ($positie == 3)
 	{
@@ -176,8 +171,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonNaam4 = $DonNaam3;
 		$DonAantal3 = $donated;
 		$DonNaam3 = $name;
-				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr3" . "<br>";
-
 	}
 	if ($positie == 2)
 	{
@@ -189,8 +182,6 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonNaam3 = $DonNaam2;
 		$DonAantal2 = $donated;
 		$DonNaam2 = $name;
-				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr2" . "<br>";
-
 	}
 	if ($positie == 1)
 	{
@@ -203,9 +194,7 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonAantal2 = $DonAantal1;
 		$DonNaam2 = $DonNaam1;
 		$DonAantal1 = $donated;
-		$DonNaam1 = $name;	
-		echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr1" . "<br>";
-		
+		$DonNaam1 = $name;			
 	}
 	
 	
