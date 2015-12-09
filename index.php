@@ -56,7 +56,7 @@ echo "<img src='" . $jsonArray['clanDetails']['results']['clanBadgeImg']['l'] . 
 echo "Clan: " . $jsonArray['clanDetails']['results']['name'] . "<br />";
 echo "Clan level: " . $jsonArray['clanDetails']['results']['clanLevel'] . "<br />";
 echo "Gewonnen oorlogen: " . $jsonArray['clanDetails']['results']['warWins'] . "<br />";
-echo "Leden: " . $jsonArray['clanDetails']['results']['members'] . "<br />";
+echo "Aantal leden: " . $jsonArray['clanDetails']['results']['members'] . "<br />";
 echo "Uitleg: " . $jsonArray['clanDetails']['results']['description'] . "<br />";
 echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br />";
 ?>
@@ -79,10 +79,23 @@ echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br /
   
  
 <?php
+$DonAantal1 = 1;
+$DonAantal2 = 1;
+$DonAantal3 = 1;
+$DonAantal4 = 1;
+$DonAantal5 = 1;
+$DonNaam1 = 'GhostN00b';
+$DonNaam2 = 'GhostN00b';
+$DonNaam3 = 'GhostN00b';
+$DonNaam4 = 'GhostN00b';
+$DonNaam5 = 'GhostN00b';
+
 for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 	$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
 	$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
 	$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
+	$rank = $jsonArray['clanDetails']['results']['memberList'][$i]['clanRank'];
+	$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
 	$ratioColor = ($ratio >= 1 ? "green" : "red");
 	//Role translaten naar Nederlands
 	$rol = $jsonArray['clanDetails']['results']['memberList'][$i]['role'];
@@ -107,11 +120,64 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 							$rol = 'Onbekende shizzle';
 						break;
 					}
+					
+	if ($donated > $DonAantal5)
+	{
+		$DonAantal5 = $donated;
+		$DonNaam5 = $name;
+	}
+	
+	if ($donated > $DonAantal4)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $donated;
+		$DonNaam4 = $name;
+		
+	}
+	if ($donated > $DonAantal3)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $DonAantal3;
+		$DonNaam4 = $DonNaam3;
+		$DonAantal3 = $donated;
+		$DonNaam3 = $name;
+		
+	}
+	if ($donated > $DonAantal2)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $DonAantal3;
+		$DonNaam4 = $DonNaam3;
+		$DonAantal3 = $DonAantal2;
+		$DonNaam3 = $DonNaam2;
+		$DonAantal2 = $donated;
+		$DonNaam2 = $name;
+		
+	}
+	if ($donated > $DonAantal1)
+	{
+		$DonAantal5 = $DonAantal4;
+		$DonNaam5 = $DonNaam4;
+		$DonAantal4 = $DonAantal3;
+		$DonNaam4 = $DonNaam3;
+		$DonAantal3 = $DonAantal2;
+		$DonNaam3 = $DonNaam2;
+		$DonAantal2 = $DonAantal1;
+		$DonNaam2 = $DonNaam1;
+		$DonAantal1 = $donated;
+		$DonNaam1 = $name;		
+	}
+	
+	
+		
 
 	echo "<tr>";
-		echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['clanRank'] . "</td>";
+		echo "<td>" . $rank . "</td>";
 		echo "<td><img src='" . $jsonArray['clanDetails']['results']['memberList'][$i]['leagueBadgeImg']['l'] . "'/></td>";
-		echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['name'] . "</td>"; 
+		echo "<td>" . $name . "</td>"; 
 		echo "<td>" . $rol . "</td>";
 		echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['expLevel'] . "</td>";
 		echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['trophies'] . "</td>";
@@ -123,6 +189,9 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 ?>
 </table>
 
+<?php
+echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1;
+?>
 </body>
 
 </html>
