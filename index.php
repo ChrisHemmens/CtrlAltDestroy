@@ -28,7 +28,7 @@ position:absolute;
 </style>
 <head>
     <title>CtrlAltDestroy</title>
-	<meta name="MobileOptimized" content="width"  />
+	<meta name="MobileOptimized" content="width" charset="utf-8" />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
@@ -61,9 +61,6 @@ echo "Aantal leden: " . $jsonArray['clanDetails']['results']['members'] . "<br /
 echo "Uitleg: " . $jsonArray['clanDetails']['results']['description'] . "<br />";
 echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br />";
 ?>
-
-
-<br /><br />
 
 <div id = "log">
 <?php 

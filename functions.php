@@ -77,12 +77,6 @@ function donationRatio($jsonArray) {{
 			$RatNaam1 = $name;
 		}
 	}
-	
-	echo $RatNaam1 . ":  " . $RatAantal1, "<br>", 
-	$RatNaam2 . ":  " . $RatAantal2, "<br>", 
-	$RatNaam3 . ":  " . $RatAantal3, "<br>", 
-	$RatNaam4 . ":  " . $RatAantal4, "<br>", 
-	$RatNaam5 . ":  " . $RatAantal5;
 }
 ?>
 <div id="log">
@@ -194,13 +188,6 @@ function donationCount($jsonArray) {{
 			$DonNaam1 = $name;			
 		}
 	}
-	
-	echo $DonNaam1 . ":  " . $DonAantal1, "<br>", 
-	$DonNaam2 . ":  " . $DonAantal2, "<br>", 
-	$DonNaam3 . ":  " . $DonAantal3, "<br>", 
-	$DonNaam4 . ":  " . $DonAantal4, "<br>", 
-	$DonNaam5 . ":  " . $DonAantal5, "<br>", 
-	"<br>";
 }
 ?>
 <div id="log">
