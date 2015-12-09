@@ -125,6 +125,8 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 	{
 		$DonAantal5 = $donated;
 		$DonNaam5 = $name;
+		echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr5" . "<br>";
+
 	}
 	
 	if ($donated > $DonAantal4)
@@ -133,7 +135,8 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonNaam5 = $DonNaam4;
 		$DonAantal4 = $donated;
 		$DonNaam4 = $name;
-		
+				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr4" . "<br>";
+
 	}
 	if ($donated > $DonAantal3)
 	{
@@ -143,7 +146,8 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonNaam4 = $DonNaam3;
 		$DonAantal3 = $donated;
 		$DonNaam3 = $name;
-		
+				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr3" . "<br>";
+
 	}
 	if ($donated > $DonAantal2)
 	{
@@ -155,7 +159,8 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonNaam3 = $DonNaam2;
 		$DonAantal2 = $donated;
 		$DonNaam2 = $name;
-		
+				echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr2" . "<br>";
+
 	}
 	if ($donated > $DonAantal1)
 	{
@@ -168,7 +173,9 @@ for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$DonAantal2 = $DonAantal1;
 		$DonNaam2 = $DonNaam1;
 		$DonAantal1 = $donated;
-		$DonNaam1 = $name;		
+		$DonNaam1 = $name;	
+		echo $DonNaam5, $DonAantal5, $DonNaam4, $DonAantal4, $DonNaam3, $DonAantal3, $DonNaam2, $DonAantal2, $DonNaam1, $DonAantal1, "nr1" . "<br>";
+		
 	}
 	
 	
