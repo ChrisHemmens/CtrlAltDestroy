@@ -74,7 +74,7 @@ donationCount($jsonArray);
 <table cellspacing="0" cellpadding="0">
   <tr>
     <th><b>Rank</b></th>
-	<th><b>Logo</b></th>
+	<th><b>League</b></th>
 	<th><b>Naam</b></th>
     <th><b>Rol</b></th> 
 	<th><b>Level</b></th>

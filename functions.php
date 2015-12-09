@@ -87,9 +87,9 @@ function donationRatio($jsonArray) {{
     <th><b>Ratio</b></th> 
 	</tr>
 	<tr>
-	<td>1</td>
-	<td><?php echo $RatNaam1;?> </td>
-	<td><?php echo number_format((float)$RatAantal1, 2, '.', '');?> </td>
+	<td><b>1</b></td>
+	<td><b><?php echo $RatNaam1;?> </b></td>
+	<td><b><?php echo number_format((float)$RatAantal1, 2, '.', '');?></b> </td>
 	</tr>
 	<tr>
 	<td>2</td>
@@ -198,9 +198,9 @@ function donationCount($jsonArray) {{
     <th><b>Gedoneerd</b></th> 
 	</tr>
 	<tr>
-	<td>1</td>
-	<td><?php echo $DonNaam1;?> </td>
-	<td><?php echo $DonAantal1;?> </td>
+	<td><b>1</b></td>
+	<td><b><?php echo $DonNaam1;?> </b></td>
+	<td><b><?php echo $DonAantal1;?> </b></td>
 	</tr>
 	<tr>
 	<td>2</td>
