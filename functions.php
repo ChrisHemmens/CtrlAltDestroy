@@ -84,7 +84,7 @@ function donationRatio($jsonArray) {{
   <tr>
     <th><b>Rank</b></th>
 	<th><b>Naam</b></th>
-    <th><b>Ratio</b></th> 
+    <th><b>Ratio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></th> 
 	</tr>
 	<tr>
 	<td><b>1</b></td>

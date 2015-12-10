@@ -1,7 +1,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-<style>
+
+<head>
+    <title>CtrlAltDestroy</title>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
+			  
+    <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
+	<style>
 
 { margin: 0; padding: 0; }
 
@@ -21,20 +29,30 @@ position:absolute;
     left:50%;
     margin: 0px 0 0 -105px;
 }
-#nte{ 
-    width:300px;
+	 #menu ul {
+	list-style-type: none;
+}
+#menu ul li {
+	display: inline;
+	margin: 0;
+}
+#menu ul li a {
+	/* Nieuw */
+	padding: 15px;
+	background-color: #44699C;
+	font-family: Verdana;
+	color: white;
 }
 
 </style>
-<head>
-    <title>CtrlAltDestroy</title>
-	<meta name="MobileOptimized" content="width" charset="utf-8" />
-	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
-			  
-    <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
-	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
 </head>
 
+<body>
+<div id="menu">
+	<ul>
+		<li><a href="/coc/vergelijk.php" title="Home">Vergelijk spelers</a></li>
+		</ul>
+</div>
 
    <?php
 //php expert shizzle van Rizzle
