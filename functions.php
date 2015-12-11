@@ -342,6 +342,11 @@ function DonMemberCount($jsonArray) {{
 	$DonMemberAantal3 = 1;
 	$DonMemberAantal4 = 1;
 	$DonMemberAantal5 = 1;
+	$RatMember1 = 1;
+	$RatMember2 = 1;
+	$RatMember3 = 1;
+	$RatMember4 = 1;
+	$RatMember5 = 1;
 	$DonMemberNaam1 = 'GhostN00b';
 	$DonMemberNaam2 = 'GhostN00b';
 	$DonMemberNaam3 = 'GhostN00b';
@@ -352,6 +357,8 @@ function DonMemberCount($jsonArray) {{
 		$positie = 6;
 		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
 		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
+		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
+		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
 		$rol = $jsonArray['clanDetails']['results']['memberList'][$i]['role'];
 		
 		if ($rol == 'member'){
@@ -366,47 +373,62 @@ function DonMemberCount($jsonArray) {{
 		{
 			$DonMemberAantal5 = $donated;
 			$DonMemberNaam5 = $name;
+			$RatMember5 = $ratio;
 		}
 		
 		if ($positie == 4)
 		{
 			$DonMemberAantal5 = $DonMemberAantal4;
 			$DonMemberNaam5 = $DonMemberNaam4;
+			$RatMember5 = $RatMember4;
 			$DonMemberAantal4 = $donated;
 			$DonMemberNaam4 = $name;
+			$RatMember4 = $ratio;
 		}
 		if ($positie == 3)
 		{
 			$DonMemberAantal5 = $DonMemberAantal4;
 			$DonMemberNaam5 = $DonMemberNaam4;
+			$RatMember5 = $RatMember4;
 			$DonMemberAantal4 = $DonMemberAantal3;
 			$DonMemberNaam4 = $DonMemberNaam3;
+			$RatMember4 = $RatMember3;
 			$DonMemberAantal3 = $donated;
 			$DonMemberNaam3 = $name;
+			$RatMember3 = $ratio;
 		}
 		if ($positie == 2)
 		{
 			$DonMemberAantal5 = $DonMemberAantal4;
 			$DonMemberNaam5 = $DonMemberNaam4;
+			$RatMember5 = $RatMember4;
 			$DonMemberAantal4 = $DonMemberAantal3;
 			$DonMemberNaam4 = $DonMemberNaam3;
+			$RatMember4 = $RatMember3;
 			$DonMemberAantal3 = $DonMemberAantal2;
 			$DonMemberNaam3 = $DonMemberNaam2;
+			$RatMember3 = $RatMember2;
 			$DonMemberAantal2 = $donated;
 			$DonMemberNaam2 = $name;
+			$RatMember2 = $ratio;
 		}
 		if ($positie == 1)
 		{
 			$DonMemberAantal5 = $DonMemberAantal4;
 			$DonMemberNaam5 = $DonMemberNaam4;
+			$RatMember5 = $RatMember4;
 			$DonMemberAantal4 = $DonMemberAantal3;
 			$DonMemberNaam4 = $DonMemberNaam3;
+			$RatMember4 = $RatMember3;
 			$DonMemberAantal3 = $DonMemberAantal2;
 			$DonMemberNaam3 = $DonMemberNaam2;
+			$RatMember3 = $RatMember2;
 			$DonMemberAantal2 = $DonMemberAantal1;
 			$DonMemberNaam2 = $DonMemberNaam1;
+			$RatMember2 = $RatMember1;
 			$DonMemberAantal1 = $donated;
-			$DonMemberNaam1 = $name;			
+			$DonMemberNaam1 = $name;
+			$RatMember1 = $ratio;			
 		}
 	}
 }
@@ -419,31 +441,37 @@ function DonMemberCount($jsonArray) {{
     <th><b>Rank</b></th>
 	<th><b>Naam</b></th>
     <th><b>Gedoneerd</b></th> 
+	<th><b>Ratio</b></th> 
 	</tr>
 	<tr>
 	<td><b>1</b></td>
 	<td><b><?php echo $DonMemberNaam1;?> </b></td>
 	<td><b><?php echo $DonMemberAantal1;?> </b></td>
+	<td><b><?php echo number_format((float)$RatMember1, 2, '.', '');?> </b></td>
 	</tr>
 	<tr>
 	<td>2</td>
 	<td><?php echo $DonMemberNaam2;?> </td>
 	<td><?php echo $DonMemberAantal2;?> </td>
+	<td><?php echo number_format((float)$RatMember2, 2, '.', '');?> </td>
 	</tr>
 	<tr>
 	<td>3</td>
 	<td><?php echo $DonMemberNaam3;?> </td>
 	<td><?php echo $DonMemberAantal3;?> </td>
+	<td><?php echo number_format((float)$RatMember3, 2, '.', '');?> </td>
 	</tr>
 	<tr>
 	<td>4</td>
 	<td><?php echo $DonMemberNaam4;?> </td>
 	<td><?php echo $DonMemberAantal4;?> </td>
+	<td><?php echo number_format((float)$RatMember4, 2, '.', '');?> </td>
 	</tr>
 	<tr>
 	<td>5</td>
 	<td><?php echo $DonMemberNaam5;?> </td>
 	<td><?php echo $DonMemberAantal5;?> </td>
+	<td><?php echo number_format((float)$RatMember5, 2, '.', '');?> </td>
 	</tr>
   </div>
   <?php } ?>
