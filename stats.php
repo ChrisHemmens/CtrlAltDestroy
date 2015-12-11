@@ -1,7 +1,7 @@
 <html>
 <head>
-    <title>CtrlAltDestroy - vergelijk</title>
-	<meta charset="utf-8" />
+    <title>CtrlAltDestroy - stats</title>
+	<meta charset="utf-8"  />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
@@ -41,10 +41,31 @@ html {
 <div id="menu">
 	<ul>
 		<li><a href="/coc/index.php" title="Home">Homepage</a></li>
-		<li><a href="/coc/stats.php" title="Home">Stats</a></li>
+		<li><a href="/coc/vergelijk.php" title="Home">Vergelijk spelers</a></li>
 		</ul>
 </div>
+<?php
+include("functions.php");
 
+$contents = file_get_contents('https://set7z18fgf.execute-api.us-east-1.amazonaws.com/prod/?route=getClanDetails&clanTag=%232CRCJU2V', false);
+
+$jsonArray = json_decode($contents, true);
+
+if(!$contents) {
+	echo "Shit is kapot G";
+}
+else { 
+echo "&nbsp;";
+?>
+	<div id = "log">
+<?php 
+	donationCount($jsonArray); 
+	donationRatio($jsonArray);	
+	requestCount($jsonArray);
+	DonMemberCount($jsonArray);
+}
+?>
+	</div>
 
 
      </body>

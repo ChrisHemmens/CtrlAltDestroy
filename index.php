@@ -4,7 +4,7 @@
 
 <head>
     <title>CtrlAltDestroy</title>
-	<meta charset="utf-8" />
+	<meta charset="utf-8"  />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
@@ -50,8 +50,9 @@ position:absolute;
 <body>
 <div id="menu">
 	<ul>
+		<li><a href="/coc/stats.php" title="Home">Stats</a></li>
 		<li><a href="/coc/vergelijk.php" title="Home">Vergelijk spelers</a></li>
-		</ul>
+	</ul>
 </div>
 
    <?php
@@ -85,13 +86,7 @@ else {
 	echo "Lokatie: " . $jsonArray['clanDetails']['results']['locationName'] . "<br />";
 ?>
 
-	<div id = "log">
-<?php 
-	donationRatio($jsonArray);
-	echo "<br /><br /><br />";
-	donationCount($jsonArray); 
-?>
-	</div>
+
 
 	<div id="log">
 	<table cellspacing="0" cellpadding="0">

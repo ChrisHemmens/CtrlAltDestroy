@@ -14,26 +14,24 @@ function donationRatio($jsonArray) {{
 
 	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$positie = 6;
-		$rpositie = 6;
 		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
 		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
 		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
 		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
-		$rank = $jsonArray['clanDetails']['results']['memberList'][$i]['clanRank'];
 		
-		if ($ratio > $RatAantal5) $rpositie = 5;
-		if ($ratio > $RatAantal4) $rpositie = 4;
-		if ($ratio > $RatAantal3) $rpositie = 3;
-		if ($ratio > $RatAantal2) $rpositie = 2;
-		if ($ratio > $RatAantal1) $rpositie = 1;
+		if ($ratio > $RatAantal5) $positie = 5;
+		if ($ratio > $RatAantal4) $positie = 4;
+		if ($ratio > $RatAantal3) $positie = 3;
+		if ($ratio > $RatAantal2) $positie = 2;
+		if ($ratio > $RatAantal1) $positie = 1;
 		
-		if ($rpositie == 5)
+		if ($positie == 5)
 		{
 			$RatAantal5 = $ratio;
 			$RatNaam5 = $name;
 		}
 		
-		if ($rpositie == 4)
+		if ($positie == 4)
 		{
 			$RatAantal5 = $RatAantal4;
 			$RatNaam5 = $RatNaam4;
@@ -41,7 +39,7 @@ function donationRatio($jsonArray) {{
 			$RatNaam4 = $name;
 		}
 		
-		if ($rpositie == 3)
+		if ($positie == 3)
 		{
 			$RatAantal5 = $RatAantal4;
 			$RatNaam5 = $RatNaam4;
@@ -51,7 +49,7 @@ function donationRatio($jsonArray) {{
 			$RatNaam3 = $name;
 		}
 		
-		if ($rpositie == 2)
+		if ($positie == 2)
 		{
 			$RatAantal5 = $RatAantal4;
 			$RatNaam5 = $RatNaam4;
@@ -63,7 +61,7 @@ function donationRatio($jsonArray) {{
 			$RatNaam2 = $name;
 		}
 		
-		if ($rpositie == 1)
+		if ($positie == 1)
 		{
 			$RatAantal5 = $RatAantal4;
 			$RatNaam5 = $RatNaam4;
@@ -81,6 +79,7 @@ function donationRatio($jsonArray) {{
 ?>
 <div id="log">
 <table cellspacing="0" cellpadding="0">
+<?php 	echo "<h2>Beste ratio</h2>"; ?> 
   <tr>
     <th><b>Rank</b></th>
 	<th><b>Naam</b></th>
@@ -113,6 +112,7 @@ function donationRatio($jsonArray) {{
 	</tr>
   </div>
   <?php } ?>
+  
 <?php
 function donationCount($jsonArray) {{
 	$DonAantal1 = 1;
@@ -128,12 +128,9 @@ function donationCount($jsonArray) {{
 
 	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
 		$positie = 6;
-		$rpositie = 6;
 		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
 		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
-		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
-		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
-		$rank = $jsonArray['clanDetails']['results']['memberList'][$i]['clanRank'];
+		
 		
 		if ($donated > $DonAantal5) $positie = 5;
 		if ($donated > $DonAantal4) $positie = 4;
@@ -189,9 +186,11 @@ function donationCount($jsonArray) {{
 		}
 	}
 }
+
 ?>
 <div id="log">
 <table cellspacing="0" cellpadding="0" width="50%">
+<?php echo "<h2>Meeste troepen gedoneerd</h2>";  ?>
   <tr>
     <th><b>Rank</b></th>
 	<th><b>Naam</b></th>
@@ -221,6 +220,230 @@ function donationCount($jsonArray) {{
 	<td>5</td>
 	<td><?php echo $DonNaam5;?> </td>
 	<td><?php echo $DonAantal5;?> </td>
+	</tr>
+  </div>
+  <?php } ?>
+  
+  <?php
+function requestCount($jsonArray) {{
+	$ReqAantal1 = 1;
+	$ReqAantal2 = 1;
+	$ReqAantal3 = 1;
+	$ReqAantal4 = 1;
+	$ReqAantal5 = 1;
+	$ReqNaam1 = 'GhostN00b';
+	$ReqNaam2 = 'GhostN00b';
+	$ReqNaam3 = 'GhostN00b';
+	$ReqNaam4 = 'GhostN00b';
+	$ReqNaam5 = 'GhostN00b';
+
+	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
+		$positie = 6;
+		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
+		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
+
+		
+		if ($donationsReceived > $ReqAantal5) $positie = 5;
+		if ($donationsReceived > $ReqAantal4) $positie = 4;
+		if ($donationsReceived > $ReqAantal3) $positie = 3;
+		if ($donationsReceived > $ReqAantal2) $positie = 2;
+		if ($donationsReceived > $ReqAantal1) $positie = 1;
+		
+		if ($positie == 5)
+		{
+			$ReqAantal5 = $donationsReceived;
+			$ReqNaam5 = $name;
+		}
+		
+		if ($positie == 4)
+		{
+			$ReqAantal5 = $ReqAantal4;
+			$ReqNaam5 = $ReqNaam4;
+			$ReqAantal4 = $donationsReceived;
+			$ReqNaam4 = $name;
+		}
+		if ($positie == 3)
+		{
+			$ReqAantal5 = $ReqAantal4;
+			$ReqNaam5 = $ReqNaam4;
+			$ReqAantal4 = $ReqAantal3;
+			$ReqNaam4 = $ReqNaam3;
+			$ReqAantal3 = $donationsReceived;
+			$ReqNaam3 = $name;
+		}
+		if ($positie == 2)
+		{
+			$ReqAantal5 = $ReqAantal4;
+			$ReqNaam5 = $ReqNaam4;
+			$ReqAantal4 = $ReqAantal3;
+			$ReqNaam4 = $ReqNaam3;
+			$ReqAantal3 = $ReqAantal2;
+			$ReqNaam3 = $ReqNaam2;
+			$ReqAantal2 = $donationsReceived;
+			$ReqNaam2 = $name;
+		}
+		if ($positie == 1)
+		{
+			$ReqAantal5 = $ReqAantal4;
+			$ReqNaam5 = $ReqNaam4;
+			$ReqAantal4 = $ReqAantal3;
+			$ReqNaam4 = $ReqNaam3;
+			$ReqAantal3 = $ReqAantal2;
+			$ReqNaam3 = $ReqNaam2;
+			$ReqAantal2 = $ReqAantal1;
+			$ReqNaam2 = $ReqNaam1;
+			$ReqAantal1 = $donationsReceived;
+			$ReqNaam1 = $name;			
+		}
+	}
+}
+
+?>
+<div id="log">
+<table cellspacing="0" cellpadding="0" width="50%">
+<?php echo "<h2>Meeste troepen ontvangen</h2>";  ?>
+  <tr>
+    <th><b>Rank</b></th>
+	<th><b>Naam</b></th>
+    <th><b>Ontvangen &nbsp;</b></th> 
+	</tr>
+	<tr>
+	<td><b>1</b></td>
+	<td><b><?php echo $ReqNaam1;?> </b></td>
+	<td><b><?php echo $ReqAantal1;?> </b></td>
+	</tr>
+	<tr>
+	<td>2</td>
+	<td><?php echo $ReqNaam2;?> </td>
+	<td><?php echo $ReqAantal2;?> </td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td><?php echo $ReqNaam3;?> </td>
+	<td><?php echo $ReqAantal3;?> </td>
+	</tr>
+	<tr>
+	<td>4</td>
+	<td><?php echo $ReqNaam4;?> </td>
+	<td><?php echo $ReqAantal4;?> </td>
+	</tr>
+	<tr>
+	<td>5</td>
+	<td><?php echo $ReqNaam5;?> </td>
+	<td><?php echo $ReqAantal5;?> </td>
+	</tr>
+  </div>
+  <?php } ?>
+  
+  <?php
+function DonMemberCount($jsonArray) {{
+	$DonMemberAantal1 = 1;
+	$DonMemberAantal2 = 1;
+	$DonMemberAantal3 = 1;
+	$DonMemberAantal4 = 1;
+	$DonMemberAantal5 = 1;
+	$DonMemberNaam1 = 'GhostN00b';
+	$DonMemberNaam2 = 'GhostN00b';
+	$DonMemberNaam3 = 'GhostN00b';
+	$DonMemberNaam4 = 'GhostN00b';
+	$DonMemberNaam5 = 'GhostN00b';
+
+	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
+		$positie = 6;
+		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
+		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
+		$rol = $jsonArray['clanDetails']['results']['memberList'][$i]['role'];
+		
+		if ($rol == 'member'){
+		if ($donated > $DonMemberAantal5) $positie = 5;
+		if ($donated > $DonMemberAantal4) $positie = 4;
+		if ($donated > $DonMemberAantal3) $positie = 3;
+		if ($donated > $DonMemberAantal2) $positie = 2;
+		if ($donated > $DonMemberAantal1) $positie = 1;
+		}
+		
+		if ($positie == 5)
+		{
+			$DonMemberAantal5 = $donated;
+			$DonMemberNaam5 = $name;
+		}
+		
+		if ($positie == 4)
+		{
+			$DonMemberAantal5 = $DonMemberAantal4;
+			$DonMemberNaam5 = $DonMemberNaam4;
+			$DonMemberAantal4 = $donated;
+			$DonMemberNaam4 = $name;
+		}
+		if ($positie == 3)
+		{
+			$DonMemberAantal5 = $DonMemberAantal4;
+			$DonMemberNaam5 = $DonMemberNaam4;
+			$DonMemberAantal4 = $DonMemberAantal3;
+			$DonMemberNaam4 = $DonMemberNaam3;
+			$DonMemberAantal3 = $donated;
+			$DonMemberNaam3 = $name;
+		}
+		if ($positie == 2)
+		{
+			$DonMemberAantal5 = $DonMemberAantal4;
+			$DonMemberNaam5 = $DonMemberNaam4;
+			$DonMemberAantal4 = $DonMemberAantal3;
+			$DonMemberNaam4 = $DonMemberNaam3;
+			$DonMemberAantal3 = $DonMemberAantal2;
+			$DonMemberNaam3 = $DonMemberNaam2;
+			$DonMemberAantal2 = $donated;
+			$DonMemberNaam2 = $name;
+		}
+		if ($positie == 1)
+		{
+			$DonMemberAantal5 = $DonMemberAantal4;
+			$DonMemberNaam5 = $DonMemberNaam4;
+			$DonMemberAantal4 = $DonMemberAantal3;
+			$DonMemberNaam4 = $DonMemberNaam3;
+			$DonMemberAantal3 = $DonMemberAantal2;
+			$DonMemberNaam3 = $DonMemberNaam2;
+			$DonMemberAantal2 = $DonMemberAantal1;
+			$DonMemberNaam2 = $DonMemberNaam1;
+			$DonMemberAantal1 = $donated;
+			$DonMemberNaam1 = $name;			
+		}
+	}
+}
+
+?>
+<div id="log">
+<table cellspacing="0" cellpadding="0" width="50%">
+<?php echo "<h2>Kanshebbers oudste</h2>";  ?>
+  <tr>
+    <th><b>Rank</b></th>
+	<th><b>Naam</b></th>
+    <th><b>Gedoneerd</b></th> 
+	</tr>
+	<tr>
+	<td><b>1</b></td>
+	<td><b><?php echo $DonMemberNaam1;?> </b></td>
+	<td><b><?php echo $DonMemberAantal1;?> </b></td>
+	</tr>
+	<tr>
+	<td>2</td>
+	<td><?php echo $DonMemberNaam2;?> </td>
+	<td><?php echo $DonMemberAantal2;?> </td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td><?php echo $DonMemberNaam3;?> </td>
+	<td><?php echo $DonMemberAantal3;?> </td>
+	</tr>
+	<tr>
+	<td>4</td>
+	<td><?php echo $DonMemberNaam4;?> </td>
+	<td><?php echo $DonMemberAantal4;?> </td>
+	</tr>
+	<tr>
+	<td>5</td>
+	<td><?php echo $DonMemberNaam5;?> </td>
+	<td><?php echo $DonMemberAantal5;?> </td>
 	</tr>
   </div>
   <?php } ?>
