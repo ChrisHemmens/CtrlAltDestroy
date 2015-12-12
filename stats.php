@@ -67,6 +67,6 @@ echo "&nbsp;";
 ?>
 	</div>
 
-
+	 <P> Created by Rizzle & Justin ® 2015 //Deze moet naar beneden...</p>
      </body>
 </html>

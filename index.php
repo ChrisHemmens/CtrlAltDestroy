@@ -25,7 +25,6 @@ html {
 position:absolute;
     width:300px;
     height:200px;
-    z-index:15;
     left:50%;
     margin: 0px 0 0 -105px;
 }
@@ -155,6 +154,8 @@ else {
 </div>
 </table>
 
+
+<P> Created by Rizzle & Justin ® 2015 </p>
 </body>
 
 </html>
