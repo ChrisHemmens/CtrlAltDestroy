@@ -15,6 +15,8 @@ Ideeën:
 
 3. 	Spelers vergelijken
 
+4. Fix Donkerblauw in de tool
+
 
 Gekozen:
 
