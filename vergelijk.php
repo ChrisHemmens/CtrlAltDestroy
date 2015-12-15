@@ -40,9 +40,11 @@ html {
 <body>
 <div id="menu">
 	<ul>
-		<li><a href="/coc/index.php" title="Home">Homepage</a></li>
-		<li><a href="/coc/stats.php" title="Home">Stats</a></li>
-		</ul>
+		<li><a href="/coc/index.php" title="Home">Home</a></li>
+		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
+		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
+		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+	</ul>
 </div>
 
 
