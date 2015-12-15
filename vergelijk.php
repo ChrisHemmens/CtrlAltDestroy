@@ -5,11 +5,21 @@
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
  <!--   <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
-	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>           -->
-	<script type="text/JavaScript" src="vergelijk.js"></script>
+	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>  -->         
+	<script type="text/JavaScript" src="vergelijk.js"></script>   
     <script src="jquery-2.1.4.min.js"></script>
+			
+<script>
+$("[id*=shizzle] input:checkbox").change(function () {
+          var maxSelection = 0;
+          if ($("[id*=shizzle] input:checkbox:checked").length > maxSelection) {
+              $(this).prop("checked", false);
+              alert("Please select a maximum of " + maxSelection + " items.");
+          }
+      })
+</script>
 		 <style>
-		 
+ 
 
 { margin: 0; padding: 0; }
 
@@ -40,6 +50,8 @@ html {
 </head>
 
 <body>
+<input type=button value='Hey jij daar, pssst, klik hier eens' OnClick="show_alert()">
+
    <?php
 //php expert shizzle van Rizzle
 include("functions.php");
@@ -64,7 +76,7 @@ else {  ?>
 
 
 	<div id="log">
-	<table cellspacing="0" cellpadding="0">
+	<table cellspacing="0" cellpadding="0" id="shizzle">
 	  <tr>
 	    <th><b>Vergelijk</b></th>
 		<th><b>League</b></th>
@@ -124,6 +136,22 @@ else {  ?>
 </div>
 </table>
 
+<div id="log">
+<table cellspacing="0" cellpadding="0">
+<?php 	echo "<h2>Beste ratio</h2>"; ?> 
+  <tr>
+    <th><b>Rank</b></th>
+	<th><b>Naam</b></th>
+    <th><b>Ratio </b></th> 
+	</tr>
+	<tr>
+	<td><b>1</b></td>
+	<td><b>2</b></td>
+	<td><b>3</b> </td>
+	</tr>
+	</table>
+	</div>
+<?php?>
 
 <P> Created by Rizzle & Justin ® 2015 </p>
      </body>
