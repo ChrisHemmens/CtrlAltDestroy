@@ -107,9 +107,9 @@ else {  ?>
 		
 		echo "<tr>";
 			if (($name == 'Justin' and $rol = 'Leider')or($name == 'Rizzle' and $rol = 'CoLeider')){
-			echo "<td>" ?> <input class="Vergelijk" type="checkbox" name="Vergelijken"  value= "1" id ='<?echo$i;?>' checked><?echo $rank;?><br><?php "</td>";	
+			echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken"  value= "1" id ='<?echo$i;?>' checked><?echo $rank;?><br><?php "</td>";	
 			} else {
-				echo "<td>" ?> <input class="Vergelijk" type="checkbox" name="Vergelijken"  value= "1" id ='<?echo$i;?>' ><?echo $rank;?><br><?php "</td>";
+				echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken"  value= "1" id ='<?echo$i;?>' ><?echo $rank;?><br><?php "</td>";
 			}
 			
 			echo "<td><img src='" . $jsonArray['clanDetails']['results']['memberList'][$i]['leagueBadgeImg']['l'] . "'/></td>";
