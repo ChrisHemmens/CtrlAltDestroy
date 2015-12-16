@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>CtrlAltDestroy - vergelijk</title>
+    <title>CtrlAltDestroy - Vergelijk</title>
 	<meta charset="utf-8" />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
@@ -8,6 +8,16 @@
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>  -->         
 	<script type="text/JavaScript" src="vergelijk.js"></script>   
     <script src="jquery-2.1.4.min.js"></script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71479321-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 			
 <script>
 $("[id*=shizzle] input:checkbox").change(function () {
@@ -50,7 +60,6 @@ html {
 </head>
 
 <body>
-<input type=button value='Hey jij daar, pssst, klik hier eens' OnClick="show_alert()">
 
    <?php
 //php expert shizzle van Rizzle
@@ -71,8 +80,10 @@ else {  ?>
 		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
 		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
 		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+		<li><a href="/coc/chatapp.php" title="Tool">ChatApp</a><li>
 	</ul>
 </div>
+<input type=button value='Hey jij daar, pssst, klik hier eens' OnClick="show_alert()">
 
 
 	<div id="log">

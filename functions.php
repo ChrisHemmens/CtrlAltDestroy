@@ -474,4 +474,5 @@ function DonMemberCount($jsonArray) {{
 	<td><?php echo number_format((float)$RatMember5, 2, '.', '');?> </td>
 	</tr>
   </div>
+  
   <?php } ?>
