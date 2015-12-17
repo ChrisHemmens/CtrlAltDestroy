@@ -6,7 +6,10 @@
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
+	<script type="text/JavaScript" src="vergelijk.js"></script>  
+	
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,54 +20,21 @@
   ga('send', 'pageview');
 
 </script>
-	<style>
-
-{ margin: 0; padding: 0; }
-
-html { 
-        background: url('image/awhyeah.jpg') no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
-
-#Logo{ 
-position:absolute;
-    width:300px;
-    height:200px;
-    left:50%;
-    margin: 0px 0 0 -105px;
-}
-	 #menu ul {
-	list-style-type: none;
-}
-#menu ul li {
-	display: inline;
-	margin: 0;
-}
-#menu ul li a {
-	/* Nieuw */
-	padding: 15px;
-	background-color: #44699C;
-	font-family: Verdana;
-	color: white;
-}
-
-</style>
 </head>
 
 <body>
 <div id="menu">
 	<ul>
 		<li><a href="/coc/index.php" title="Home">Home</a></li>
+		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
 		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
 		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
 		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-		<li><a href="/coc/chatapp.php" title="Tool">ChatApp</a><li>
 	</ul>
 </div>
-
+<!-- Button die verbinding heeft met vergelijk.js -->
+</br></br></br></br>
+<input type=button value='Hey jij daar, pssst, klik hier eens' OnClick="show_alert()">
    <?php
 //php expert shizzle van Rizzle
 include("functions.php");

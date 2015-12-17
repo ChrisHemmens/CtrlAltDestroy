@@ -3,6 +3,7 @@
     <title>CtrlAltDestroy - Tool</title>
 	<meta charset="utf-8"  />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
+	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 			  
     <!-- <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>-->
@@ -26,49 +27,19 @@
 
 </script>
 	<style>
-		 
-
-{ margin: 0; padding: 0; }
-
-html { 
-        background: url('image/awhyeah.jpg') no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
-
-<!--
-	 #menu ul {
-	list-style-type: none;
-}
-#menu ul li {
-	display: inline;
-	margin: 0;
-}
-#menu ul li a {
-	/* Nieuw */
-	padding: 15px;
-	background-color: #44699C;
-	font-family: Verdana;
-	color: white;
-}
--->
 </style>
 </head>
  <body onLoad="initializeArmy();">
- <div id="menu">
+<div id="menu">
 	<ul>
 		<li><a href="/coc/index.php" title="Home">Home</a></li>
+		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
 		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
 		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
 		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-		<li><a href="/coc/chatapp.php" title="Tool">ChatApp</a><li>
 	</ul>
 </div>
-<br />
-<br />
-<br />
+</br></br></br></br>
    <!--Tabulation-->
    <div id="navcontainer">
    </div>

@@ -3,11 +3,11 @@
     <title>CtrlAltDestroy - Vergelijk</title>
 	<meta charset="utf-8" />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
+	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 			  
  <!--   <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>  -->         
-	<script type="text/JavaScript" src="vergelijk.js"></script>   
-    <script src="jquery-2.1.4.min.js"></script>
+ 
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,50 +18,10 @@
   ga('send', 'pageview');
 
 </script>
-			
-<script>
-$("[id*=shizzle] input:checkbox").change(function () {
-          var maxSelection = 0;
-          if ($("[id*=shizzle] input:checkbox:checked").length > maxSelection) {
-              $(this).prop("checked", false);
-              alert("Please select a maximum of " + maxSelection + " items.");
-          }
-      })
-</script>
-		 <style>
- 
-
-{ margin: 0; padding: 0; }
-
-html { 
-        background: url('image/awhyeah.jpg') no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
-
-
-	 #menu ul {
-	list-style-type: none;
-}
-#menu ul li {
-	display: inline;
-	margin: 0;
-}
-#menu ul li a {
-	/* Nieuw */
-	padding: 15px;
-	background-color: #44699C;
-	font-family: Verdana;
-	color: white;
-}
-</style>
 </head>
 
 <body>
-
-   <?php
+<?php
 //php expert shizzle van Rizzle
 include("functions.php");
 
@@ -77,17 +37,15 @@ else {  ?>
 <div id="menu">
 	<ul>
 		<li><a href="/coc/index.php" title="Home">Home</a></li>
+		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
 		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
 		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
 		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-		<li><a href="/coc/chatapp.php" title="Tool">ChatApp</a><li>
 	</ul>
 </div>
-<input type=button value='Hey jij daar, pssst, klik hier eens' OnClick="show_alert()">
-
-
+</br></br></br></br>
 	<div id="log">
-	<table cellspacing="0" cellpadding="0" id="shizzle">
+	<table cellspacing="0" cellpadding="0" id="Tabelvergelijk">
 	  <tr>
 	    <th><b>Vergelijk</b></th>
 		<th><b>League</b></th>

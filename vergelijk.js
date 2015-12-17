@@ -1,5 +1,5 @@
 function show_alert() { 
-var msg = "Welcome to ctrlaltdestroy.tk";
+var msg = "Welkom op ctrlaltdestroy.tk";
 alert(msg); 
 }
 
