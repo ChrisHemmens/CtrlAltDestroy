@@ -31,19 +31,32 @@
 </div>
 </br></br></br>
 <H2>Is er een warsysteem?</H2>
-<p>TODO: Info over wars //Is het handig om dit openbaar te maken voor een tegenstander?</p>
+<p>
+    Ja, onze clan heeft een warsysteem.
+    <br/>
+    Het zou alleen niet zo slim zijn om dat hier neer te zetten aangezien de tegenstanders onze site ook zullen vinden.
+    <br/>
+    Regelmatig zullen we een clanmail sturen met daarin onze strategie, ook kan je het altijd vragen in onze BAND (meer info onderop deze pagina) of in de clanchat!
+</p>
 </br>
 <H2>Mag ik altijd alles doneren wat ik wil?</H2>
-<p>TODO: Info over donaties</p>
+<p>
+    Standaard doneren we boogschutters en tovenaars. Dit zodat iedereen in de clan kan doneren, level maakt niet uit.
+    <br/>
+    In war hebben we andere regels:
+    <br/>
+    Als je van plan bent om een warattack te doen, dan kan je iedere gewenste troop – vaak nog highlvl ook – krijgen.
+</p>
 </br>
 <H2>Is farmen oké?</H2>
-<p>TODO: Info over farmen ok, maar graag wel actief in de wars</p>
+<p>Farmen is oké, pushen ook. Waar het om gaat is dat je actief doneert en regelmatig wilt participeren in de war.</p>
 </br>
-<H2>Hoe verdien ik Oudste</H2>
-<p>TODO: Info over oudste</p>
+<H2>Hoe verdien ik oudste</H2>
+<p>Iedere 14e en 28e dag van de maand promoveren we de persoon met de meeste donaties – die op dat moment nog geen oudste is – tot oudste.</p>
 </br>
 <H2>Hoe verdien ik Co?</H2>
-<p>TODO: Info over Co</p>
+<p>Co is niet te verdienen. We hebben slechte (en ook goede) ervaringen gehad met Co’s die vervolgens besluiten om een hele clan te kicken. 
+<br>Om de stabiliteit te van onze clan te waarborgen hebben we 3 (Co-)Leiders en daar houden we het bij.  </p>
 </br>
 <H2>Gebruikt de clan een Chatapp?</H2>
 <p>Als chatapp gebruiken we BAND. Zoek in de app naar de BAND(groep) die ‘CtrlAltDestroy’ heet, dat zijn wij namelijk. </br>Laat het ook in de clanchat even weten als je onze groep ga joinen, zo weten wij zeker dat jij het bent!

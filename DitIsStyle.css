@@ -15,7 +15,7 @@ position:absolute;
     left:50%;
     margin: 0px 0 0 -105px;
 }
-	 #menu ul {
+#menu ul {
 	z-index: 2;
 	position: fixed;
 	list-style-type: none;
