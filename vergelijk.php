@@ -21,6 +21,18 @@
 </head>
 
 <body>
+<div id="menu">
+	<ul>
+		<li><a href="/coc/index.php" title="Home">Home</a></li>
+		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
+		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
+		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
+		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+	</ul>
+</div>
+</br></br></br></br>
+
+	<div>
 <?php
 //php expert shizzle van Rizzle
 include("functions.php");
@@ -34,29 +46,12 @@ if(!$contents) {
 }
 else {  ?>
 
-<div id="menu">
-	<ul>
-		<li><a href="/coc/index.php" title="Home">Home</a></li>
-		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
-		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
-		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
-		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-	</ul>
-</div>
-</br></br></br></br>
-	<div id="log">
-	<table cellspacing="0" cellpadding="0" id="Tabelvergelijk">
-	  <tr>
-	    <th><b>Vergelijk</b></th>
-		<th><b>League</b></th>
-		<th><b>Naam</b></th>
-		<th><b>Rol</b></th> 
-		<th><b>Level</b></th>
-		<th><b>Trophies</b></th>
-	  </tr>
-	  </div>
-	  
-	 <div>
+
+	
+<form action="VergelijkDezeShizzleG">
+<select name="Naam" multiple>
+
+
 <?php
 
 	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
@@ -86,41 +81,20 @@ else {  ?>
 							break;
 		}
 		
-		echo "<tr>";
-			if (($name == 'Justin' and $rol = 'Leider')or($name == 'Rizzle' and $rol = 'CoLeider')){
-			echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken"  value= "1" id ='<?echo$i;?>' checked><?echo $rank;?><br><?php "</td>";	
-			} else {
-				echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken"  value= "1" id ='<?echo$i;?>' ><?echo $rank;?><br><?php "</td>";
-			}
-			
-			echo "<td><img src='" . $jsonArray['clanDetails']['results']['memberList'][$i]['leagueBadgeImg']['l'] . "'/></td>";
-			echo "<td>" . $name . "</td>"; 
-			echo "<td>" . $rol . "</td>";
-			echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['expLevel'] . "</td>";
-			echo "<td>" . $jsonArray['clanDetails']['results']['memberList'][$i]['trophies'] . "</td>";
-		echo "</tr>";
+		?>
+
+  <option value='<?echo $name;?>'><?echo $rank . " " . $name . " " . $rol;?></option>
+
+<?php
 	}
+	?>
+</select>
+<input type="submit">
+</form>
+<?php
 }
 ?>
 </div>
-</table>
-
-<div id="log">
-<table cellspacing="0" cellpadding="0">
-<?php 	echo "<h2>Beste ratio</h2>"; ?> 
-  <tr>
-    <th><b>Rank</b></th>
-	<th><b>Naam</b></th>
-    <th><b>Ratio </b></th> 
-	</tr>
-	<tr>
-	<td><b>1</b></td>
-	<td><b>2</b></td>
-	<td><b>3</b> </td>
-	</tr>
-	</table>
-	</div>
-<?php?>
 
 <P> Created by Rizzle & Justin ® 2015 </p>
      </body>
