@@ -97,6 +97,6 @@ else {  ?>
 ?>
 </div>
 
-<P> Created by Rizzle & Justin ® 2015 </p>
+<P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
      </body>
 </html>

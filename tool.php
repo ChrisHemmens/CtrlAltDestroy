@@ -1465,6 +1465,6 @@
          </tr>
       </table>
    </div>
-   <P> (Deze tool niet helemaal) created by Rizzle & Justin ® 2015 </p>
+   <P> (Deze tool niet helemaal) created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
     </body>
 </html>
