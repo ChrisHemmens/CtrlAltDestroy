@@ -46,6 +46,7 @@ $jsonArray = json_decode($contents, true);
 
 if(!$contents) {
 	echo "Shit is kapot G";
+		?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
 }
 else { 
 ?>

@@ -30,7 +30,7 @@
 		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
 	</ul>
 </div>
-</br></br></br></br>
+</br></br></br>
 
 	<div>
 <?php
@@ -43,6 +43,7 @@ $jsonArray = json_decode($contents, true);
 
 if(!$contents) {
 	echo "Shit is kapot G";
+	?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
 }
 else {  ?>
 
