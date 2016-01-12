@@ -473,6 +473,17 @@ function DonMemberCount($jsonArray) {{
 	<td><?php echo $DonMemberAantal5;?> </td>
 	<td><?php echo number_format((float)$RatMember5, 2, '.', '');?> </td>
 	</tr>
-  </div>
-  
+  </div> 
   <?php } ?>
+
+<?php
+  function FakeEmptyTable(){
+?>
+<div id="log">
+<table cellspacing="0" cellpadding="0" width="50%">
+</div>
+
+<?php
+}
+ ?>
+

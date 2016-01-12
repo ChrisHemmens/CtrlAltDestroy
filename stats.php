@@ -50,6 +50,7 @@ echo "&nbsp;";
 	donationRatio($jsonArray);	
 	requestCount($jsonArray);
 	DonMemberCount($jsonArray);
+	FakeEmptyTable(); //Empty table to fix the 'created by' not in correct place bug
 }
 ?>
 	</div> 
