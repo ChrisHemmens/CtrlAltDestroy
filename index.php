@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <title>CtrlAltDestroy</title>
 	<meta charset="utf-8"  />
@@ -8,7 +7,6 @@
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
-	<script type="text/JavaScript" src="vergelijk.js"></script>  
 	
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -35,7 +33,6 @@
 
 <!-- Button die verbinding heeft met vergelijk.js -->
 </br></br></br></br>
-<input type=button value='Hey jij daar, pssst, klik hier eens' OnClick="show_alert()">
    <?php
 //php expert shizzle van Rizzle
 include("functions.php");
@@ -89,8 +86,6 @@ else {
 <?php
 
 	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
-		$positie = 6;
-		$rpositie = 6;
 		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
 		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
 		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
@@ -119,14 +114,15 @@ else {
 								$rol = 'Onbekende shizzle';
 							break;
 		}
-		
+		/*  Checkboces uitcommenten
 		echo "<tr>";
 			if (($name == 'Justin' and $rol = 'Leider')or($name == 'Rizzle' and $rol = 'CoLeider')){
-			echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken"  id ='<?echo $i;?>' checked><?echo $rank;?><br><?php "</td>";	
+			echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken"  id ='<?echo $i;?>' checked><?echo $rank;?><br><?php "</td>";
 			} else {
-				echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken" id ='<?echo $i;?>' ><?echo $rank;?><br><?php "</td>";
-			}
+			echo "<td>" ?> <input class="Vergelijk" type="checkbox" style ="width: 20px; height:20px;" name="Vergelijken" id ='<?echo $i;?>' ><?echo $rank;?><br><?php "</td>"; 
+			} */
 			
+			echo "<td>" . $rank . "</td>"; 
 			echo "<td><img src='" . $jsonArray['clanDetails']['results']['memberList'][$i]['leagueBadgeImg']['l'] . "'/></td>";
 			echo "<td>" . $name . "</td>"; 
 			echo "<td>" . $rol . "</td>";
