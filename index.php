@@ -71,7 +71,12 @@ else {
 	echo "Gewonnen oorlogen: " . $jsonArray['warWins'] . "<br />";
 	echo "Aantal leden: " . $jsonArray['members'] . "<br />";
 	echo "Uitleg: " . $jsonArray['description'] . "<br />";
-	echo "Lokatie:  Nederland <br />";
+
+	if ($jsonArray['location']['name'] == 'Netherlands'){
+		echo "Lokatie: Nederland <br />";
+	} else {
+		echo "Lokatie: " . $jsonArray['location']['name'] . "<br />";
+	}
 
 include("functions.php");
 
