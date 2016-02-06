@@ -1,13 +1,12 @@
 <html>
 <head>
-    <title>CtrlAltDestroy</title>
+    <title>CtrlAltDestroy - Wall of fame</title>
 	<meta charset="utf-8"  />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
-	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
-	
+	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,19 +22,20 @@
 <body>
 <div id="menu">
 	<ul>
-		<li><a href="/coc/index.php" title="Home">Home</a></li>
-    	<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
-    	<li><a href="/coc/walloffame.php" title="Chat">Wall of fame</a><li>
-    	<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
-    	<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-	</ul>
+    <li><a href="/coc/index.php" title="Home">Home</a></li>
+      <li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
+      <li><a href="/coc/walloffame.php" title="Chat">Wall of fame</a><li>
+      <li><a href="/coc/stats.php" title="Stats">Stats</a></li>
+      <li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+  </ul>
 </div>
-
-</br></br></br></br>
-
+</br></br></br>
 <?php
+include("functions.php");
+
 //Connect to the dataProvider
 include 'topSecretShizzle.php';
+
 $opts = array(
   'http'=>array(
     'method'=>"GET",
@@ -50,37 +50,21 @@ $url = $url . '/' . rawurlencode($tag);
 $contents = file_get_contents($url, null, stream_context_create($opts));
 $jsonArray = json_decode($contents, true);
 
+
 if(!$contents) {
 	echo "Shit is kapot G";
-		?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
+	?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
 }
 else { 
+echo "&nbsp;";
 ?>
-	<div id="Logo">
-<?php
-	echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "'><br />";
+	<div id = "log">
+<?php 
+	coLeadersList($jsonArray); 
+	oudsteList($jsonArray);
+}
 ?>
-	</div>
-
-	<br /><br /><br /><br /><br /></br></br></br>
-
-
-<?php
-	echo "Clan: " . $jsonArray['name'] . "<br />";
-	echo "Clan level: " . $jsonArray['clanLevel'] . "<br />";
-	echo "Gewonnen oorlogen: " . $jsonArray['warWins'] . "<br />";
-	echo "Aantal leden: " . $jsonArray['members'] . "<br />";
-	echo "Uitleg: " . $jsonArray['description'] . "<br />";
-	echo "Lokatie: " . $jsonArray['location']['name'] . "<br />";
-
-include("functions.php");
-
-membersList($jsonArray); 
-} 
-?>
-
-
-<P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
-</body>
-
+	</div> 
+ 		<P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
+     </body>
 </html>

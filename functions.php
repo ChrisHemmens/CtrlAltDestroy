@@ -1,4 +1,222 @@
 <?php
+function membersList($jsonArray) {
+	?>
+	<div id="log">
+	<table cellspacing="0" cellpadding="0">
+	  <tr>
+		<th><b>Rank</b></th>
+		<th><b>League</b></th>
+		<th><b>Naam</b></th>
+		<th><b>Rol</b></th> 
+		<th><b>Level</b></th>
+		<th><b>Trophies</b></th>
+		<th><b>Donaties</b></th>
+		<th><b>Ontvangen</b></th>
+		<th><b>Ratio</b></th>
+	  </tr>
+	  </div>
+	  
+	 <div>
+<?php
+
+	for($i = 0; $i < $jsonArray['members']; $i++) {
+		$donated = $jsonArray['memberList'][$i]['donations'];
+		$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
+		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
+		$rank = $jsonArray['memberList'][$i]['clanRank'];
+		$name = $jsonArray['memberList'][$i]['name'];
+		//Role translaten naar Nederlands
+		$rol = $jsonArray['memberList'][$i]['role'];
+		switch($rol) {
+							case 'leader':
+								$rol = 'Leider';
+							break;
+							
+							case 'member':
+								$rol = 'Lid';
+							break;
+							
+							case 'admin':
+								$rol = 'Oudste';
+							break;
+							
+							case 'coLeader':
+								$rol = 'CoLeider';
+							break;
+							
+							default:
+								$rol = 'Onbekende shizzle';
+							break;
+		}
+
+
+		echo "<tr>";					
+			echo "<td>" . $rank . "</td>"; 
+			echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
+			echo "<td>" . $name . "</td>"; 
+			echo "<td>" . $rol . "</td>";
+			echo "<td>" . $jsonArray['memberList'][$i]['expLevel'] . "</td>";
+			echo "<td>" . $jsonArray['memberList'][$i]['trophies'] . "</td>";
+			echo "<td>" . $donated . "</td>";
+			echo "<td>" . $donationsReceived . "</td>";
+			echo "<td>" .  number_format((float)$ratio, 2, '.', '') . "</td>";
+		echo "</tr>";
+
+}
+?>
+</div>
+</table>
+<?php
+}
+?>
+<?php
+function coLeadersList($jsonArray) {
+	?>
+	<div id="log">
+	<table cellspacing="0" cellpadding="0">
+		<?php echo "<h2>De superieure leiders: </h2>";  ?>
+	  <tr>
+		<th><b>League</b></th>
+		<th><b>Naam</b></th>
+		<th><b>Rol</b></th> 
+	  </tr>
+	  </div>
+	  
+	 <div>
+<?php
+
+	for($i = 0; $i < $jsonArray['members']; $i++) {
+		$name = $jsonArray['memberList'][$i]['name'];
+		//Role translaten naar Nederlands
+		$rol = $jsonArray['memberList'][$i]['role'];
+		switch($rol) {
+							case 'leader':
+								$rol = 'Leider';
+							break;
+							
+							case 'member':
+								$rol = 'Lid';
+							break;
+							
+							case 'admin':
+								$rol = 'Oudste';
+							break;
+							
+							case 'coLeader':
+								$rol = 'CoLeider';
+							break;
+							
+							default:
+								$rol = 'Onbekende shizzle';
+							break;
+		}
+
+if ($rol == 'Leider'){
+		echo "<tr>";					
+			echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
+			echo "<td>" . $name . "</td>"; 
+			echo "<td>" . $rol . "</td>";
+		echo "</tr>";
+	}
+}
+
+	for($i = 0; $i < $jsonArray['members']; $i++) {
+		$name = $jsonArray['memberList'][$i]['name'];
+		//Role translaten naar Nederlands
+		$rol = $jsonArray['memberList'][$i]['role'];
+		switch($rol) {
+							case 'leader':
+								$rol = 'Leider';
+							break;
+							
+							case 'member':
+								$rol = 'Lid';
+							break;
+							
+							case 'admin':
+								$rol = 'Oudste';
+							break;
+							
+							case 'coLeader':
+								$rol = 'CoLeider';
+							break;
+							
+							default:
+								$rol = 'Onbekende shizzle';
+							break;
+		}
+
+if ($rol == 'CoLeider'){
+		echo "<tr>";					
+			echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
+			echo "<td>" . $name . "</td>"; 
+			echo "<td>" . $rol . "</td>";
+		echo "</tr>";
+	}
+}
+?>
+</div>
+</table>
+<?php
+}
+?>
+<?php
+function oudsteList($jsonArray) {
+	?>
+	<div id="log">
+	<table cellspacing="0" cellpadding="0">
+		<?php echo "<h2>De big bosses: </h2>";  ?>
+	  <tr>
+		<th><b>League</b></th>
+		<th><b>Naam</b></th>
+		<th><b>Rol</b></th> 
+	  </tr>
+	  </div>
+	  
+	 <div>
+<?php
+
+	for($i = 0; $i < $jsonArray['members']; $i++) {
+		$name = $jsonArray['memberList'][$i]['name'];
+		//Role translaten naar Nederlands
+		$rol = $jsonArray['memberList'][$i]['role'];
+		switch($rol) {
+							case 'leader':
+								$rol = 'Leider';
+							break;
+							
+							case 'member':
+								$rol = 'Lid';
+							break;
+							
+							case 'admin':
+								$rol = 'Oudste';
+							break;
+							
+							case 'coLeader':
+								$rol = 'CoLeider';
+							break;
+							
+							default:
+								$rol = 'Onbekende shizzle';
+							break;
+		}
+
+if ($rol == 'Oudste'){
+		echo "<tr>";					
+			echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
+			echo "<td>" . $name . "</td>"; 
+			echo "<td>" . $rol . "</td>";
+		echo "</tr>";
+	}
+}
+?>
+</div>
+</table>
+<?php
+}
+?>
+<?php
 function donationRatio($jsonArray) {{
 	$RatAantal1 = 0;
 	$RatAantal1 = 0;
@@ -12,11 +230,11 @@ function donationRatio($jsonArray) {{
 	$RatNaam4 = 'GhostN00b';
 	$RatNaam5 = 'GhostN00b';
 
-	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
+	for($i = 0; $i < $jsonArray['members']; $i++) {
 		$positie = 6;
-		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
-		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
-		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
+		$name = $jsonArray['memberList'][$i]['name'];
+		$donated = $jsonArray['memberList'][$i]['donations'];
+		$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
 		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
 		
 		if ($ratio > $RatAantal5) $positie = 5;
@@ -126,10 +344,10 @@ function donationCount($jsonArray) {{
 	$DonNaam4 = 'GhostN00b';
 	$DonNaam5 = 'GhostN00b';
 
-	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
+	for($i = 0; $i < $jsonArray['members']; $i++) {
 		$positie = 6;
-		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
-		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
+		$name = $jsonArray['memberList'][$i]['name'];
+		$donated = $jsonArray['memberList'][$i]['donations'];
 		
 		
 		if ($donated > $DonAantal5) $positie = 5;
@@ -237,10 +455,10 @@ function requestCount($jsonArray) {{
 	$ReqNaam4 = 'GhostN00b';
 	$ReqNaam5 = 'GhostN00b';
 
-	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
+	for($i = 0; $i < $jsonArray['members']; $i++) {
 		$positie = 6;
-		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
-		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
+		$name = $jsonArray['memberList'][$i]['name'];
+		$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
 
 		
 		if ($donationsReceived > $ReqAantal5) $positie = 5;
@@ -353,13 +571,13 @@ function DonMemberCount($jsonArray) {{
 	$DonMemberNaam4 = 'GhostN00b';
 	$DonMemberNaam5 = 'GhostN00b';
 
-	for($i = 0; $i < $jsonArray['clanDetails']['results']['members']; $i++) {
+	for($i = 0; $i < $jsonArray['members']; $i++) {
 		$positie = 6;
-		$name = $jsonArray['clanDetails']['results']['memberList'][$i]['name'];
-		$donated = $jsonArray['clanDetails']['results']['memberList'][$i]['donations'];
-		$donationsReceived = $jsonArray['clanDetails']['results']['memberList'][$i]['donationsReceived'];
+		$name = $jsonArray['memberList'][$i]['name'];
+		$donated = $jsonArray['memberList'][$i]['donations'];
+		$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
 		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
-		$rol = $jsonArray['clanDetails']['results']['memberList'][$i]['role'];
+		$rol = $jsonArray['memberList'][$i]['role'];
 		
 		if ($rol == 'member'){
 		if ($donated > $DonMemberAantal5) $positie = 5;

@@ -22,20 +22,34 @@
 <body>
 <div id="menu">
 	<ul>
-		<li><a href="/coc/index.php" title="Home">Home</a></li>
-		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
-		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
-		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
-		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-	</ul>
+    <li><a href="/coc/index.php" title="Home">Home</a></li>
+      <li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
+      <li><a href="/coc/walloffame.php" title="Chat">Wall of fame</a><li>
+      <li><a href="/coc/stats.php" title="Stats">Stats</a></li>
+      <li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+  </ul>
 </div>
 </br></br></br>
 <?php
 include("functions.php");
 
-$contents = file_get_contents('https://set7z18fgf.execute-api.us-east-1.amazonaws.com/prod/?route=getClanDetails&clanTag=%232CRCJU2V', false);
+//Connect to the dataProvider
+include 'topSecretShizzle.php';
 
+$opts = array(
+  'http'=>array(
+    'method'=>"GET",
+    'header'=>array(
+                "Accept: application/json",
+                "Authorization: Bearer " . $api_key
+        )
+  )
+);
+$url = $url . '/' . rawurlencode($tag);
+
+$contents = file_get_contents($url, null, stream_context_create($opts));
 $jsonArray = json_decode($contents, true);
+
 
 if(!$contents) {
 	echo "Shit is kapot G";

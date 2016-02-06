@@ -31,13 +31,13 @@
 </head>
  <body onLoad="initializeArmy();">
 <div id="menu">
-	<ul>
-		<li><a href="/coc/index.php" title="Home">Home</a></li>
-		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
-		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
-		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
-		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-	</ul>
+   <ul>
+      <li><a href="/coc/index.php" title="Home">Home</a></li>
+      <li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
+      <li><a href="/coc/walloffame.php" title="Chat">Wall of fame</a><li>
+      <li><a href="/coc/stats.php" title="Stats">Stats</a></li>
+      <li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+   </ul>
 </div>
 </br></br></br></br>
    <!--Tabulation-->

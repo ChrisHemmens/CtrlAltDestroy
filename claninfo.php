@@ -22,17 +22,26 @@
 <body>
 <div id="menu">
 	<ul>
-		<li><a href="/coc/index.php" title="Home">Home</a></li>
-		<li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
-		<li><a href="/coc/stats.php" title="Stats">Stats</a></li>
-		<li><a href="/coc/vergelijk.php" title="Compare">Vergelijk spelers</a></li>
-		<li><a href="/coc/tool.php" title="Tool">Tool</a><li>
-	</ul>
+    <li><a href="/coc/index.php" title="Home">Home</a></li>
+      <li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
+      <li><a href="/coc/walloffame.php" title="Chat">Wall of fame</a><li>
+      <li><a href="/coc/stats.php" title="Stats">Stats</a></li>
+      <li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+  </ul>
 </div>
 </br></br></br>
 <H2>Is er een warsysteem?</H2>
+<p> Ja, we hebben 2 soorten wars: </br></br>
+  <b>1. RecruitWar</b> </br>
+      Vrijdagavond starten we een recruitWar. We geven nieuwe leden in deze war een kans om zich te bewijzen, ook zullen leden die een 2de kans krijgen hier aan meedoen.</br></br>
+  <b>2. Doordeweekse wars</b> </br>
+      Op maandag- en woensdag avond starten we de echte wars. Hier kom je alleen voor in aanmerking 
+      als je positief opval tijdens de recuitwar of al eerder (met positief resultaat) heb meegedaan aan een echte war.
+</p>
+</br>
+<H2>Is er een warstrategie?</H2>
 <p>
-    Ja, onze clan heeft een warsysteem.
+    Ja, onze clan heeft een warstrategie.
     <br/>
     Het zou alleen niet zo slim zijn om dat hier neer te zetten aangezien de tegenstanders onze site ook zullen vinden.
     <br/>
@@ -56,7 +65,7 @@
 </br>
 <H2>Hoe verdien ik Co?</H2>
 <p>Co is niet te verdienen. We hebben slechte (en ook goede) ervaringen gehad met Co’s die vervolgens besluiten om een hele clan te kicken. 
-<br>Om de stabiliteit te van onze clan te waarborgen hebben we 3 (Co-)Leiders en daar houden we het bij.  </p>
+<br>Om de stabiliteit te van onze clan te waarborgen hebben we 4 (Co-)Leiders en daar houden we het bij.  </p>
 </br>
 <H2>Gebruikt de clan een Chatapp?</H2>
 <p>Als chatapp gebruiken we BAND. Zoek in de app naar de BAND(groep) die ‘CtrlAltDestroy’ heet, dat zijn wij namelijk. </br>Laat het ook in de clanchat even weten als je onze groep ga joinen, zo weten wij zeker dat jij het bent!
