@@ -71,7 +71,7 @@ else {
 	echo "Gewonnen oorlogen: " . $jsonArray['warWins'] . "<br />";
 	echo "Aantal leden: " . $jsonArray['members'] . "<br />";
 	echo "Uitleg: " . $jsonArray['description'] . "<br />";
-	echo "Lokatie: " . $jsonArray['location']['name'] . "<br />";
+	echo "Lokatie:  Nederland <br />";
 
 include("functions.php");
 

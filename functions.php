@@ -1,4 +1,105 @@
 <?php
+function stats($jsonArray) {
+	?>  
+	<div>
+	<font size="4">
+	<?php
+	$totalDonated = 0;
+	$totalReceived = 0;
+	$loyaal = 0;
+	$ietsMinderLoyaal = 0;
+	$gelijk = 0;
+	$totalExp = 0;
+	$totalTrophies = 0;
+
+	for($i = 0; $i < $jsonArray['members']; $i++) {
+		$aantalMembers = $jsonArray['members'];
+		$donated = $jsonArray['memberList'][$i]['donations'];
+		$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
+		$expLvl =  $jsonArray['memberList'][$i]['expLevel'];
+		$trophies =  $jsonArray['memberList'][$i]['trophies'];
+
+		
+		if ($donationsReceived > $donated){
+			$ietsMinderLoyaal += 1;
+		}
+		if ($donationsReceived < $donated){
+			$loyaal += 1;
+		}
+		if ($donationsReceived == $donated){
+			$gelijk +=1;
+		}
+
+		$totalDonated += $donated;
+		$totalReceived += $donationsReceived;
+		$totalExp += $expLvl;
+		$totalTrophies += $trophies;
+
+
+}
+
+
+$ratio = ($totalReceived == 0 ? 0 : $totalDonated/$totalReceived);
+
+echo "In deze periode zijn tot nu toe " . $totalDonated . " troepen gedoneerd door " . $aantalMembers . " leden." . "<html> </br> </html>";
+echo "Deze " . $aantalMembers. " leden hebben in totaal " . $totalReceived . " troepen ontvangen." . "<html> </br> </html>";
+echo "Het ratio van de clan is " . number_format((float)$ratio, 2, '.', '') . ", dit komt doordat we ";
+
+if ($totalReceived > $totalDonated){
+	echo ($totalReceived - $totalDonated) . " troepen meer hebben ontvangen dan gegeven. (waarschijnlijk is munstermanos langsgeweest)";
+}
+if ($totalReceived < $totalDonated){
+	echo ($totalDonated - $totalReceived) . " troepen meer hebben gegeven dan ontvangen. (waarschijnlijk hebben we een paar slechte donators gekicked)";
+}
+if ($totalReceived == $totalDonated){
+	echo " precies evenveel troepen hebben ontvangen als gegeven.";
+}
+
+echo "<html> </br> </br> </html>";
+
+if ($loyaal > 1){
+	echo $loyaal . " leden hebben meer troepen gegeven dan ontvangen.";
+}
+if ($loyaal == 0){
+	echo "Op dit moment heeft (nog) niemand meer troepen gegeven dan ontvangen.";
+}
+if ($loyaal == 1){
+	echo $loyaal . " lid heeft meer troepen gegeven dan ontvangen.";
+} 
+
+echo "<html> </br> </html>";
+
+if ($ietsMinderLoyaal > 1){
+	echo $ietsMinderLoyaal . " leden hebben meer troepen ontvangen dan gegeven.";
+}
+if ($ietsMinderLoyaal == 0){
+	echo "Op dit moment heeft (nog) niemand meer troepen ontvangen dan gegeven.";
+}
+if ($ietsMinderLoyaal == 1){
+	echo $ietsMinderLoyaal . " lid heeft meer troepen ontvangen dan gegeven.";
+}
+
+echo "<html> </br> </html>";
+
+if ($gelijk > 1){
+	echo $gelijk . " leden hebben evenveel troepen gegeven als ontvangen."; 
+}
+if ($gelijk == 0){
+	echo "Op dit moment heeft niemand evenveel troepen gegeven als ontvangen.";
+}
+if ($gelijk == 1){
+	echo $gelijk . " lid heeft evenveel troepen gegeven als ontvangen.";
+}
+echo "<html> </br> </br> </html>";
+echo "Samen hebben we " . $totalTrophies . " trophies en " . $totalExp . " experience, dat is gemiddeld " . number_format((int)($totalTrophies / $aantalMembers)) . " tophies en " . number_format((int)($totalExp / $aantalMembers)) . " experience per lid.";
+echo "<html> </br></br> </html>";;
+?>
+</font>
+</div>
+<?php
+}
+?>
+<?php
 function membersList($jsonArray) {
 	?>
 	<div id="log">
@@ -579,7 +680,7 @@ function DonMemberCount($jsonArray) {{
 		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
 		$rol = $jsonArray['memberList'][$i]['role'];
 		
-		if ($rol == 'member'){
+		if (($rol == 'member') and ($name != 'munstermanos')){  //munster had al oudste, overgedragen aan zeldenrust
 		if ($donated > $DonMemberAantal5) $positie = 5;
 		if ($donated > $DonMemberAantal4) $positie = 4;
 		if ($donated > $DonMemberAantal3) $positie = 3;

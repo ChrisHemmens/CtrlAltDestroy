@@ -29,7 +29,7 @@
       <li><a href="/coc/tool.php" title="Tool">Tool</a><li>
   </ul>
 </div>
-</br></br></br>
+</br></br>
 <?php
 include("functions.php");
 
@@ -65,6 +65,7 @@ echo "&nbsp;";
 	requestCount($jsonArray);
 	DonMemberCount($jsonArray);
 	FakeEmptyTable(); //Empty table to fix the 'created by' not in correct place bug
+  stats($jsonArray);
 }
 ?>
 	</div> 
