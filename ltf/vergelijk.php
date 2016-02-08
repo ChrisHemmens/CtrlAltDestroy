@@ -1,13 +1,13 @@
 <html>
 <head>
-    <title>CtrlAltDestroy</title>
-	<meta charset="utf-8"  />
+    <title>CtrlAltDestroy - Vergelijk</title>
+	<meta charset="utf-8" />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
-			  
-    <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
-	
+			  
+ <!--   <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>  -->         
+ 
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,12 +30,16 @@
     	<li><a href="tool.php" title="Tool">Tool</a><li>
 	</ul>
 </div>
+</br></br></br>
 
-</br></br></br></br>
-
+	<div>
 <?php
+//php expert shizzle van Rizzle
+include("functions.php");
+
 //Connect to the dataProvider
 include 'topSecretShizzle.php';
+
 $opts = array(
   'http'=>array(
     'method'=>"GET",
@@ -50,42 +54,63 @@ $url = $url . '/' . rawurlencode($tag);
 $contents = file_get_contents($url, null, stream_context_create($opts));
 $jsonArray = json_decode($contents, true);
 
+
 if(!$contents) {
 	echo "Shit is kapot G";
-		?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
+	?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
 }
-else { 
-?>
-	<div id="Logo">
-<?php
-	echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "'><br />";
-?>
-	</div>
+else {  ?>
 
-	<br /><br /><br /><br /><br /></br></br></br>
+
+	
+<form action="VergelijkDezeShizzleG">
+<select name="Naam" multiple>
 
 
 <?php
-	echo "Clan: " . $jsonArray['name'] . "<br />";
-	echo "Clan level: " . $jsonArray['clanLevel'] . "<br />";
-	echo "Gewonnen oorlogen: " . $jsonArray['warWins'] . "<br />";
-	echo "Aantal leden: " . $jsonArray['members'] . "<br />";
-	echo "Uitleg: " . $jsonArray['description'] . "<br />";
 
-	if ($jsonArray['location']['name'] == 'Netherlands'){
-		echo "Lokatie: Nederland <br />";
-	} else {
-		echo "Lokatie: " . $jsonArray['location']['name'] . "<br />";
+	for($i = 0; $i < $jsonArray['members']; $i++) {
+		$rank = $jsonArray['memberList'][$i]['clanRank'];
+		$name = $jsonArray['memberList'][$i]['name'];
+		//Role translaten naar Nederlands
+		$rol = $jsonArray['memberList'][$i]['role'];
+		switch($rol) {
+							case 'leader':
+								$rol = 'Leider';
+							break;
+							
+							case 'member':
+								$rol = 'Lid';
+							break;
+							
+							case 'admin':
+								$rol = 'Oudste';
+							break;
+							
+							case 'coLeader':
+								$rol = 'CoLeider';
+							break;
+							
+							default:
+								$rol = 'Onbekende shizzle';
+							break;
+		}
+		
+		?>
+
+  <option value='<?echo $name;?>'><?echo $rank . " " . $name . " " . $rol;?></option>
+
+<?php
 	}
-
-include("functions.php");
-
-membersList($jsonArray); 
-} 
+	?>
+</select>
+<input type="submit">
+</form>
+<?php
+}
 ?>
-
+</div>
 
 <P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
-</body>
-
+     </body>
 </html>

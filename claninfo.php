@@ -21,12 +21,12 @@
 
 <body>
 <div id="menu">
-	<ul>
-    <li><a href="/coc/index.php" title="Home">Home</a></li>
-      <li><a href="/coc/claninfo.php" title="Chat">Claninfo</a><li>
-      <li><a href="/coc/walloffame.php" title="Chat">Wall of fame</a><li>
-      <li><a href="/coc/stats.php" title="Stats">Stats</a></li>
-      <li><a href="/coc/tool.php" title="Tool">Tool</a><li>
+  <ul>
+    <li><a href="index.php" title="Home">Home</a></li>
+      <li><a href="claninfo.php" title="Chat">Claninfo</a><li>
+      <li><a href="walloffame.php" title="Chat">Wall of fame</a><li>
+      <li><a href="stats.php" title="Stats">Stats</a></li>
+      <li><a href="tool.php" title="Tool">Tool</a><li>
   </ul>
 </div>
 </br></br></br>

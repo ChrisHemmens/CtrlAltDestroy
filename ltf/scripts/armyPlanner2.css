@@ -1,0 +1,395 @@
+#navcontainer ul 
+{ 
+   list-style-type: none; 
+   margin-top: 5px;
+   margin-bottom: 2px;
+   margin-right: 0px;
+   margin-left: 0px;
+   padding: 0;
+}
+
+#navcontainer ul li 
+{ 
+   display: inline; 
+}
+
+#navcontainer ul li a 
+{ 
+   text-decoration: none; 
+   padding: .2em 1em;
+   color: #fff;
+   background-color: #383929;/*#036;*/
+}
+
+#navcontainer ul li a:hover
+{
+   color: #fff;
+   /*background-color: #369;*/
+   background-color: #696D4C;
+}
+#navcontainer a.selected
+{
+   background-color: #696D4C;
+}
+
+.normal, .grid, .gridAlt, .gridSelected, .button, input, select, textarea {
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+input.quantity,input.armyQuantity {
+    text-align: right;
+}
+input.quantity{
+	width:40px;
+}
+input.armyQuantity{
+	width:45px;
+}
+
+input.loot {
+    text-align: right;
+	width:70px;
+}
+
+.gridTd {
+    line-height: 1.35em;
+    border-right: 1px solid gray;
+}
+
+.gridLabel {
+    background: #e0d0b0;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+}
+
+.button {
+	background-color: #D6DFEE;
+	border: 1px solid #333;
+	color: #330033;
+	padding : 0px 5px 0px 5px;
+	margin: 0px 4px 1px 4px;
+	cursor: hand;
+	font-weight: bold;
+	border-color: #90a6bd #333 #333 #90a6bd ;
+	text-align: center;
+}
+
+.lootAvailable {
+	text-align: center;
+	padding-top: 5px;
+	vertical-align: middle;
+	width: 70px;
+}
+
+.lootText {
+    font-weight: bold;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 14px;
+	vertical-align: top;
+	text-align: left;
+	padding-right:4px;
+	width:55px;
+	margin:auto;
+}
+
+.label {
+    font-weight: bold;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+	vertical-align: middle;
+	text-align: right;
+	padding-right:4px;
+	white-space: nowrap;
+}
+
+.radioButtonLabel {
+    font-weight: bold;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.radioButton{
+	padding-right:10px;
+	padding-left: 10px;
+}
+
+.multiRow {
+	vertical-align: top;
+}
+
+.text {
+    font-weight: normal;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+	vertical-align: middle;
+	text-align: center;
+	padding-right:4px;
+	white-space: nowrap;
+	margin:auto;
+}
+
+.dataTable {
+    border: 0px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+	/*width: 100%;*/
+}
+
+.errorTable{
+	padding-bottom: 10px;
+	border: none;
+}
+
+.bottomRow{
+	padding-bottom: 10px;
+}
+
+.section{
+	background-image: url(../images/background.png);
+}
+
+.bannerTable {
+	width: 905px;
+}
+
+.bannerImage {
+	display:block; margin:10px auto;
+}
+
+.sectionHeader {
+	background-image: url(../images/sectionHeader.png);
+	color:white;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    border-bottom: 1px black solid;
+    font-size: 12px;
+	font-weight: bold;
+	padding-left: 0.5em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	width: 905px;
+}
+
+.linksTable {
+    border: 0px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+	width: 905px;
+}
+
+.footer {
+	/*background: #CCCCCC;*/
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 12px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	width: 905px;
+	text-align:center;
+}
+
+.subHeader {
+	/*background: #CCCCCC;*/
+    border-bottom: 1px black solid;
+    font-size: 15px;
+	font-weight: bold;
+	padding-left: 0.5em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	width: 700px;
+}
+
+.evenRow{
+	background: #ebfaf9;
+}
+
+.errorText{
+    font-weight: bold;
+    color: red;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 14px;
+	vertical-align: middle;
+	text-align: center;
+	padding-right:4px;
+	white-space: nowrap;
+	width:60px;
+	margin:auto;
+	display:none;
+}
+
+.divider{
+	padding-top: 5px;
+}
+
+.capacity{
+    font-weight: normal;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+	text-align: right;
+	padding-right:4px;
+	white-space: nowrap;
+	width:60px;
+	margin:auto;
+}
+
+
+.elixir {
+    font-weight: normal;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+	text-align: right;
+	padding-right:4px;
+	white-space: nowrap;
+	margin:auto;
+}
+
+.elixirTotal {
+    font-weight: bold;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 12px;
+	text-align: right;
+	padding-left:2px;
+	padding-right:4px;
+	white-space: nowrap;
+	margin:auto;
+}
+
+
+.capacityTotal{
+    font-weight: bold;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 12px;
+	text-align: right;
+	padding-right:4px;
+	white-space: nowrap;
+	width:60px;
+	margin:auto;
+}
+
+.time {
+    font-weight: normal;
+    font-family: Tahoma, 'MS Sans Serif', sans-serif;
+    font-size: 11px;
+	vertical-align: middle;
+	text-align: center;
+	padding-right:4px;
+	white-space: nowrap;
+	margin:auto;
+}
+
+
+.panes {
+    /*display:none;*/
+    padding:15px 10px;
+    border:1px solid #999;
+    border-top:0;
+    font-size:14px;
+    background-color:#fff;
+
+}
+.tab {
+	padding:none;
+}
+
+.tabHeader, .leftTab, .rightTab, .midTabActive, .midTabInactive {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	vertical-align: middle; 
+	font-family: Tahoma, 'MS Sans Serif', sans-serif;
+	text-align: bottom;
+	height: 23px;
+	display: inline-block;
+	font-weight: bold;
+	font-size:14;
+	cursor: pointer;
+}
+
+.midTabActive  {
+    background: url(../images/middleActive.png);
+	padding-right: 20px;
+}
+
+.midTabInactive  {
+    background: url(../images/middleInactive.png);
+	padding-right: 20px;
+}
+
+
+.heroImageNotBoosted,.heroImageBoosted,.troopSpellImage {
+	z-index: -1;
+}
+
+.heroImageNotBoosted,.heroImageBoosted {
+	height:75px;
+	width:55px;
+}
+.heroImageNotBoosted{
+	padding: 5px;
+}
+
+.heroImageBoosted{
+	border:5px solid #A6F42F;
+}
+.heroMaxBadge {
+	position:absolute;
+	left:5px;
+	bottom:4px;
+	height:28px;
+	width:24px;
+	display:none;
+}
+.heroNonMaxBadge {
+	position:absolute;
+	left:7px;
+	bottom:3px;
+	height:25px;
+	width:22px;
+}
+.heroLevelText {
+	position: absolute;
+	left: 9px;
+	bottom: 7px; 
+	font-size: 12px; 
+	color: white; 
+	font-family: impact sans-serif; 
+	font-weight: bold; 
+	text-shadow: -2px 1px rgb(8, 7, 7);
+	min-width: 16px;
+}
+
+.troopSpellMaxBadge {
+	position:absolute;
+	left:-2px;
+	bottom:-3px;
+	height:25px;
+	width:24px;
+	display:none;
+}
+.troopSpellNonMaxBadge {
+	position:absolute;
+	left:0px;
+	bottom:-2px;
+	height:20px;
+	width:22px;
+}
+.troopSpellLevelText {
+	position: absolute;
+	left: 2px;
+	bottom: 0px; 
+	font-size: 12px; 
+	color: white; 
+	font-family: impact sans-serif; 
+	font-weight: bold; 
+	text-shadow: -2px 1px rgb(8, 7, 7);
+	min-width: 16px;
+}

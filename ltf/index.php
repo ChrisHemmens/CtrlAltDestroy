@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>CtrlAltDestroy</title>
+    <title>Love To Farm</title>
 	<meta charset="utf-8"  />
-	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
+	<link rel="shortcut icon" type="image/jpg" href="/image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
@@ -24,7 +24,6 @@
 <div id="menu">
 	<ul>
 		<li><a href="index.php" title="Home">Home</a></li>
-    	<li><a href="claninfo.php" title="Chat">Claninfo</a><li>
     	<li><a href="walloffame.php" title="Chat">Wall of fame</a><li>
     	<li><a href="stats.php" title="Stats">Stats</a></li>
     	<li><a href="tool.php" title="Tool">Tool</a><li>
@@ -68,15 +67,10 @@ else {
 <?php
 	echo "Clan: " . $jsonArray['name'] . "<br />";
 	echo "Clan level: " . $jsonArray['clanLevel'] . "<br />";
-	echo "Gewonnen oorlogen: " . $jsonArray['warWins'] . "<br />";
-	echo "Aantal leden: " . $jsonArray['members'] . "<br />";
-	echo "Uitleg: " . $jsonArray['description'] . "<br />";
-
-	if ($jsonArray['location']['name'] == 'Netherlands'){
-		echo "Lokatie: Nederland <br />";
-	} else {
-		echo "Lokatie: " . $jsonArray['location']['name'] . "<br />";
-	}
+	echo "War wins: " . $jsonArray['warWins'] . "<br />";
+	echo "Members: " . $jsonArray['members'] . "<br />";
+	echo "Clan description: " . $jsonArray['description'] . "<br />";
+	echo "Location: " . $jsonArray['location']['name'] . "<br />";
 
 include("functions.php");
 

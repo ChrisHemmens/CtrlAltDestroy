@@ -8,7 +8,7 @@ Welke key moet gebruikt worden?
 2 = Rizzle
 */
 
-$clan = 1;
+$clan = 2;
 /*
 Welke clan moet gebruikt worden?
 1 = CtrlAltDestroy

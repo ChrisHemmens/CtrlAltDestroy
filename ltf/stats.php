@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>CtrlAltDestroy - Wall of fame</title>
+    <title>Love To Farm - Stats</title>
 	<meta charset="utf-8"  />
-	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
+	<link rel="shortcut icon" type="image/jpg" href="/image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
@@ -23,13 +23,12 @@
 <div id="menu">
   <ul>
     <li><a href="index.php" title="Home">Home</a></li>
-      <li><a href="claninfo.php" title="Chat">Claninfo</a><li>
       <li><a href="walloffame.php" title="Chat">Wall of fame</a><li>
       <li><a href="stats.php" title="Stats">Stats</a></li>
       <li><a href="tool.php" title="Tool">Tool</a><li>
   </ul>
 </div>
-</br></br></br>
+</br></br>
 <?php
 include("functions.php");
 
@@ -60,11 +59,16 @@ echo "&nbsp;";
 ?>
 	<div id = "log">
 <?php 
-	coLeadersList($jsonArray); 
-	oudsteList($jsonArray);
+	donationCount($jsonArray); 
+	donationRatio($jsonArray);	
+	requestCount($jsonArray);
+	DonMemberCount($jsonArray);
+	FakeEmptyTable(); //Empty table to fix the 'created by' not in correct place bug
+  stats($jsonArray);
 }
 ?>
 	</div> 
- 		<P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
+		 	 <P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
      </body>
+
 </html>

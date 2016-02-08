@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>CtrlAltDestroy - Tool</title>
+    <title>Love To Farm - Tool</title>
 	<meta charset="utf-8"  />
-	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
+	<link rel="shortcut icon" type="image/jpg" href="/image/awhyeah2.jpg">
 	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 			  
     <!-- <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
@@ -33,7 +33,6 @@
 <div id="menu">
    <ul>
       <li><a href="index.php" title="Home">Home</a></li>
-      <li><a href="claninfo.php" title="Chat">Claninfo</a><li>
       <li><a href="walloffame.php" title="Chat">Wall of fame</a><li>
       <li><a href="stats.php" title="Stats">Stats</a></li>
       <li><a href="tool.php" title="Tool">Tool</a><li>
@@ -1465,6 +1464,6 @@
          </tr>
       </table>
    </div>
-   <P> (Deze tool niet helemaal) created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
+   <P> (This tool not entirely) created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
     </body>
 </html>

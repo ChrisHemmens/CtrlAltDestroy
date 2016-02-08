@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>CtrlAltDestroy - Wall of fame</title>
+    <title>Love To Farm - Wall of fame</title>
 	<meta charset="utf-8"  />
-	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
+	<link rel="shortcut icon" type="image/jpg" href="/image/awhyeah2.jpg">
 			  
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
@@ -23,7 +23,6 @@
 <div id="menu">
   <ul>
     <li><a href="index.php" title="Home">Home</a></li>
-      <li><a href="claninfo.php" title="Chat">Claninfo</a><li>
       <li><a href="walloffame.php" title="Chat">Wall of fame</a><li>
       <li><a href="stats.php" title="Stats">Stats</a></li>
       <li><a href="tool.php" title="Tool">Tool</a><li>

@@ -41,57 +41,57 @@ function stats($jsonArray) {
 
 $ratio = ($totalReceived == 0 ? 0 : $totalDonated/$totalReceived);
 
-echo "In deze periode zijn tot nu toe " . $totalDonated . " troepen gedoneerd door " . $aantalMembers . " leden. (gemiddeld " . number_format((int)($totalDonated / $aantalMembers)) .  " per lid) <html> </br> </html>";
-echo "Deze " . $aantalMembers. " leden hebben in totaal " . $totalReceived . " troepen ontvangen. (gemiddeld " . number_format((int)($totalReceived / $aantalMembers)) .  " per lid) <html> </br> </html>";
-echo "Het ratio van de clan is " . number_format((float)$ratio, 2, '.', '') . ", dit komt doordat we ";
+echo "During this period, " . $totalDonated . " troops are donated by " . $aantalMembers . " members. (average of " . number_format((int)($totalDonated / $aantalMembers)) .  " per member) <html> </br> </html>";
+echo "These " . $aantalMembers. " members have received " . $totalReceived . " troops. (average of " . number_format((int)($totalReceived / $aantalMembers)) .  " per member) <html> </br> </html>";
+echo "The clanratio is " . number_format((float)$ratio, 2, '.', '') . " because we ";
 
 if ($totalReceived > $totalDonated){
-	echo ($totalReceived - $totalDonated) . " troepen meer hebben ontvangen dan gegeven. (waarschijnlijk is munstermanos langsgeweest)";
+	echo " received " . ($totalReceived - $totalDonated) . " troops more than we donated.";
 }
 if ($totalReceived < $totalDonated){
-	echo ($totalDonated - $totalReceived) . " troepen meer hebben gegeven dan ontvangen. (waarschijnlijk hebben we een paar slechte donators gekicked)";
+	echo " donated " . ($totalDonated - $totalReceived) . " troops more than we received.";
 }
 if ($totalReceived == $totalDonated){
-	echo " precies evenveel troepen hebben ontvangen als gegeven.";
+	echo " received the same number of troops as we donated.";
 }
 
 echo "<html> </br> </br> </html>";
 
 if ($loyaal > 1){
-	echo $loyaal . " leden hebben meer troepen gegeven dan ontvangen.";
+	echo $loyaal . " members donated more troops than they received.";
 }
 if ($loyaal == 0){
-	echo "Op dit moment heeft (nog) niemand meer troepen gegeven dan ontvangen.";
+	echo "No one donated more than he/she received.";
 }
 if ($loyaal == 1){
-	echo $loyaal . " lid heeft meer troepen gegeven dan ontvangen.";
+	echo $loyaal . " member donated more troops than he/she received.";
 } 
 
 echo "<html> </br> </html>";
 
 if ($ietsMinderLoyaal > 1){
-	echo $ietsMinderLoyaal . " leden hebben meer troepen ontvangen dan gegeven.";
+	echo $ietsMinderLoyaal . " members received more troops than they donated.";
 }
 if ($ietsMinderLoyaal == 0){
-	echo "Op dit moment heeft (nog) niemand meer troepen ontvangen dan gegeven.";
+	echo "No one received more than he/she donated.";
 }
 if ($ietsMinderLoyaal == 1){
-	echo $ietsMinderLoyaal . " lid heeft meer troepen ontvangen dan gegeven.";
+	echo $ietsMinderLoyaal . " member received more troops than he/she donated.";
 }
 
 echo "<html> </br> </html>";
 
 if ($gelijk > 1){
-	echo $gelijk . " leden hebben evenveel troepen gegeven als ontvangen."; 
+	echo $gelijk . " members donated as much as he/she received."; 
 }
 if ($gelijk == 0){
-	echo "Op dit moment heeft niemand evenveel troepen gegeven als ontvangen.";
+	echo "No one as much as he/she received.";
 }
 if ($gelijk == 1){
-	echo $gelijk . " lid heeft evenveel troepen gegeven als ontvangen.";
+	echo $gelijk . " member donated as much as he/she received.";
 }
 echo "<html> </br> </br> </html>";
-echo "Samen hebben we " . $totalTrophies . " trophies en " . $totalExp . " experience, dat is gemiddeld " . number_format((int)($totalTrophies / $aantalMembers)) . " trophies en " . number_format((int)($totalExp / $aantalMembers)) . " experience per lid.";
+echo "Together we got " . $totalTrophies . " trophies and " . $totalExp . " experience, that's an average of " . number_format((int)($totalTrophies / $aantalMembers)) . " trophies and " . number_format((int)($totalExp / $aantalMembers)) . " experience per member.";
 echo "<html> </br></br> </html>";;
 ?>
 </font>
@@ -105,14 +105,14 @@ function membersList($jsonArray) {
 	<div id="log">
 	<table cellspacing="0" cellpadding="0">
 	  <tr>
-		<th><b>Rank</b></th>
+		<th><b>Position</b></th>
 		<th><b>League</b></th>
-		<th><b>Naam</b></th>
-		<th><b>Rol</b></th> 
+		<th><b>Name</b></th>
+		<th><b>Role</b></th> 
 		<th><b>Level</b></th>
 		<th><b>Trophies</b></th>
-		<th><b>Donaties</b></th>
-		<th><b>Ontvangen</b></th>
+		<th><b>Donated</b></th>
+		<th><b>Received</b></th>
 		<th><b>Ratio</b></th>
 	  </tr>
 	  </div>
@@ -130,19 +130,19 @@ function membersList($jsonArray) {
 		$rol = $jsonArray['memberList'][$i]['role'];
 		switch($rol) {
 							case 'leader':
-								$rol = 'Leider';
+								$rol = 'Leader';
 							break;
 							
 							case 'member':
-								$rol = 'Lid';
+								$rol = 'Member';
 							break;
 							
 							case 'admin':
-								$rol = 'Oudste';
+								$rol = 'Elder';
 							break;
 							
 							case 'coLeader':
-								$rol = 'CoLeider';
+								$rol = 'CoLeader';
 							break;
 							
 							default:
@@ -175,11 +175,11 @@ function coLeadersList($jsonArray) {
 	?>
 	<div id="log">
 	<table cellspacing="0" cellpadding="0">
-		<?php echo "<h2>De superieure leiders: </h2>";  ?>
+		<?php echo "<h2>The superior leaders: </h2>";  ?>
 	  <tr>
 		<th><b>League</b></th>
-		<th><b>Naam</b></th>
-		<th><b>Rol</b></th> 
+		<th><b>Name</b></th>
+		<th><b>Role</b></th> 
 	  </tr>
 	  </div>
 	  
@@ -192,19 +192,19 @@ function coLeadersList($jsonArray) {
 		$rol = $jsonArray['memberList'][$i]['role'];
 		switch($rol) {
 							case 'leader':
-								$rol = 'Leider';
+								$rol = 'Leader';
 							break;
 							
 							case 'member':
-								$rol = 'Lid';
+								$rol = 'Member';
 							break;
 							
 							case 'admin':
-								$rol = 'Oudste';
+								$rol = 'Elder';
 							break;
 							
 							case 'coLeader':
-								$rol = 'CoLeider';
+								$rol = 'CoLeader';
 							break;
 							
 							default:
@@ -212,7 +212,7 @@ function coLeadersList($jsonArray) {
 							break;
 		}
 
-if ($rol == 'Leider'){
+if ($rol == 'Leader'){
 		echo "<tr>";					
 			echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
 			echo "<td>" . $name . "</td>"; 
@@ -227,27 +227,26 @@ if ($rol == 'Leider'){
 		$rol = $jsonArray['memberList'][$i]['role'];
 		switch($rol) {
 							case 'leader':
-								$rol = 'Leider';
+								$rol = 'Leader';
 							break;
 							
 							case 'member':
-								$rol = 'Lid';
+								$rol = 'Member';
 							break;
 							
 							case 'admin':
-								$rol = 'Oudste';
+								$rol = 'Elder';
 							break;
 							
 							case 'coLeader':
-								$rol = 'CoLeider';
+								$rol = 'CoLeader';
 							break;
 							
 							default:
 								$rol = 'Onbekende shizzle';
 							break;
 		}
-
-if ($rol == 'CoLeider'){
+if ($rol == 'CoLeader'){
 		echo "<tr>";					
 			echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
 			echo "<td>" . $name . "</td>"; 
@@ -266,11 +265,11 @@ function oudsteList($jsonArray) {
 	?>
 	<div id="log">
 	<table cellspacing="0" cellpadding="0">
-		<?php echo "<h2>De big bosses: </h2>";  ?>
+		<?php echo "<h2>The big bosses: </h2>";  ?>
 	  <tr>
 		<th><b>League</b></th>
-		<th><b>Naam</b></th>
-		<th><b>Rol</b></th> 
+		<th><b>Name</b></th>
+		<th><b>Role</b></th> 
 	  </tr>
 	  </div>
 	  
@@ -283,19 +282,19 @@ function oudsteList($jsonArray) {
 		$rol = $jsonArray['memberList'][$i]['role'];
 		switch($rol) {
 							case 'leader':
-								$rol = 'Leider';
+								$rol = 'Leader';
 							break;
 							
 							case 'member':
-								$rol = 'Lid';
+								$rol = 'Member';
 							break;
 							
 							case 'admin':
-								$rol = 'Oudste';
+								$rol = 'Elder';
 							break;
 							
 							case 'coLeader':
-								$rol = 'CoLeider';
+								$rol = 'CoLeader';
 							break;
 							
 							default:
@@ -303,7 +302,7 @@ function oudsteList($jsonArray) {
 							break;
 		}
 
-if ($rol == 'Oudste'){
+if ($rol == 'Elder'){
 		echo "<tr>";					
 			echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
 			echo "<td>" . $name . "</td>"; 
@@ -398,10 +397,10 @@ function donationRatio($jsonArray) {{
 ?>
 <div id="log">
 <table cellspacing="0" cellpadding="0">
-<?php 	echo "<h2>Beste ratio</h2>"; ?> 
+<?php 	echo "<h2>Best ratio</h2>"; ?> 
   <tr>
     <th><b>Rank</b></th>
-	<th><b>Naam</b></th>
+	<th><b>Name</b></th>
     <th><b>Ratio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></th> 
 	</tr>
 	<tr>
@@ -509,11 +508,11 @@ function donationCount($jsonArray) {{
 ?>
 <div id="log">
 <table cellspacing="0" cellpadding="0" width="50%">
-<?php echo "<h2>Meeste troepen gedoneerd</h2>";  ?>
+<?php echo "<h2>Most troops donated</h2>";  ?>
   <tr>
     <th><b>Rank</b></th>
-	<th><b>Naam</b></th>
-    <th><b>Gedoneerd</b></th> 
+	<th><b>Name</b></th>
+    <th><b>Donated</b></th> 
 	</tr>
 	<tr>
 	<td><b>1</b></td>
@@ -620,11 +619,11 @@ function requestCount($jsonArray) {{
 ?>
 <div id="log">
 <table cellspacing="0" cellpadding="0" width="50%">
-<?php echo "<h2>Meeste troepen ontvangen</h2>";  ?>
+<?php echo "<h2>Most troops received</h2>";  ?>
   <tr>
     <th><b>Rank</b></th>
-	<th><b>Naam</b></th>
-    <th><b>Ontvangen &nbsp;</b></th> 
+	<th><b>Name</b></th>
+    <th><b>Received &nbsp;</b></th> 
 	</tr>
 	<tr>
 	<td><b>1</b></td>
@@ -680,7 +679,7 @@ function DonMemberCount($jsonArray) {{
 		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
 		$rol = $jsonArray['memberList'][$i]['role'];
 		
-		if (($rol == 'member') and ($name != 'munstermanos')){  //munster had al oudste, overgedragen aan zeldenrust
+		if ($rol == 'member'){  
 		if ($donated > $DonMemberAantal5) $positie = 5;
 		if ($donated > $DonMemberAantal4) $positie = 4;
 		if ($donated > $DonMemberAantal3) $positie = 3;
@@ -755,11 +754,11 @@ function DonMemberCount($jsonArray) {{
 ?>
 <div id="log">
 <table cellspacing="0" cellpadding="0" width="50%">
-<?php echo "<h2>Kanshebbers oudste</h2>";  ?>
+<?php echo "<h2>Possible next elder list</h2>";  ?>
   <tr>
     <th><b>Rank</b></th>
-	<th><b>Naam</b></th>
-    <th><b>Gedoneerd</b></th> 
+	<th><b>Name</b></th>
+    <th><b>Donated</b></th> 
 	<th><b>Ratio</b></th> 
 	</tr>
 	<tr>
