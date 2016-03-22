@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>CtrlAltDestroy - Nieuwe api</title>
+    <title>CtrlAltDestroy - Api</title>
   <meta charset="utf-8"  />
   <meta http-equiv="Cache-Control" content="no-store" />
   <link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
