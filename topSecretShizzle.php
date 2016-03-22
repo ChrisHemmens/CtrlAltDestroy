@@ -12,7 +12,7 @@ $clan = 1;
 /*
 Welke clan moet gebruikt worden?
 1 = CtrlAltDestroy
-2 = Love To Farm
+2 = NULL
 */
 
 if ($wieZnKey == 1){
@@ -28,7 +28,7 @@ $tag = '#2CRCJU2V'; //CtrlAltDestroy
 }
 
 if ($clan == 2){
-$tag = '#2CP0PPR0'; //Love To Farm
+$tag = ''; //NULL
 }
 
 $url = 'https://api.clashofclans.com/v1/clans';
