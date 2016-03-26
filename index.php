@@ -69,6 +69,7 @@ else {
 	echo "Clan: " . $jsonArray['name'] . "<br />";
 	echo "Clan level: " . $jsonArray['clanLevel'] . "<br />";
 	echo "Gewonnen oorlogen: " . $jsonArray['warWins'] . "<br />";
+	echo "Zegereeks oorlogen: " . $jsonArray['warWinStreak'] . "<br />";
 	echo "Aantal leden: " . $jsonArray['members'] . "<br />";
 	echo "Uitleg: " . $jsonArray['description'] . "<br />";
 
