@@ -61,7 +61,7 @@
 <p>Farmen is oké, pushen ook. Waar het om gaat is dat je actief doneert en regelmatig wilt participeren in de war.</p>
 </br>
 <H2>Hoe verdien ik oudste?</H2>
-<p>Iedere 14e en 28e dag van de maand promoveren we de persoon met de meeste donaties – die op dat moment nog geen oudste is – tot oudste.</p>
+<p>Iedere 28e dag van de maand promoveren we de persoon met de meeste donaties – die op dat moment nog geen oudste is – tot oudste. </br> Op de 'Stats' pagina kan je zien wie op dit moment het meeste kans maakt op oudste.</p>
 </br>
 <H2>Hoe verdien ik Co?</H2>
 <p>Co is niet te verdienen. We hebben slechte (en ook goede) ervaringen gehad met Co’s die vervolgens besluiten om een hele clan te kicken. 

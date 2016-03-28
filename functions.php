@@ -46,10 +46,10 @@ echo "Deze " . $aantalMembers. " leden hebben in totaal " . $totalReceived . " t
 echo "Het ratio van de clan is " . number_format((float)$ratio, 2, '.', '') . ", dit komt doordat we ";
 
 if ($totalReceived > $totalDonated){
-	echo ($totalReceived - $totalDonated) . " troepen meer hebben ontvangen dan gegeven. (waarschijnlijk is munstermanos langsgeweest)";
+	echo ($totalReceived - $totalDonated) . " troepen meer hebben ontvangen dan gegeven.";
 }
 if ($totalReceived < $totalDonated){
-	echo ($totalDonated - $totalReceived) . " troepen meer hebben gegeven dan ontvangen. (waarschijnlijk hebben we een paar slechte donators gekicked)";
+	echo ($totalDonated - $totalReceived) . " troepen meer hebben gegeven dan ontvangen.";
 }
 if ($totalReceived == $totalDonated){
 	echo " precies evenveel troepen hebben ontvangen als gegeven.";
