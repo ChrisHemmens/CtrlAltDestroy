@@ -67,11 +67,23 @@ else {
 
 <?php
 	echo "Clan: " . $jsonArray['name'] . "<br />";
-	echo "Clan level: " . $jsonArray['clanLevel'] . "<br />";
+	echo "Opgericht: 14-11-2015 <br /> Dagen sinds oprichting: ";
+	$now = time(); // or your date as well
+     $your_date = strtotime("2015-11-14"); //Datum opgericht
+     $datediff = $now - $your_date;
+     echo floor($datediff/(60*60*24));
+     echo "</br> Oftewel: ";
+     $date1 = new DateTime("2015-11-14");
+	$date2 = new DateTime();
+	$diff = $date1->diff($date2);
+	echo $diff->y . " jaren, " . $diff->m." maanden, ".$diff->d." dagen ";
+
+	echo "</br> Clan level: " . $jsonArray['clanLevel'] . "<br />";
 	echo "Gewonnen oorlogen: " . $jsonArray['warWins'] . "<br />";
 	echo "Zegereeks oorlogen: " . $jsonArray['warWinStreak'] . "<br />";
 	echo "Aantal leden: " . $jsonArray['members'] . "<br />";
 	echo "Uitleg: " . $jsonArray['description'] . "<br />";
+
 
 	if ($jsonArray['location']['name'] == 'Netherlands'){
 		echo "Lokatie: Nederland <br />";
