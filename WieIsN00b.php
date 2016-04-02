@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>CtrlAltDestroy - Vergelijk spelers</title>
+    <title>CtrlAltDestroy - Vergelijk spelers, resultaat</title>
 	<meta charset="utf-8" />
 	<link rel="shortcut icon" type="image/jpg" href="image/awhyeah2.jpg">
 	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
@@ -32,6 +32,34 @@
 </div>
 </br></br></br>
 
+<?php
+
+	// The value of the variable name is found
+
+foreach ($_GET['Tag'] as $value)
+{
+    $name[$i] = $value; 
+    $i++;
+}
+
+echo "In totaal heb je " . sizeof($name) . " namen gekozen.</br>" ;
+
+if (sizeof($name) < 2){
+	echo "We hebben minimaal 2 namen nodig om te vergelijken";
+}
+
+if (sizeof($name) > 6){
+	echo "Je kunt maximaal 5 clashers selecteren om te vergelijken. </br> Voor statistieken en ranglijsten van de gehele clan kan je terecht op de Stats pagina </br>";
+}
+
+if (sizeof($name)>1 && sizeof($name) <6) {
+echo "Je koos voor: "; 
+echo $name[1];
+}
+	?>
+
+
+
 	<div>
 <?php
 //php expert shizzle
@@ -60,11 +88,6 @@ if(!$contents) {
 	?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
 }
 else {  ?>
-
-
-	
-<form action="WieIsN00b.php">
-<select name="Tag[]" multiple>
 
 
 <?php
@@ -99,14 +122,10 @@ else {  ?>
 		
 		?>
 
-  <option value='<?echo $playerTag;?>'><?echo $rank . " " . $name . " " . $rol . " " . $playerTag;?></option>
 
 <?php
 	}
 	?>
-</select>
-<input type="submit">
-</form>
 <?php
 }
 ?>
