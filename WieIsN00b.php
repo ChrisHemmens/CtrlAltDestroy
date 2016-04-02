@@ -34,32 +34,32 @@
 
 <?php
 
-	// The value of the variable name is found
-
 foreach ($_GET['Tag'] as $value)
 {
     $name[$i] = $value; 
     $i++;
 }
 
-echo "In totaal heb je " . sizeof($name) . " namen gekozen.</br>" ;
+$aantalTags = sizeof($name);
+echo "In totaal heb je " . $aantalTags . " namen gekozen.</br>" ;
 
-if (sizeof($name) < 2){
+if ($aantalTags < 2){
 	echo "We hebben minimaal 2 namen nodig om te vergelijken";
 }
 
-if (sizeof($name) > 6){
+if ($aantalTags > 6){
 	echo "Je kunt maximaal 5 clashers selecteren om te vergelijken. </br> Voor statistieken en ranglijsten van de gehele clan kan je terecht op de Stats pagina </br>";
 }
 
-if (sizeof($name)>1 && sizeof($name) <6) {
-echo "Je koos voor: "; 
-echo $name[1];
-}
-	?>
+if ($aantalTags>1 && $aantalTags <6) {
+echo "TUSSEN 2 EN 5 DUS GOED, NU TEST: "; 
 
+for ($i=0; $i < ($aantalTags) ; $i++) { 
+ 	echo $name[$i] . ", </br>";
+ } 
 
-
+ 	
+?>
 	<div>
 <?php
 //php expert shizzle
@@ -127,7 +127,7 @@ else {  ?>
 	}
 	?>
 <?php
-}
+}}
 ?>
 </div>
 
