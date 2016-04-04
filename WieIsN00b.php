@@ -36,8 +36,11 @@
 
 foreach ($_GET['Tag'] as $value)
 {
+	$i++;
     $name[$i] = $value; 
-    $i++;
+    echo $value .  " komt op plek " . $i . "</br>";
+
+ 
 }
 
 $aantalTags = sizeof($name);
@@ -52,10 +55,11 @@ if ($aantalTags > 6){
 }
 
 if ($aantalTags>1 && $aantalTags <6) {
-echo "TUSSEN 2 EN 5 DUS GOED, NU TEST: "; 
+echo "TUSSEN 2 EN 5 DUS GOED, NU TEST: </br>"; 
 
-for ($i=0; $i < ($aantalTags) ; $i++) { 
- 	echo $name[$i] . ", </br>";
+for ($i=1; $i <= ($aantalTags) ; $i++) { 
+ 	//echo $name[$i] . ", </br>";
+ 	echo $name[$i] ." zit op plek " . $i . "</br>";
  } 
 
  	
