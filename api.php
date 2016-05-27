@@ -47,6 +47,25 @@ print '<pre>';
 print_r($response);
 print '</pre>';
 ?>
+$opts = array(
+  'http'=>array(
+    'method'=>"GET",
+    'header'=>array(
+                "Accept: application/json",
+                "Authorization: Bearer " . $api_key
+        )
+  )
+);
+<?php
+$url = 'https://api.clashofclans.com/v1/clans';
+$url = $url . '/' . rawurlencode($tag).'/warlog';
+
+$result = file_get_contents($url, null, stream_context_create($opts));
+$response = json_decode($result,true);
+print '<pre>';
+print_r($response);
+print '</pre>';
+?>
 
        <P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
      </body>

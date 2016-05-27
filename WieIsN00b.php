@@ -50,7 +50,7 @@ if ($aantalTags < 2){
 	echo "We hebben minimaal 2 namen nodig om te vergelijken";
 }
 
-if ($aantalTags > 6){
+if ($aantalTags > 5){
 	echo "Je kunt maximaal 5 clashers selecteren om te vergelijken. </br> Voor statistieken en ranglijsten van de gehele clan kan je terecht op de Stats pagina </br>";
 }
 
