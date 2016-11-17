@@ -26,7 +26,7 @@
       <li><a href="claninfo.php" title="Chat">Claninfo</a><li>
       <li><a href="walloffame.php" title="Chat">Wall of fame</a><li>
       <li><a href="stats.php" title="Stats">Stats</a></li>
-      <li><a href="tool.php" title="Tool">Tool</a><li>
+ <!-- <li><a href="tool.php" title="Tool">Tool</a><li> -->
   </ul>
 </div>
 </br></br></br>
@@ -41,11 +41,10 @@
 </br>
 <H2>Is er een warstrategie?</H2>
 <p>
-    Ja, onze clan heeft een warstrategie.
+    Ja, onze clan heeft een warstrategie, maar deze zetten we natuurlijk niet online.
     <br/>
-    Het zou alleen niet zo slim zijn om dat hier neer te zetten aangezien de tegenstanders onze site ook zullen vinden.
-    <br/>
-    Regelmatig zullen we een clanmail sturen met daarin onze strategie, ook kan je het altijd vragen in onze BAND (meer info onderop deze pagina) of in de clanchat!
+    Onze strategie zal besproken worden via BAND (meer info onderop deze pagina) en in de clanchat. 
+    Vaak zal TaiLong of Paul hierover beginnen, ook kan je het natuurlijk altijd zelf vragen via BAND of in de clanchat!
 </p>
 </br>
 <H2>Mag ik altijd alles doneren wat ik wil?</H2>
@@ -54,7 +53,7 @@
     <br/>
     In war hebben we andere regels:
     <br/>
-    Als je van plan bent om een warattack te doen, dan kan je iedere gewenste troop – vaak nog highlvl ook – krijgen.
+    Als je van plan bent om een warattack te doen, dan kan je iedere gewenste troop – vaak zelfs maxlvl – krijgen.
 </p>
 </br>
 <H2>Is farmen oké?</H2>

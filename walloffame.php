@@ -26,7 +26,7 @@
       <li><a href="claninfo.php" title="Chat">Claninfo</a><li>
       <li><a href="walloffame.php" title="Chat">Wall of fame</a><li>
       <li><a href="stats.php" title="Stats">Stats</a></li>
-      <li><a href="tool.php" title="Tool">Tool</a><li>
+ <!-- <li><a href="tool.php" title="Tool">Tool</a><li> -->
   </ul>
 </div>
 </br></br></br>
