@@ -7,7 +7,6 @@
     <link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="DitIsStyle.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
-	
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -56,13 +55,16 @@ if(!$contents) {
 }
 else { 
 ?>
-	<div id="Logo">
+<!--	<div id="Logo">   UITCOMMENTEN VAN OUDE LOGO
 <?php
 	echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "'><br />";
 ?>
-	</div>
+</div>
+-->
 
-	<br /><br /><br /><br /><br /></br></br></br>
+
+<img src="https://www.clashofstats.com/signatures/2CRCJU2V?lng=en&color=blue&size=large"/>
+	</br></br>
 
 
 <?php
@@ -73,8 +75,8 @@ else {
      $datediff = $now - $your_date;
      echo floor($datediff/(60*60*24));
      echo "</br> Oftewel: ";
-     $date1 = new DateTime("2015-11-14");
-	$date2 = new DateTime();
+    $date1 = new DateTime("2015-11-14");
+    $date2 = new DateTime();
 	$diff = $date1->diff($date2);
 	echo $diff->y . " jaren, " . $diff->m." maanden, ".$diff->d." dagen ";
 
