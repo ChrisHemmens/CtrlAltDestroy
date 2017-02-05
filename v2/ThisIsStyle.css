@@ -1,0 +1,35 @@
+body {
+    background-image: url("images/awhyeah.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size:100% auto;
+    background-repeat: repeat-y;
+}
+
+
+
+.container {
+    /*width: 780px;*/
+    background: #FFF;
+    margin: 0 auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px; 
+    border: 10px solid MidnightBlue;
+    border-left-color: #f4f442;
+    border-right-color: #f4f442;
+}
+
+.imgtextblok-left {
+  text-align: left;
+}
+.imgtextblok-right {
+  text-align: right;
+}
+.spacer { margin:0; padding:0; height:50px; }
+
+.form {
+    display: inline-block;
+    text-align: center;
+}
