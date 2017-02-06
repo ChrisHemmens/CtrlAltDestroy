@@ -74,12 +74,13 @@
         </div>    
       </div>
 
+      <div class="spacer"></div>
+      <img src="/v2/Images/ctrlaltdestroy.png" class="img-responsive" alt="ctrlaltdestroyLogo" width="100%"> 
+      
       <div class="spacer"></div> 
       <div class="container">
         <img src="https://www.clashofstats.com/signatures/2CRCJU2V?lng=en&color=blue&size=large" width="100%"/>
       </div>
-
-
 
       <div class="spacer"></div> 
       <div class="container">
@@ -124,16 +125,29 @@
 ?>
 
 
+
+<div class="spacer"></div>
+<div class="container">
+
+</div>
+<div class="spacer"></div>
+<div class="container">
+
+</div>
+<div class="spacer"></div>
+<div class="container">
+
+</div>
+<div class="spacer"></div>
+<div class="container">
+
+</div>
 <div class="spacer"></div>
 <div class="container">
 
 </div>
 <div class="spacer"></div>
 
-
-
-
-
-
+<P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
 </body>
 </html> 
