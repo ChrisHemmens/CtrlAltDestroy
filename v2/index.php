@@ -11,8 +11,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+
+  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
+  <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
+
+
   <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
   <link rel="shortcut icon" href="images/awhyeah2.jpg"/>
+  <script>
+  $(document).ready(function() {
+    $('#members').DataTable();
+  } );
+  </script>
 </head>
 <body>
 
@@ -67,8 +79,7 @@
       <div class="spacer"></div> 
       <div class="container">
         <?php
-     echo "<font size=\"4\">" . $jsonArray['description'] . "</FONT>";
-
+        echo "<font size=\"4\">" . $jsonArray['description'] . "</FONT>";
         ?>
       </div>
 
@@ -76,7 +87,6 @@
       <div class="spacer"></div> 
       <div class="container">
         <?php
-
         membersList($jsonArray); 
         ?>
       </div>

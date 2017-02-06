@@ -103,23 +103,39 @@ function stats($jsonArray) {
 function membersList($jsonArray) {
 	?>
 	<div id="log">
-		<table cellspacing="0" cellpadding="0">
-			<tr>
-				<th><b>Rank</b></th>
-				<th><b>League</b></th>
-				<th><b>Naam</b></th>
-				<th><b>Rol</b></th> 
-				<th><b>Level</b></th>
-				<th><b>Trophies</b></th>
-				<th><b>Donaties</b></th>
-				<th><b>Ontvangen</b></th>
-				<th><b>Ratio</b></th>
-			</tr>
+		<table id="members" class="table table-striped table-bordered" cellspacing="0" cellpadding="0" width="100%">
+			<thead>
+				<tr>
+					<th><b>Rank</b></th>
+					<th><b>League</b></th>
+					<th><b>Naam</b></th>
+					<th><b>Rol</b></th> 
+					<th><b>Level</b></th>
+					<th><b>Trophies</b></th>
+					<th><b>Donaties</b></th>
+					<th><b>Ontvangen</b></th>
+					<th><b>Ratio</b></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th><b>Rank</b></th>
+					<th><b>League</b></th>
+					<th><b>Naam</b></th>
+					<th><b>Rol</b></th> 
+					<th><b>Level</b></th>
+					<th><b>Trophies</b></th>
+					<th><b>Donaties</b></th>
+					<th><b>Ontvangen</b></th>
+					<th><b>Ratio</b></th>
+				</tr>
+			</tfoot>
 		</div>
-		
+
 		<div>
 			<?php
 
+			echo "<tbody>";
 			for($i = 0; $i < $jsonArray['members']; $i++) {
 				$donated = $jsonArray['memberList'][$i]['donations'];
 				$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
@@ -132,19 +148,19 @@ function membersList($jsonArray) {
 					case 'leader':
 					$rol = 'Leider';
 					break;
-					
+
 					case 'member':
 					$rol = 'Lid';
 					break;
-					
+
 					case 'admin':
 					$rol = 'Oudste';
 					break;
-					
+
 					case 'coLeader':
 					$rol = 'CoLeider';
 					break;
-					
+
 					default:
 					$rol = 'Onbekende shizzle';
 					break;
@@ -162,8 +178,8 @@ function membersList($jsonArray) {
 				echo "<td>" . $donationsReceived . "</td>";
 				echo "<td>" .  number_format((float)$ratio, 2, '.', '') . "</td>";
 				echo "</tr>";
-
 			}
+			echo "</tbody>";
 			?>
 		</div>
 	</table>
@@ -182,7 +198,7 @@ function coLeadersList($jsonArray) {
 				<th><b>Rol</b></th> 
 			</tr>
 		</div>
-		
+
 		<div>
 			<?php
 
@@ -194,19 +210,19 @@ function coLeadersList($jsonArray) {
 					case 'leader':
 					$rol = 'Leider';
 					break;
-					
+
 					case 'member':
 					$rol = 'Lid';
 					break;
-					
+
 					case 'admin':
 					$rol = 'Oudste';
 					break;
-					
+
 					case 'coLeader':
 					$rol = 'CoLeider';
 					break;
-					
+
 					default:
 					$rol = 'Onbekende shizzle';
 					break;
@@ -229,19 +245,19 @@ function coLeadersList($jsonArray) {
 					case 'leader':
 					$rol = 'Leider';
 					break;
-					
+
 					case 'member':
 					$rol = 'Lid';
 					break;
-					
+
 					case 'admin':
 					$rol = 'Oudste';
 					break;
-					
+
 					case 'coLeader':
 					$rol = 'CoLeider';
 					break;
-					
+
 					default:
 					$rol = 'Onbekende shizzle';
 					break;
@@ -273,7 +289,7 @@ function oudsteList($jsonArray) {
 				<th><b>Rol</b></th> 
 			</tr>
 		</div>
-		
+
 		<div>
 			<?php
 
@@ -285,19 +301,19 @@ function oudsteList($jsonArray) {
 					case 'leader':
 					$rol = 'Leider';
 					break;
-					
+
 					case 'member':
 					$rol = 'Lid';
 					break;
-					
+
 					case 'admin':
 					$rol = 'Oudste';
 					break;
-					
+
 					case 'coLeader':
 					$rol = 'CoLeider';
 					break;
-					
+
 					default:
 					$rol = 'Onbekende shizzle';
 					break;
@@ -337,19 +353,19 @@ function donationRatio($jsonArray) {{
 		$donated = $jsonArray['memberList'][$i]['donations'];
 		$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
 		$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
-		
+
 		if ($ratio > $RatAantal5) $positie = 5;
 		if ($ratio > $RatAantal4) $positie = 4;
 		if ($ratio > $RatAantal3) $positie = 3;
 		if ($ratio > $RatAantal2) $positie = 2;
 		if ($ratio > $RatAantal1) $positie = 1;
-		
+
 		if ($positie == 5)
 		{
 			$RatAantal5 = $ratio;
 			$RatNaam5 = $name;
 		}
-		
+
 		if ($positie == 4)
 		{
 			$RatAantal5 = $RatAantal4;
@@ -357,7 +373,7 @@ function donationRatio($jsonArray) {{
 			$RatAantal4 = $ratio;
 			$RatNaam4 = $name;
 		}
-		
+
 		if ($positie == 3)
 		{
 			$RatAantal5 = $RatAantal4;
@@ -367,7 +383,7 @@ function donationRatio($jsonArray) {{
 			$RatAantal3 = $ratio;
 			$RatNaam3 = $name;
 		}
-		
+
 		if ($positie == 2)
 		{
 			$RatAantal5 = $RatAantal4;
@@ -379,7 +395,7 @@ function donationRatio($jsonArray) {{
 			$RatAantal2 = $ratio;
 			$RatNaam2 = $name;
 		}
-		
+
 		if ($positie == 1)
 		{
 			$RatAantal5 = $RatAantal4;
@@ -431,7 +447,7 @@ function donationRatio($jsonArray) {{
 		</tr>
 	</div>
 	<?php } ?>
-	
+
 	<?php
 	function donationCount($jsonArray) {{
 		$DonAantal1 = 1;
@@ -449,20 +465,20 @@ function donationRatio($jsonArray) {{
 			$positie = 6;
 			$name = $jsonArray['memberList'][$i]['name'];
 			$donated = $jsonArray['memberList'][$i]['donations'];
-			
-			
+
+
 			if ($donated > $DonAantal5) $positie = 5;
 			if ($donated > $DonAantal4) $positie = 4;
 			if ($donated > $DonAantal3) $positie = 3;
 			if ($donated > $DonAantal2) $positie = 2;
 			if ($donated > $DonAantal1) $positie = 1;
-			
+
 			if ($positie == 5)
 			{
 				$DonAantal5 = $donated;
 				$DonNaam5 = $name;
 			}
-			
+
 			if ($positie == 4)
 			{
 				$DonAantal5 = $DonAantal4;
@@ -542,7 +558,7 @@ function donationRatio($jsonArray) {{
 			</tr>
 		</div>
 		<?php } ?>
-		
+
 		<?php
 		function requestCount($jsonArray) {{
 			$ReqAantal1 = 1;
@@ -561,19 +577,19 @@ function donationRatio($jsonArray) {{
 				$name = $jsonArray['memberList'][$i]['name'];
 				$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
 
-				
+
 				if ($donationsReceived > $ReqAantal5) $positie = 5;
 				if ($donationsReceived > $ReqAantal4) $positie = 4;
 				if ($donationsReceived > $ReqAantal3) $positie = 3;
 				if ($donationsReceived > $ReqAantal2) $positie = 2;
 				if ($donationsReceived > $ReqAantal1) $positie = 1;
-				
+
 				if ($positie == 5)
 				{
 					$ReqAantal5 = $donationsReceived;
 					$ReqNaam5 = $name;
 				}
-				
+
 				if ($positie == 4)
 				{
 					$ReqAantal5 = $ReqAantal4;
@@ -653,7 +669,7 @@ function donationRatio($jsonArray) {{
 				</tr>
 			</div>
 			<?php } ?>
-			
+
 			<?php
 			function DonMemberCount($jsonArray) {{
 				$DonMemberAantal1 = 1;
@@ -679,7 +695,7 @@ function donationRatio($jsonArray) {{
 					$donationsReceived = $jsonArray['memberList'][$i]['donationsReceived'];
 					$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
 					$rol = $jsonArray['memberList'][$i]['role'];
-					
+
 		if (($rol == 'member') and ($name != 'munstermanos')){  //munster had al oudste, overgedragen aan zeldenrust
 			if ($donated > $DonMemberAantal5) $positie = 5;
 			if ($donated > $DonMemberAantal4) $positie = 4;
