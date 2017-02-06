@@ -63,7 +63,7 @@ ga('send', 'pageview');
 </br>
 <H2>Hoe verdien ik Co?</H2>
 <p>Co is niet te verdienen. We hebben slechte (en ook goede) ervaringen gehad met Co’s die vervolgens besluiten om een hele clan te kicken. 
-  <br>Om de stabiliteit te van onze clan te waarborgen hebben we 3 (Co-)Leiders en daar houden we het bij.  </p>
+  <br>Om de stabiliteit te van onze clan te waarborgen hebben we 4 (Co-)Leiders en daar houden we het bij.  </p>
 </br>
 <H2>Gebruikt de clan een Chatapp?</H2>
 <p>Als chatapp gebruiken we BAND. Zoek in de app naar de BAND(groep) die ‘CtrlAltDestroy’ heet, dat zijn wij namelijk. </br>Laat het ook in de clanchat even weten als je onze groep ga joinen, zo weten wij zeker dat jij het bent!

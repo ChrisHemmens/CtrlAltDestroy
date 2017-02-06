@@ -131,10 +131,8 @@ function membersList($jsonArray) {
 				</tr>
 			</tfoot>
 		</div>
-
 		<div>
 			<?php
-
 			echo "<tbody>";
 			for($i = 0; $i < $jsonArray['members']; $i++) {
 				$donated = $jsonArray['memberList'][$i]['donations'];
@@ -165,8 +163,6 @@ function membersList($jsonArray) {
 					$rol = 'Onbekende shizzle';
 					break;
 				}
-
-
 				echo "<tr>";					
 				echo "<td>" . $rank . "</td>"; 
 				echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
@@ -303,7 +299,7 @@ function coLeadersList($jsonArray) {
 					echo "</tr>";
 				}
 			}
-
+			
 			for($i = 0; $i < $jsonArray['members']; $i++) {
 				$name = $jsonArray['memberList'][$i]['name'];
 		//Role translaten naar Nederlands

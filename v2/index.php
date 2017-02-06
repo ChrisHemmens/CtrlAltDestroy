@@ -25,7 +25,7 @@
     $('#members').DataTable();
   } );
   </script>
-    <script>
+  <script>
   $(document).ready(function() {
     $('#membersSmall').DataTable();
   } );
@@ -90,24 +90,36 @@
 
       <div class="visible-xs visible-sm"> <!--MOBILE ONLY CONTENT-->  
         <div class="spacer"></div> 
+
+
         <div class="container">
+          <div style="text-align: center;">
+            <a href = "/v2/memberslist.php" class = "btn btn-default btn-lg" role = "button">
+              Bekijk hier de volledige lijst!
+            </a>
+          </div>
           <?php
           membersListSmall($jsonArray); 
           ?>
+          <div style="text-align: center;">
+            <a href = "/v2/memberslist.php" class = "btn btn-default btn-lg" role = "button">
+              Bekijk hier de volledige lijst!
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-      <div class="hidden-xs hidden-sm"> <!--bigger than 768PX screens only content -->
-       <div class="spacer"></div> 
-       <div class="container">
-        <?php
-        membersList($jsonArray); 
-        ?>
-      </div>
+    <div class="hidden-xs hidden-sm"> <!--bigger than 768PX screens only content -->
+     <div class="spacer"></div> 
+     <div class="container">
+      <?php
+      membersList($jsonArray); 
+      ?>
     </div>
   </div>
-  <?php
+</div>
+<?php
 } 
 ?>
 
