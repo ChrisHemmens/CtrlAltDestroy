@@ -187,6 +187,73 @@ function membersList($jsonArray) {
 }
 ?>
 <?php
+function membersListSmall($jsonArray) {
+	?>
+	<div id="log">
+		<table id="membersSmall" class="table table-striped table-bordered" cellspacing="0" cellpadding="0" width="100%">
+			<thead>
+				<tr>
+					<th><b>Rank</b></th>
+					<th><b>Naam</b></th>
+					<th><b>Rol</b></th> 
+					<th><b>Level</b></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th><b>Rank</b></th>
+					<th><b>Naam</b></th>
+					<th><b>Rol</b></th> 
+					<th><b>Level</b></th>
+				</tr>
+			</tfoot>
+		</div>
+
+		<div>
+			<?php
+
+			echo "<tbody>";
+			for($i = 0; $i < $jsonArray['members']; $i++) {
+				$rank = $jsonArray['memberList'][$i]['clanRank'];
+				$name = $jsonArray['memberList'][$i]['name'];
+		//Role translaten naar Nederlands
+				$rol = $jsonArray['memberList'][$i]['role'];
+				switch($rol) {
+					case 'leader':
+					$rol = 'Leider';
+					break;
+
+					case 'member':
+					$rol = 'Lid';
+					break;
+
+					case 'admin':
+					$rol = 'Oudste';
+					break;
+
+					case 'coLeader':
+					$rol = 'Co';
+					break;
+
+					default:
+					$rol = 'Onbekende shizzle';
+					break;
+				}
+				echo "<tr>";					
+				echo "<td>" . $rank . "</td>"; 
+				echo "<td>" . $name . "</td>"; 
+				echo "<td>" . $rol . "</td>";
+				echo "<td>" . $jsonArray['memberList'][$i]['expLevel'] . "</td>";
+				echo "</tr>";
+			}
+			echo "</tbody>";
+			?>
+		</div>
+	</table>
+	<?php
+}
+?>
+<?php
 function coLeadersList($jsonArray) {
 	?>
 	<div id="log">

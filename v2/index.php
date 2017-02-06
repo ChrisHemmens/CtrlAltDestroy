@@ -25,6 +25,11 @@
     $('#members').DataTable();
   } );
   </script>
+    <script>
+  $(document).ready(function() {
+    $('#membersSmall').DataTable();
+  } );
+  </script>
 </head>
 <body>
 
@@ -83,25 +88,35 @@
         ?>
       </div>
 
+      <div class="visible-xs visible-sm"> <!--MOBILE ONLY CONTENT-->  
+        <div class="spacer"></div> 
+        <div class="container">
+          <?php
+          membersListSmall($jsonArray); 
+          ?>
+        </div>
+      </div>
+    </div>
 
-      <div class="spacer"></div> 
-      <div class="container">
+      <div class="hidden-xs hidden-sm"> <!--bigger than 768PX screens only content -->
+       <div class="spacer"></div> 
+       <div class="container">
         <?php
         membersList($jsonArray); 
         ?>
       </div>
-
     </div>
-    <?php
-  } 
-  ?>
-
-
-  <div class="spacer"></div>
-  <div class="container">
-
   </div>
-  <div class="spacer"></div>
+  <?php
+} 
+?>
+
+
+<div class="spacer"></div>
+<div class="container">
+
+</div>
+<div class="spacer"></div>
 
 
 
