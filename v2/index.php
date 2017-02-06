@@ -12,13 +12,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
-  <link rel="shortcut icon" href="images/lsvv.png"/>
+  <link rel="shortcut icon" href="images/awhyeah2.jpg"/>
 </head>
 <body>
 
   <?php
 //Connect to the dataProvider
   include '/topSecretShizzle.php';
+  include("functions.php");
   $opts = array(
     'http'=>array(
       'method'=>"GET",
@@ -46,12 +47,12 @@
       <div class="row">
         <div class="col-xs-6"><div class="imgtextblok-left">
           <?php
-          echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"180\">";
+          echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"140\">";
           ?>
         </div></div>
         <div class="col-xs-6"><div class="imgtextblok-right">          
           <?php
-          echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"180\">"; //Hier binnenkort even een ander voor zoeken
+          echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"140\">"; //Hier binnenkort even een ander voor zoeken
           ?></div></div>
         </div>    
       </div>
@@ -61,11 +62,22 @@
         <img src="https://www.clashofstats.com/signatures/2CRCJU2V?lng=en&color=blue&size=large" width="100%"/>
       </div>
 
+
+
       <div class="spacer"></div> 
       <div class="container">
         <?php
-        include("functions.php");
-      //  membersList($jsonArray); 
+     echo "<font size=\"4\">" . $jsonArray['description'] . "</FONT>";
+
+        ?>
+      </div>
+
+
+      <div class="spacer"></div> 
+      <div class="container">
+        <?php
+
+        membersList($jsonArray); 
         ?>
       </div>
 
