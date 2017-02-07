@@ -367,11 +367,12 @@ else {
 </div>
 </div>
 
-
 <div class="spacer"></div>
 <div class="container">
   <div class="container-blok">
-
+    <?php
+    stats($jsonArray);
+    ?>
   </div>
 </div>
 <div class="spacer"></div>
