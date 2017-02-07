@@ -72,12 +72,12 @@
   </div>
   
   <div class="spacer"></div>
-  <img src="/v2/Images/ctrlaltdestroy.png" class="img-responsive" alt="ctrlaltdestroyLogo" width="100%"> 
+  <img src="/Images/ctrlaltdestroy.png" class="img-responsive" alt="ctrlaltdestroyLogo" width="100%"> 
   <div class="spacer"></div> 
   <div class="container">
   	<div class="container-blok">
   		<div style="text-align: center;">
-  			<a href = "/v2#memberslist" class = "btn btn-default btn-lg" role = "button">
+  			<a href = "/index.php#memberslist" class = "btn btn-default btn-lg" role = "button">
   				Ga terug naar de site!
   			</a>
   		</div>
@@ -90,7 +90,7 @@
 </div>
 <div class="spacer"></div> 
 <div style="text-align: center;">
-	<a href = "/v2#memberslist" class = "btn btn-default btn-lg" role = "button">
+	<a href = "/index.php#memberslist" class = "btn btn-default btn-lg" role = "button">
 		Ga terug naar de site!
 	</a>
 </div>
