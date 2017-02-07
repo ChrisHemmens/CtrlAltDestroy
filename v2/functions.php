@@ -92,7 +92,6 @@ function stats($jsonArray) {
 			}
 			echo "<html> </br> </br> </html>";
 			echo "Samen hebben we " . $totalTrophies . " trophies en " . $totalExp . " experience, dat is gemiddeld " . number_format((int)($totalTrophies / $aantalMembers)) . " trophies en " . number_format((int)($totalExp / $aantalMembers)) . " experience per lid.";
-			echo "<html> </br></br> </html>";;
 			?>
 		</font>
 	</div>
