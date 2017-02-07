@@ -38,6 +38,68 @@
     $('#membersSmall').DataTable();
   } );
   </script>
+  <script>
+  $(document).ready(function() {
+    $('#coList').DataTable({
+      "bPaginate": false,
+      "bLengthChange": false,
+      "bFilter": false,
+      "bInfo": false,
+      "pageLength": 50 
+    });
+  });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('#oudsteList').DataTable({
+      "bPaginate": false,
+      "bLengthChange": false,
+      "bFilter": false,
+      "bInfo": false,
+      "pageLength": 50 
+    });
+  });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('#ratio').DataTable({
+      "bPaginate": false,
+      "bLengthChange": false,
+      "bFilter": false,
+      "bInfo": false
+    });
+  });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('#donaties').DataTable({
+      "bPaginate": false,
+      "bLengthChange": false,
+      "bFilter": false,
+      "bInfo": false
+    });
+  });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('#ontvangen').DataTable({
+      "bPaginate": false,
+      "bLengthChange": false,
+      "bFilter": false,
+      "bInfo": false
+    });
+  });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('#mogelijkOudste').DataTable({
+      "bPaginate": false,
+      "bLengthChange": false,
+      "bFilter": false,
+      "bInfo": false
+    });
+  });
+  </script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -47,6 +109,7 @@
       <div class="navbar-header page-scroll">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -68,7 +131,10 @@
             <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#ClanInfo">ClanInfo</a>
           </li>
           <li>
-            <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#test">Test</a>
+            <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#Specials">Wall Of Fame</a>
+          </li>
+          <li>
+            <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#Stats">Statistieken</a>
           </li>
         </ul>
       </div>
@@ -205,8 +271,8 @@ else {
 </div>
 <div class="row">
   <div class="col-lg-4 col-lg-offset-2">
-    <h3 align="center">Mag ik altijd alles doneren wat ik wil?</h3> <p>
-    Standaard doneren we boogschutters en tovenaars. Dit zodat iedereen in de clan kan doneren en kans heeft op oudste, het level van de troops maakt niet uit.
+    <h3 align="center">Zijn er donatieregels?</h3> <p>
+    Ja, standaard doneren we boogschutters en tovenaars. Dit zodat iedereen in de clan kan doneren en kans heeft op oudste, het level van de troops maakt niet uit.
     <br/><br/>
     <b>In war hebben we andere regels:</b>
     <br/>
@@ -236,27 +302,72 @@ else {
     <div class="spacer"></div>
   </div>
   <div class="col-lg-4">
-   <h3 align="center">Download onze chatapp gelijk!</h3>  
+   <h3 align="center">Download hier onze chatapp!</h3>  
    <A HREF="https://play.google.com/store/apps/details?id=com.nhn.android.band"><img src="images/GooglePlayLogo.png" alt="koekelplee linkje"  width="100%" border="0"></A>
  </br>
  <A HREF="https://itunes.apple.com/nl/app/band-fun-community-forum-for/id542613198?mt=8"><img src="images/IOSStoreLogo.png" alt="AppleStore linkje"  width="100%" border="0"></A>
 </div>
 </div>
-
 </div>
 </div>
+<div id="Specials"></div>
 <div class="spacer"></div>
 <div class="container">
   <div class="container-blok">
-
-  </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <?php 
+        coLeadersList($jsonArray); 
+        ?>
+        <div class="spacer"></div>
+      </div></div>
+      <div class="col-lg-6">
+       <?php 
+       oudsteList($jsonArray); 
+       ?>
+       <div class="spacer"></div>
+     </div>
+   </div>
+ </div>
 </div>
+</div>
+
+<div id="Stats"></div>
 <div class="spacer"></div>
 <div class="container">
   <div class="container-blok">
-
-  </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <?php 
+        donationCount($jsonArray);  
+        ?>
+        <div class="spacer"></div>
+      </div>
+      <div class="col-lg-6">
+       <?php 
+       requestCount($jsonArray);
+       ?>
+       <div class="spacer"></div>
+     </div>
+   </div>
+   <div class="row">
+    <div class="col-lg-6">
+      <?php 
+      donationRatio($jsonArray);  
+      ?>
+      <div class="spacer"></div>
+    </div>
+    <div class="col-lg-6">
+     <?php 
+     DonMemberCount($jsonArray);
+     ?>
+     <div class="spacer"></div>
+   </div>
+ </div>
 </div>
+</div>
+
+
 <div class="spacer"></div>
 <div class="container">
   <div class="container-blok">
