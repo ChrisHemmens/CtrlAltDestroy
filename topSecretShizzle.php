@@ -1,11 +1,11 @@
 <?php
 
 
-$wieZnKey = 1;
+$wieZnKey = 2;
 /*
 Welke key moet gebruikt worden?
 1 = Justin
-2 = Rizzle
+2 = Justin+Paul+Rizzle
 */
 
 $clan = 1;
@@ -20,7 +20,7 @@ if ($wieZnKey == 1){
 }
 
 if ($wieZnKey == 2){
-	$api_key = 'HIER KOMT DE KEY';
+	$api_key = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjUzNWY0MzEyLTQwZmUtNDVjOS04ZjVlLTAyMjM4Y2I4MDQ2ZSIsImlhdCI6MTQ4NjQ2ODA3OCwic3ViIjoiZGV2ZWxvcGVyL2VmZjczZjE1LWNjNzctOGIyYi05NTFhLTk2ZjdmNGQ2ODVlYSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjIxNy4xMjAuMjM0LjIxMCIsIjg2Ljg0LjEyNC4xMyIsIjgxLjIwNS4xMjEuMjQwIl0sInR5cGUiOiJjbGllbnQifV19.CVROiOmmbS7BkFUM-qN-53DKiKtB7q5H_S7FaIOKf7nTrsQ_Ba43RFp-TtOqDdfFS0ZykCC6khUT08u9i28J3Q';
 }
 
 if ($clan == 1){

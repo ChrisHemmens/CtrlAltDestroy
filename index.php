@@ -19,7 +19,7 @@
 
 
   <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
-  <link rel="shortcut icon" href="images/awhyeah2.jpg"/>
+  <link rel="shortcut icon" href="Images/awhyeah2.jpg"/>
 
   <!-- Custom CSS -->
   <link href="css/scrolling-nav.css" rel="stylesheet">
