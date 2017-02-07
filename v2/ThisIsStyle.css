@@ -7,9 +7,7 @@ body {
     background-repeat: repeat-y;
 }
 
-
-
-.container {
+.container-blok {
     /*width: 780px;*/
     background: #FFF;
     margin: 0 auto;
@@ -27,9 +25,19 @@ body {
 .imgtextblok-right {
   text-align: right;
 }
-.spacer { margin:0; padding:0; height:50px; }
 
 .form {
     display: inline-block;
     text-align: center;
+}
+.table 
+{
+    table-layout:fixed; /*Dit zodat de table binnen de container blijft*/
+    width:100%;
+    word-break: break-all; /*Dit zodat woorden gesplitst kunnen worden in de tabel*/
+}
+.spacer { 
+    margin:0; 
+    padding:0; 
+    height:50px; 
 }

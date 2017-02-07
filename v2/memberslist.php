@@ -22,7 +22,9 @@
 	<link rel="shortcut icon" href="images/awhyeah2.jpg"/>
 	<script>
 	$(document).ready(function() {
-		$('#members').DataTable();
+		$('#members').dataTable( {
+			"pageLength": 50
+		} );
 	} );
 	</script>
 </head>
@@ -73,28 +75,24 @@
   <img src="/v2/Images/ctrlaltdestroy.png" class="img-responsive" alt="ctrlaltdestroyLogo" width="100%"> 
   <div class="spacer"></div> 
   <div class="container">
-  	<style>
-  	table 
-  	{
-  		table-layout:fixed; /*Dit zodat de table binnen de container blijft*/
-  		width:100%;
-  		word-break: break-all; /*Dit zodat woorden gesplitst kunnen worden in de tabel*/
-  	}
-  	</style>
-  	<div style="text-align: center;">
-  		<a href = "/v2" class = "btn btn-default btn-lg" role = "button">
-  			Ga terug naar de site!
-  		</a>
-  	</div>
-  	<?php
-  	membersList($jsonArray); 
-  	?>
-  	<div style="text-align: center;">
-  		<a href = "/v2" class = "btn btn-default btn-lg" role = "button">
-  			Ga terug naar de site!
-  		</a>
+  	<div class="container-blok">
+  		<div style="text-align: center;">
+  			<a href = "/v2" class = "btn btn-default btn-lg" role = "button">
+  				Ga terug naar de site!
+  			</a>
+  		</div>
+  		<?php
+  		membersList($jsonArray); 
+  		?>
+  		
   	</div>
   </div>
+</div>
+<div class="spacer"></div> 
+<div style="text-align: center;">
+	<a href = "/v2" class = "btn btn-default btn-lg" role = "button">
+		Ga terug naar de site!
+	</a>
 </div>
 <?php
 } 
