@@ -12,11 +12,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 
-
   <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
   <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
-
 
   <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
   <link rel="shortcut icon" href="Images/awhyeah2.jpg"/>
@@ -185,62 +183,61 @@ else {
       </div></div>
       <div class="col-xs-6"><div class="imgtextblok-right">          
         <?php
-          echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"140\">"; //Hier binnenkort even een ander voor zoeken
-          ?></div></div>
-        </div>    
-      </div>
-
-      <div class="spacer"></div>
-      <img src="/Images/ctrlaltdestroy.png" class="img-responsive" alt="ctrlaltdestroyLogo" width="100%"> 
-
-      <div class="spacer"></div> 
-      <div class="container">
-        <div class="container-blok">
-          <img src="https://www.clashofstats.com/signatures/2CRCJU2V?lng=en&color=blue&size=large" width="100%"/>
-        </div>
-      </div>
-
-      <div class="spacer"></div> 
-      <div class="container">
-        <div class="container-blok">
-          <?php
-          echo "<font size=\"4\">" . $jsonArray['description'] . "</FONT>";
-          ?>
-        </div>
-      </div>
-      <div id="memberslist"></div> <!-- Dit is voor de navbar -->
-      <div class="visible-xs visible-sm"> <!--MOBILE ONLY CONTENT-->  
-        <div class="spacer"></div> 
-        <div class="container">
-          <div class="container-blok">
-            <div style="text-align: center;">
-              <a href = "/memberslist.php" class = "btn btn-default btn-lg" role = "button">
-                Bekijk hier de volledige lijst!
-              </a>
-            </div>
-            <?php
-            membersListSmall($jsonArray); 
-            ?>
-            <div style="text-align: center;">
-              <a href = "/memberslist.php" class = "btn btn-default btn-lg" role = "button">
-                Bekijk hier de volledige lijst!
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+        echo "<img src=\"/Images/characters/". rand(1,24) . ".png\" alt=\"RandomTroop\" height=\"140\">";
+        ?></div></div>
+      </div>    
     </div>
 
-    <div class="hidden-xs hidden-sm"> <!--bigger than 768PX screens only content -->
-     <div class="spacer"></div> 
-     <div class="container">
+   <!-- <div class="spacer"></div>
+   <img src="/Images/ctrlaltdestroy.png" class="img-responsive" alt="ctrlaltdestroyLogo" width="100%"> WEL OF NIET GEBRUIKEN? -->
+   <div class="spacer"></div> 
+   <div class="container">
+    <div class="container-blok">
+      <img src="https://www.clashofstats.com/signatures/2CRCJU2V?lng=en&color=blue&size=large" width="100%"/>
+    </div>
+  </div>
+
+  <div class="spacer"></div> 
+  <div class="container">
+    <div class="container-blok">
+      <?php
+      echo "<font size=\"4\">" . $jsonArray['description'] . "</FONT>";
+      ?>
+    </div>
+  </div>
+  <div id="memberslist"></div> <!-- Dit is voor de navbar -->
+  <div class="visible-xs visible-sm"> <!--MOBILE ONLY CONTENT-->  
+    <div class="spacer"></div> 
+    <div class="container">
       <div class="container-blok">
+        <div style="text-align: center;">
+          <a href = "/memberslist.php" class = "btn btn-default btn-lg" role = "button">
+            Bekijk hier de volledige lijst!
+          </a>
+        </div>
         <?php
-        membersList($jsonArray); 
+        membersListSmall($jsonArray); 
         ?>
+        <div style="text-align: center;">
+          <a href = "/memberslist.php" class = "btn btn-default btn-lg" role = "button">
+            Bekijk hier de volledige lijst!
+          </a>
+        </div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="hidden-xs hidden-sm"> <!--bigger than 768PX screens only content -->
+ <div class="spacer"></div> 
+ <div class="container">
+  <div class="container-blok">
+    <?php
+    membersList($jsonArray); 
+    ?>
+  </div>
+</div>
+</div>
 </div>
 
 <div id="ClanInfo"></div>
@@ -325,7 +322,6 @@ else {
        <?php 
        oudsteList($jsonArray); 
        ?>
-       <div class="spacer"></div>
      </div>
    </div>
  </div>
@@ -361,7 +357,6 @@ else {
      <?php 
      DonMemberCount($jsonArray);
      ?>
-     <div class="spacer"></div>
    </div>
  </div>
 </div>
