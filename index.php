@@ -147,7 +147,7 @@
 
 <?php
 //Connect to the dataProvider
-include '/topSecretShizzle.php';
+include "topSecretShizzle.php";
 include("functions.php");
 $opts = array(
   'http'=>array(
@@ -164,8 +164,12 @@ $contents = file_get_contents($url, null, stream_context_create($opts));
 $jsonArray = json_decode($contents, true);
 
 if(!$contents) {
+  ?>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <?php
   echo "Shit is kapot G";
-  ?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
+  ?></br><img src="Images/shitiskapotG.jpg" width="100%" alt="Shit is kapot G"><?php
 }
 else { 
   ?>
@@ -238,10 +242,6 @@ else {
     </div>
   </div>
 </div>
-<?php
-} 
-?>
-
 
 <div id="ClanInfo"></div>
 <div class="spacer"></div>
@@ -303,9 +303,9 @@ else {
   </div>
   <div class="col-lg-4">
    <h3 align="center">Download hier onze chatapp!</h3>  
-   <A HREF="https://play.google.com/store/apps/details?id=com.nhn.android.band"><img src="images/GooglePlayLogo.png" alt="koekelplee linkje"  width="100%" border="0"></A>
+   <A HREF="https://play.google.com/store/apps/details?id=com.nhn.android.band"><img src="Images/GooglePlayLogo.png" alt="koekelplee linkje"  width="100%" border="0"></A>
  </br>
- <A HREF="https://itunes.apple.com/nl/app/band-fun-community-forum-for/id542613198?mt=8"><img src="images/IOSStoreLogo.png" alt="AppleStore linkje"  width="100%" border="0"></A>
+ <A HREF="https://itunes.apple.com/nl/app/band-fun-community-forum-for/id542613198?mt=8"><img src="Images/IOSStoreLogo.png" alt="AppleStore linkje"  width="100%" border="0"></A>
 </div>
 </div>
 </div>
@@ -375,6 +375,9 @@ else {
     ?>
   </div>
 </div>
+<?php
+} 
+?>
 <div class="spacer"></div>
 <P> Created by Rizzle & Justin &copy 2015 - <?php echo date("Y"); ?></p>
 </body>

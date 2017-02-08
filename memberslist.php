@@ -19,20 +19,22 @@
 
 
 	<link rel="stylesheet" type="text/css" href="thisIsStyle.css">
-	<link rel="shortcut icon" href="images/awhyeah2.jpg"/>
+	<link rel="shortcut icon" href="Images/awhyeah2.jpg"/>
 	<script>
 	$(document).ready(function() {
-		$('#members').dataTable( {
-			"pageLength": 50
-		} );
-	} );
+		$('#members').dataTable( {    
+			"bPaginate": false,
+			"bLengthChange": false,
+			"pageLength": 50 
+		});
+	});
 	</script>
 </head>
 <body>
 
 	<?php
 //Connect to the dataProvider
-	include '/topSecretShizzle.php';
+	include "topSecretShizzle.php";
 	include("functions.php");
 	$opts = array(
 		'http'=>array(
@@ -50,7 +52,7 @@
 
 	if(!$contents) {
 		echo "Shit is kapot G";
-		?></br><img src="image/shitiskapotG.jpg" alt="Shit is kapot G"><?php
+		?></br><img src="Images/shitiskapotG.jpg" alt="Shit is kapot G"><?php
 	}
 	else { 
 		?>

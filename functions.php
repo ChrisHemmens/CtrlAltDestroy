@@ -42,7 +42,7 @@ function stats($jsonArray) {
 			$ratio = ($totalReceived == 0 ? 0 : $totalDonated/$totalReceived);
 
 			echo "In deze periode zijn tot nu toe " . $totalDonated . " troepen gedoneerd door " . $aantalMembers . " leden. (gemiddeld " . number_format((int)($totalDonated / $aantalMembers)) .  " per lid) <html> </br> </html>";
-			echo "Deze " . $aantalMembers. " leden hebben in totaal " . $totalReceived . " troepen ontvangen. (gemiddeld " . number_format((int)($totalReceived / $aantalMembers)) .  " per lid) <html> </br> </html>";
+			echo "Onze " . $aantalMembers. " leden hebben in totaal " . $totalReceived . " troepen ontvangen. (gemiddeld " . number_format((int)($totalReceived / $aantalMembers)) .  " per lid) <html> </br> </html>";
 			echo "Het ratio van de clan is " . number_format((float)$ratio, 2, '.', '') . ", dit komt doordat we ";
 
 			if ($totalReceived > $totalDonated){
