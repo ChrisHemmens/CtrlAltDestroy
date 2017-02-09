@@ -119,7 +119,6 @@ $(document).ready(function() {
      <span class="icon-bar"></span>
      <span class="icon-bar"></span>
      <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
    </button>
    <a class="navbar-brand page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#page-top">CtrlAltDestroy</a>
  </div>
@@ -138,7 +137,7 @@ $(document).ready(function() {
     <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#ClanInfo">ClanInfo</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#ChatApp">ChatApp</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#ChatApp">Chat App</a>
   </li>
   <li>
     <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#Specials">Wall Of Fame</a>
@@ -312,20 +311,19 @@ else {
   <h1 align="center">Chat App</h1>
   <div class="row">
    <div class="col-lg-4 col-lg-offset-2">
-    <h3 align="center">Gebruikt de clan een Chatapp?</h3> <p>Als chatapp gebruiken we BAND. Zoek in de app naar de BAND(groep) die ‘CtrlAltDestroy’ heet, dat zijn wij namelijk. </br>Laat het ook in de clanchat even weten als je onze groep ga joinen, zo weten wij zeker dat jij het bent!</p>
-    <div class="spacer"></div>
-  </div>
-  <div class="col-lg-4">
-    <iframe src="http://band.us/#!/band/58997968" height="600px" width="100%"></iframe>
-   <div class="spacer"></div>
- <!--  <h3 align="center">Download hier onze chatapp!</h3> 
-   <A HREF="https://play.google.com/store/apps/details?id=com.nhn.android.band"><img src="Images/GooglePlayLogo.png" alt="koekelplee linkje" width="50%" border="0"></A>
- </br>
- <A HREF="https://itunes.apple.com/nl/app/band-fun-community-forum-for/id542613198?mt=8"><img src="Images/IOSStoreLogo.png" alt="AppleStore linkje" width="50%" border="0"></A>
--->
+     <h3 align="center">Gebruikt de clan een Chatapp?</h3><p>Als chatapp gebruiken we BAND. Zoek in de app naar de BAND(groep) die ‘CtrlAltDestroy’ heet, dat zijn wij namelijk.</br>Laat het ook in de clanchat even weten als je onze groep ga joinen, zo weten wij zeker dat jij het bent!</p>
+     <div class="spacer"></div>
+   </div>
+   <div class="col-lg-4">
+    <h3 align="center">Download hier onze chatapp!</h3>
+    <A HREF="https://play.google.com/store/apps/details?id=com.nhn.android.band"><img src="Images/GooglePlayLogo.png" alt="koekelplee linkje" width="100%" border="0"></A>
+    <A HREF="https://itunes.apple.com/nl/app/band-fun-community-forum-for/id542613198?mt=8"><img src="Images/IOSStoreLogo.png" alt="AppleStore linkje" width="100%" border="0"></A>
+  <div class="spacer"></div>
 </div>
 </div>
-</div></div>
+<iframe src="http://band.us/#!/band/58997968" frameborder="0" width="100%" height="600"></iframe>
+</div>
+</div>
 <div id="Specials"></div>
 <div class="spacer"></div>
 <div class="container">
