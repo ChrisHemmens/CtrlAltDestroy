@@ -18,9 +18,6 @@
  <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
  <link rel="shortcut icon" href="Images/awhyeah2.jpg"/>
 
- <!-- Custom CSS -->
- <link href="css/scrolling-nav.css" rel="stylesheet">
-
  <!-- Scrolling Nav JavaScript -->
  <script src="js/jquery.easing.min.js"></script>
  <script src="js/scrolling-nav.js"></script>
@@ -118,9 +115,8 @@ $(document).ready(function() {
      <span class="icon-bar"></span>
      <span class="icon-bar"></span>
      <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#page-top">CtrlAltDestroy</a>
+   <a class="navbar-brand page-scroll" href="#page-top">CtrlAltDestroy</a>
  </div>
 
  <!-- Collect the nav links, forms, and other content for toggling -->
@@ -148,6 +144,7 @@ $(document).ready(function() {
 </ul>
 </div>
 <!-- /.navbar-collapse -->
+</div>
 </div>
 <!-- /.container -->
 </nav>
@@ -318,8 +315,8 @@ else {
     <h3 align="center">Download hier onze chatapp!</h3>
     <A HREF="https://play.google.com/store/apps/details?id=com.nhn.android.band"><img src="Images/GooglePlayLogo.png" alt="koekelplee linkje" width="100%" border="0"></A>
     <A HREF="https://itunes.apple.com/nl/app/band-fun-community-forum-for/id542613198?mt=8"><img src="Images/IOSStoreLogo.png" alt="AppleStore linkje" width="100%" border="0"></A>
-  <div class="spacer"></div>
-</div>
+    <div class="spacer"></div>
+  </div>
 </div>
 <iframe src="http://band.us/#!/band/58997968" frameborder="0" width="100%" height="600"></iframe>
 </div>
