@@ -62,22 +62,25 @@
 
 	if(!$contents) {
 		echo "Shit is kapot G";
-		?></br><img src="Images/shitiskapotG.jpg" alt="Shit is kapot G"><?php
-	}
-	else { 
 		?>
+	</br>
+	<img src="Images/shitiskapotG.jpg" width="100%" alt="Shit is kapot G">
+	<?php
+}
+else { 
+	?>
 
-		<div class="spacer"></div> 
+	<div class="spacer"></div> 
 
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-6"><div class="imgtextblok-left">
-					<?php
-					echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"140\">";
-					?>
-				</div></div>
-				<div class="col-xs-6"><div class="imgtextblok-right">          
-					<?php
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6"><div class="imgtextblok-left">
+				<?php
+				echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"140\">";
+				?>
+			</div></div>
+			<div class="col-xs-6"><div class="imgtextblok-right">          
+				<?php
           echo "<img src='" . $jsonArray['badgeUrls']['medium'] . "' alt=\"ClanLogo\" height=\"140\">"; //Hier binnenkort even een ander voor zoeken
           ?></div></div>
       </div>    

@@ -21,16 +21,18 @@
  <!-- Scrolling Nav JavaScript -->
  <script src="js/jquery.easing.min.js"></script>
  <script src="js/scrolling-nav.js"></script>
- <script>
+
+ <!-- Google Analytics -->
+ <script> 
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-71479321-1', 'auto');
 ga('send', 'pageview');
-
 </script>
+
+<!-- Tables -->
 <script>
 $(document).ready(function() {
   $('#members').DataTable();
@@ -118,37 +120,34 @@ $(document).ready(function() {
    </button>
    <a class="navbar-brand page-scroll" href="#page-top">CtrlAltDestroy</a>
  </div>
-
  <!-- Collect the nav links, forms, and other content for toggling -->
  <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav">
    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
    <li class="hidden">
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#page-top"></a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#page-top"></a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#memberslist">Clanleden</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#memberslist">Clanleden</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#ClanInfo">ClanInfo</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#ClanInfo">ClanInfo</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#ChatApp">Chat App</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#ChatApp">Chat App</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#Specials">Wall Of Fame</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#Specials">Wall Of Fame</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="#Stats">Statistieken</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#Stats">Statistieken</a>
   </li>
 </ul>
 </div>
 <!-- /.navbar-collapse -->
 </div>
-</div>
 <!-- /.container -->
 </nav>
-
 </br></br>
 
 <?php
@@ -175,7 +174,10 @@ if(!$contents) {
  <div class="spacer"></div>
  <?php
  echo "Shit is kapot G";
- ?></br><img src="Images/shitiskapotG.jpg" width="100%" alt="Shit is kapot G"><?php
+ ?>
+</br>
+<img src="Images/shitiskapotG.jpg" width="100%" alt="Shit is kapot G">
+<?php
 }
 else { 
  ?>
@@ -207,16 +209,18 @@ else {
  <div class="spacer"></div> 
  <div class="container">
   <div class="container-blok">
-   <?php
-   echo "<font size=\"4\">" . $jsonArray['description'] . "</FONT>";
-   ?>
- </div>
+    <h1 align="center">Clanbeschrijving</h1>
+    <?php
+    echo "<font size=\"4\">" . $jsonArray['description'] . "</FONT>";
+    ?>
+  </div>
 </div>
 <div id="memberslist"></div> <!-- Dit is voor de navbar -->
 <div class="visible-xs visible-sm"> <!--MOBILE ONLY CONTENT--> 
   <div class="spacer"></div> 
   <div class="container">
    <div class="container-blok">
+    <h1 align="center">Clanleden</h1>
     <div style="text-align: center;">
      <a href = "/memberslist.php" class = "btn btn-default btn-lg" role = "button">
       Bekijk hier de volledige lijst!
@@ -239,6 +243,7 @@ else {
  <div class="spacer"></div> 
  <div class="container">
    <div class="container-blok">
+    <h1 align="center">Clanleden</h1>
     <?php
     membersList($jsonArray); 
     ?>
@@ -325,6 +330,7 @@ else {
 <div class="spacer"></div>
 <div class="container">
  <div class="container-blok">
+  <h1 align="center">Wall of Fame</h1>
   <div class="row">
    <div class="col-lg-6">
     <?php 
