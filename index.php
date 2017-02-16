@@ -7,106 +7,23 @@
  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
  <meta http-equiv="Pragma" content="no-cache" />
  <meta http-equiv="Expires" content="0" />
+ <link rel="shortcut icon" href="https://api-assets.clashofclans.com/badges/200/q4jIBKZpAFUDIa7doaAW6lmmlgcVgnIKhXD4B5tNxpU.png"/>
+ 
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/angular.min.js"></script>
+ <script src="js/jquery.dataTables.min.js"></script> 
+ <script src="js/dataTables.bootstrap.min.js"></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
- <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
- <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
-
- <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
- <link rel="shortcut icon" href="Images/awhyeah2.jpg"/>
-
+ 
  <!-- Scrolling Nav JavaScript -->
  <script src="js/jquery.easing.min.js"></script>
  <script src="js/scrolling-nav.js"></script>
-
- <!-- Google Analytics -->
- <script> 
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-71479321-1', 'auto');
-ga('send', 'pageview');
-</script>
-
-<!-- Tables -->
-<script>
-$(document).ready(function() {
-  $('#members').DataTable();
-} );
-</script>
-<script>
-$(document).ready(function() {
-  $('#membersSmall').DataTable();
-} );
-</script>
-<script>
-$(document).ready(function() {
-  $('#coList').DataTable({
-   "bPaginate": false,
-   "bLengthChange": false,
-   "bFilter": false,
-   "bInfo": false,
-   "pageLength": 50 
- });
-});
-</script>
-<script>
-$(document).ready(function() {
-  $('#oudsteList').DataTable({
-   "bPaginate": false,
-   "bLengthChange": false,
-   "bFilter": false,
-   "bInfo": false,
-   "pageLength": 50 
- });
-});
-</script>
-<script>
-$(document).ready(function() {
-  $('#ratio').DataTable({
-   "bPaginate": false,
-   "bLengthChange": false,
-   "bFilter": false,
-   "bInfo": false
- });
-});
-</script>
-<script>
-$(document).ready(function() {
-  $('#donaties').DataTable({
-   "bPaginate": false,
-   "bLengthChange": false,
-   "bFilter": false,
-   "bInfo": false
- });
-});
-</script>
-<script>
-$(document).ready(function() {
-  $('#ontvangen').DataTable({
-   "bPaginate": false,
-   "bLengthChange": false,
-   "bFilter": false,
-   "bInfo": false
- });
-});
-</script>
-<script>
-$(document).ready(function() {
-  $('#mogelijkOudste').DataTable({
-   "bPaginate": false,
-   "bLengthChange": false,
-   "bFilter": false,
-   "bInfo": false
- });
-});
-</script>
+ 
+ <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
+ <script src="js/thisIsJS.js"></script>
 </head>
-
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
  <!-- Navigation -->
  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -158,8 +75,8 @@ $opts = array(
  'http'=>array(
   'method'=>"GET",
   'header'=>array(
-   "Accept: application/json",
-   "Authorization: Bearer " . $api_key
+   "Accept:application/json",
+   "Authorization:Bearer " . $api_key
    )
   )
  );
@@ -221,7 +138,7 @@ else {
   <div class="container">
    <div class="container-blok">
     <h1 align="center">Clanleden</h1>
-    <div style="text-align: center;">
+    <div style="text-align:center;">
      <a href = "/memberslist.php" class = "btn btn-default btn-lg" role = "button">
       Bekijk hier de volledige lijst!
     </a>
@@ -229,7 +146,7 @@ else {
   <?php
   membersListSmall($jsonArray); 
   ?>
-  <div style="text-align: center;">
+  <div style="text-align:center;">
    <a href = "/memberslist.php" class = "btn btn-default btn-lg" role = "button">
     Bekijk hier de volledige lijst!
   </a>
@@ -259,7 +176,7 @@ else {
   <h1 align="center">Claninformatie</h1>
   <div class="row">
    <div class="col-lg-4 col-lg-offset-2">
-    <h3 align="center">Is er een warsysteem?</h3> <p> <p> Ja, we hebben 2 soorten wars: </br></br>
+    <h3 align="center">Is er een warsysteem?</h3> <p> <p> Ja, we hebben 2 soorten wars:</br></br>
     <b>1. RecruitWar</b> </br>
     Vrijdagavond starten we een recruitWar. We geven nieuwe leden in deze war een kans om zich te bewijzen, ook zullen leden die een 2de kans krijgen hier aan meedoen.</br></br>
     <b>2. Doordeweekse wars</b> </br>
