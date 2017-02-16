@@ -35,29 +35,32 @@
      <span class="icon-bar"></span>
      <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand page-scroll" href="#page-top">CtrlAltDestroy</a>
+   <a class="navbar-brand page-scroll" href="#page-top" onclick="show('main')">CtrlAltDestroy</a>
  </div>
  <!-- Collect the nav links, forms, and other content for toggling -->
  <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav">
    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
    <li class="hidden">
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#page-top"></a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#page-top" onclick="show('main'); hide('war')"></a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#memberslist">Clanleden</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#memberslist" onclick="show('main'); hide('war')">Clanleden</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#ClanInfo">ClanInfo</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#ClanInfo" onclick="show('main'); hide('war')">ClanInfo</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#ChatApp">Chat App</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#ChatApp" onclick="show('main'); hide('war')">Chat App</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#Specials">Wall Of Fame</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#Specials" onclick="show('main'); hide('war')">Wall Of Fame</a>
   </li>
   <li>
-    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#Stats">Statistieken</a>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#Stats" onclick="show('main'); hide('war')">Statistieken</a>
+  </li>
+  <li>
+    <a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse.in" href="#war" onclick="hide('main'); show('war')"><span class="glyphicon glyphicon-king"></span> War Room</a>
   </li>
 </ul>
 </div>
@@ -66,7 +69,6 @@
 <!-- /.container -->
 </nav>
 </br></br>
-
 <?php
 //Connect to the dataProvider
 include "topSecretShizzle.php";
@@ -98,9 +100,7 @@ if(!$contents) {
 }
 else { 
  ?>
-
  <div class="spacer"></div> 
-
  <div class="container-fluid">
   <div class="row">
    <div class="col-xs-6"><div class="imgtextblok-left">
@@ -114,7 +114,6 @@ else {
     ?></div></div>
   </div>  
 </div>
-
   <!-- <div class="spacer"></div>
   <img src="/Images/ctrlaltdestroy.png" class="img-responsive" alt="ctrlaltdestroyLogo" width="100%"> WEL OF NIET GEBRUIKEN? -->
   <div class="spacer"></div> 
@@ -123,6 +122,8 @@ else {
      <img src="https://www.clashofstats.com/signatures/2CRCJU2V?lng=en&color=blue&size=large" width="100%"/>
    </div>
  </div>
+<!-- Main Website -->
+<div id="main">
  <div class="spacer"></div> 
  <div class="container">
   <div class="container-blok">
@@ -155,7 +156,6 @@ else {
 </div>
 </div>
 </div>
-
 <div class="hidden-xs hidden-sm"> <!--bigger than 768PX screens only content -->
  <div class="spacer"></div> 
  <div class="container">
@@ -168,7 +168,6 @@ else {
 </div>
 </div>
 </div>
-
 <div id="ClanInfo"></div>
 <div class="spacer"></div>
 <div class="container">
@@ -264,7 +263,6 @@ else {
 </div>
 </div>
 </div>
-
 <div id="Stats"></div>
 <div class="spacer"></div>
 <div class="container">
@@ -298,13 +296,32 @@ else {
 </div>
 </div>
 </div>
-
 <div class="spacer"></div>
 <div class="container">
  <div class="container-blok">
   <?php
   stats($jsonArray);
   ?>
+</div>
+</div>
+</div>
+<!-- Close Main Website -->
+<!-- War Room -->
+<div id="war">
+ <div class="spacer"></div> 
+ <div class="container">
+  <div class="container-blok">
+    <h1 align="center">War Room</h1>
+    <img src="Images/clanwars.png" width="100%" alt="War Room">
+  </div>
+</div>
+ <div class="spacer"></div> 
+ <div class="container">
+  <div class="container-blok">
+    <h1 align="center">War Lijnup</h1>
+    <iframe src="https://docs.google.com/spreadsheets/d/1JjnZ0vo-F6ZJHhwk28rWIsUphUAZM5u6qbr3vffOX0s/pubhtml?widget=true&amp;headers=false" frameborder="0" width="100%" height="800"></iframe>
+	<div class="spacer"></div> 
+  </div>
 </div>
 </div>
 <?php
