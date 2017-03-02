@@ -21,8 +21,8 @@
  <script src="js/jquery.easing.min.js"></script>
  <script src="js/scrolling-nav.js"></script>
  
- <link rel="stylesheet" type="text/css" href="thisIsStyle.css">
- <script src="js/thisIsJS.js"></script>
+ <link rel="stylesheet" type="text/css" href="ThisIsStyle.css">
+ <script src="js/ThisIsJS.js"></script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
  <!-- Navigation -->
