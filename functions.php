@@ -41,8 +41,8 @@ function stats($jsonArray) {
 
 			$ratio = ($totalReceived == 0 ? 0 : $totalDonated/$totalReceived);
 
-			echo "In deze periode zijn tot nu toe " . $totalDonated . " troepen gedoneerd door " . $aantalMembers . " leden. (gemiddeld " . number_format((int)($totalDonated / $aantalMembers)) .  " per lid) <html> </br> </html>";
-			echo "Onze " . $aantalMembers. " leden hebben in totaal " . $totalReceived . " troepen ontvangen. (gemiddeld " . number_format((int)($totalReceived / $aantalMembers)) .  " per lid) <html> </br> </html>";
+			echo "In deze periode zijn tot nu toe " . $totalDonated . " troepen gedoneerd door " . $aantalMembers . " leden. (gemiddeld " . number_format((int)($totalDonated / $aantalMembers)) .  " per lid) <html></br></html>";
+			echo "Onze " . $aantalMembers. " leden hebben in totaal " . $totalReceived . " troepen ontvangen. (gemiddeld " . number_format((int)($totalReceived / $aantalMembers)) .  " per lid) <html></br></html>";
 			echo "Het ratio van de clan is " . number_format((float)$ratio, 2, '.', '') . ", dit komt doordat we ";
 
 			if ($totalReceived > $totalDonated){
@@ -55,7 +55,7 @@ function stats($jsonArray) {
 				echo " precies evenveel troepen hebben ontvangen als gegeven.";
 			}
 
-			echo "<html> </br> </br> </html>";
+			echo "<html></br></br></html>";
 
 			if ($loyaal > 1){
 				echo $loyaal . " leden hebben meer troepen gegeven dan ontvangen.";
@@ -67,7 +67,7 @@ function stats($jsonArray) {
 				echo $loyaal . " lid heeft meer troepen gegeven dan ontvangen.";
 			} 
 
-			echo "<html> </br> </html>";
+			echo "<html></br></html>";
 
 			if ($ietsMinderLoyaal > 1){
 				echo $ietsMinderLoyaal . " leden hebben meer troepen ontvangen dan gegeven.";
@@ -79,7 +79,7 @@ function stats($jsonArray) {
 				echo $ietsMinderLoyaal . " lid heeft meer troepen ontvangen dan gegeven.";
 			}
 
-			echo "<html> </br> </html>";
+			echo "<html></br></html>";
 
 			if ($gelijk > 1){
 				echo $gelijk . " leden hebben evenveel troepen gegeven als ontvangen."; 
@@ -90,7 +90,7 @@ function stats($jsonArray) {
 			if ($gelijk == 1){
 				echo $gelijk . " lid heeft evenveel troepen gegeven als ontvangen.";
 			}
-			echo "<html> </br> </br> </html>";
+			echo "<html></br></br></html>";
 			echo "Samen hebben we " . $totalTrophies . " trophies en " . $totalExp . " experience, dat is gemiddeld " . number_format((int)($totalTrophies / $aantalMembers)) . " trophies en " . number_format((int)($totalExp / $aantalMembers)) . " experience per lid.";
 			?>
 		</font>
@@ -139,6 +139,8 @@ function membersList($jsonArray) {
 				$ratio = ($donationsReceived == 0 ? 0 : $donated/$donationsReceived);
 				$rank = $jsonArray['memberList'][$i]['clanRank'];
 				$name = $jsonArray['memberList'][$i]['name'];
+				$tag = $jsonArray['memberList'][$i]['tag'];
+				$tag = ltrim($tag,'#');
 		//Role translaten naar Nederlands
 				$rol = $jsonArray['memberList'][$i]['role'];
 				switch($rol) {
@@ -155,7 +157,7 @@ function membersList($jsonArray) {
 					break;
 
 					case 'coLeader':
-					$rol = 'CoLeider';
+					$rol = 'Co Leider';
 					break;
 
 					default:
@@ -165,7 +167,7 @@ function membersList($jsonArray) {
 				echo "<tr>";					
 				echo "<td>" . $rank . "</td>"; 
 				echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
-				echo "<td>" . $name . "</td>"; 
+				echo "<td><a href='https://www.clashofstats.com/players/" . $tag . "' target=_blank>" . $name . "</a></td>"; 
 				echo "<td>" . $rol . "</td>";
 				echo "<td>" . $jsonArray['memberList'][$i]['expLevel'] . "</td>";
 				echo "<td>" . $jsonArray['memberList'][$i]['trophies'] . "</td>";
@@ -211,6 +213,8 @@ function membersListSmall($jsonArray) {
 			for($i = 0; $i < $jsonArray['members']; $i++) {
 				$rank = $jsonArray['memberList'][$i]['clanRank'];
 				$name = $jsonArray['memberList'][$i]['name'];
+				$tag = $jsonArray['memberList'][$i]['tag'];
+				$tag = ltrim($tag,'#');
 		//Role translaten naar Nederlands
 				$rol = $jsonArray['memberList'][$i]['role'];
 				switch($rol) {
@@ -236,7 +240,7 @@ function membersListSmall($jsonArray) {
 				}
 				echo "<tr>";					
 				echo "<td>" . $rank . "</td>"; 
-				echo "<td>" . $name . "</td>"; 
+				echo "<td><a href='https://www.clashofstats.com/players/" . $tag . "' target=_blank>" . $name . "</a></td>";
 				echo "<td>" . $rol . "</td>";
 				echo "<td>" . $jsonArray['memberList'][$i]['expLevel'] . "</td>";
 				echo "</tr>";
@@ -268,6 +272,8 @@ function coLeadersList($jsonArray) {
 			echo "<tbody>";
 			for($i = 0; $i < $jsonArray['members']; $i++) {
 				$name = $jsonArray['memberList'][$i]['name'];
+				$tag = $jsonArray['memberList'][$i]['tag'];
+				$tag = ltrim($tag,'#');
 		//Role translaten naar Nederlands
 				$rol = $jsonArray['memberList'][$i]['role'];
 				switch($rol) {
@@ -295,7 +301,7 @@ function coLeadersList($jsonArray) {
 				if ($rol == 'Leider'){
 					echo "<tr>";					
 					echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
-					echo "<td>" . $name . "</td>"; 
+					echo "<td><a href='https://www.clashofstats.com/players/" . $tag . "' target=_blank>" . $name . "</a></td>";
 					echo "<td>" . $rol . "</td>";
 					echo "</tr>";
 				}
@@ -303,6 +309,8 @@ function coLeadersList($jsonArray) {
 			
 			for($i = 0; $i < $jsonArray['members']; $i++) {
 				$name = $jsonArray['memberList'][$i]['name'];
+				$tag = $jsonArray['memberList'][$i]['tag'];
+				$tag = ltrim($tag,'#');
 		//Role translaten naar Nederlands
 				$rol = $jsonArray['memberList'][$i]['role'];
 				switch($rol) {
@@ -330,7 +338,7 @@ function coLeadersList($jsonArray) {
 				if ($rol == 'CoLeider'){
 					echo "<tr>";					
 					echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
-					echo "<td>" . $name . "</td>"; 
+					echo "<td><a href='https://www.clashofstats.com/players/" . $tag . "' target=_blank>" . $name . "</a></td>";
 					echo "<td>" . $rol . "</td>";
 					echo "</tr>";
 				}
@@ -361,6 +369,8 @@ function oudsteList($jsonArray) {
 			echo "<tbody>";
 			for($i = 0; $i < $jsonArray['members']; $i++) {
 				$name = $jsonArray['memberList'][$i]['name'];
+				$tag = $jsonArray['memberList'][$i]['tag'];
+				$tag = ltrim($tag,'#');
 		//Role translaten naar Nederlands
 				$rol = $jsonArray['memberList'][$i]['role'];
 				switch($rol) {
@@ -388,7 +398,7 @@ function oudsteList($jsonArray) {
 				if ($rol == 'Oudste'){
 					echo "<tr>";					
 					echo "<td><img src='" . $jsonArray['memberList'][$i]['league']['iconUrls']['small'] . "'/></td>";
-					echo "<td>" . $name . "</td>"; 
+					echo "<td><a href='https://www.clashofstats.com/players/" . $tag . "' target=_blank>" . $name . "</a></td>";
 					echo "<td>" . $rol . "</td>";
 					echo "</tr>";
 				}
@@ -492,28 +502,28 @@ function donationRatio($jsonArray) {{
 		<tbody>
 			<tr>
 				<td><b>1</b></td>
-				<td><b><?php echo $RatNaam1;?> </b></td>
-				<td><b><?php echo number_format((float)$RatAantal1, 2, '.', '');?></b> </td>
+				<td><b><?php echo $RatNaam1;?></b></td>
+				<td><b><?php echo number_format((float)$RatAantal1, 2, '.', '');?></b></td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td><?php echo $RatNaam2;?> </td>
-				<td><?php echo number_format((float)$RatAantal2, 2, '.', '');?> </td>
+				<td><?php echo $RatNaam2;?></td>
+				<td><?php echo number_format((float)$RatAantal2, 2, '.', '');?></td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td><?php echo $RatNaam3;?> </td>
-				<td><?php echo number_format((float)$RatAantal3, 2, '.', '');?> </td>
+				<td><?php echo $RatNaam3;?></td>
+				<td><?php echo number_format((float)$RatAantal3, 2, '.', '');?></td>
 			</tr>
 			<tr>
 				<td>4</td>
-				<td><?php echo $RatNaam4;?> </td>
-				<td><?php echo number_format((float)$RatAantal4, 2, '.', '');?> </td>
+				<td><?php echo $RatNaam4;?></td>
+				<td><?php echo number_format((float)$RatAantal4, 2, '.', '');?></td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td><?php echo $RatNaam5;?> </td>
-				<td><?php echo number_format((float)$RatAantal5, 2, '.', '');?> </td>
+				<td><?php echo $RatNaam5;?></td>
+				<td><?php echo number_format((float)$RatAantal5, 2, '.', '');?></td>
 			</tr>
 		</tbody>
 	</table>
@@ -608,28 +618,28 @@ function donationCount($jsonArray) {{
 		<tbody>
 			<tr>
 				<td><b>1</b></td>
-				<td><b><?php echo $DonNaam1;?> </b></td>
-				<td><b><?php echo $DonAantal1;?> </b></td>
+				<td><b><?php echo $DonNaam1;?></b></td>
+				<td><b><?php echo $DonAantal1;?></b></td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td><?php echo $DonNaam2;?> </td>
-				<td><?php echo $DonAantal2;?> </td>
+				<td><?php echo $DonNaam2;?></td>
+				<td><?php echo $DonAantal2;?></td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td><?php echo $DonNaam3;?> </td>
-				<td><?php echo $DonAantal3;?> </td>
+				<td><?php echo $DonNaam3;?></td>
+				<td><?php echo $DonAantal3;?></td>
 			</tr>
 			<tr>
 				<td>4</td>
-				<td><?php echo $DonNaam4;?> </td>
-				<td><?php echo $DonAantal4;?> </td>
+				<td><?php echo $DonNaam4;?></td>
+				<td><?php echo $DonAantal4;?></td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td><?php echo $DonNaam5;?> </td>
-				<td><?php echo $DonAantal5;?> </td>
+				<td><?php echo $DonNaam5;?></td>
+				<td><?php echo $DonAantal5;?></td>
 			</tr>
 		</tbody>
 	</table>
@@ -724,28 +734,28 @@ function requestCount($jsonArray) {{
 		<tbody>
 			<tr>
 				<td><b>1</b></td>
-				<td><b><?php echo $ReqNaam1;?> </b></td>
-				<td><b><?php echo $ReqAantal1;?> </b></td>
+				<td><b><?php echo $ReqNaam1;?></b></td>
+				<td><b><?php echo $ReqAantal1;?></b></td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td><?php echo $ReqNaam2;?> </td>
-				<td><?php echo $ReqAantal2;?> </td>
+				<td><?php echo $ReqNaam2;?></td>
+				<td><?php echo $ReqAantal2;?></td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td><?php echo $ReqNaam3;?> </td>
-				<td><?php echo $ReqAantal3;?> </td>
+				<td><?php echo $ReqNaam3;?></td>
+				<td><?php echo $ReqAantal3;?></td>
 			</tr>
 			<tr>
 				<td>4</td>
-				<td><?php echo $ReqNaam4;?> </td>
-				<td><?php echo $ReqAantal4;?> </td>
+				<td><?php echo $ReqNaam4;?></td>
+				<td><?php echo $ReqAantal4;?></td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td><?php echo $ReqNaam5;?> </td>
-				<td><?php echo $ReqAantal5;?> </td>
+				<td><?php echo $ReqNaam5;?></td>
+				<td><?php echo $ReqAantal5;?></td>
 			</tr>
 		</tbody>
 	</table>
@@ -865,33 +875,33 @@ function DonMemberCount($jsonArray) {{
 		<tbody>
 			<tr>
 				<td><b>1</b></td>
-				<td><b><?php echo $DonMemberNaam1;?> </b></td>
-				<td><b><?php echo $DonMemberAantal1;?> </b></td>
-				<td><b><?php echo number_format((float)$RatMember1, 2, '.', '');?> </b></td>
+				<td><b><?php echo $DonMemberNaam1;?></b></td>
+				<td><b><?php echo $DonMemberAantal1;?></b></td>
+				<td><b><?php echo number_format((float)$RatMember1, 2, '.', '');?></b></td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td><?php echo $DonMemberNaam2;?> </td>
-				<td><?php echo $DonMemberAantal2;?> </td>
-				<td><?php echo number_format((float)$RatMember2, 2, '.', '');?> </td>
+				<td><?php echo $DonMemberNaam2;?></td>
+				<td><?php echo $DonMemberAantal2;?></td>
+				<td><?php echo number_format((float)$RatMember2, 2, '.', '');?></td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td><?php echo $DonMemberNaam3;?> </td>
-				<td><?php echo $DonMemberAantal3;?> </td>
-				<td><?php echo number_format((float)$RatMember3, 2, '.', '');?> </td>
+				<td><?php echo $DonMemberNaam3;?></td>
+				<td><?php echo $DonMemberAantal3;?></td>
+				<td><?php echo number_format((float)$RatMember3, 2, '.', '');?></td>
 			</tr>
 			<tr>
 				<td>4</td>
-				<td><?php echo $DonMemberNaam4;?> </td>
-				<td><?php echo $DonMemberAantal4;?> </td>
-				<td><?php echo number_format((float)$RatMember4, 2, '.', '');?> </td>
+				<td><?php echo $DonMemberNaam4;?></td>
+				<td><?php echo $DonMemberAantal4;?></td>
+				<td><?php echo number_format((float)$RatMember4, 2, '.', '');?></td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td><?php echo $DonMemberNaam5;?> </td>
-				<td><?php echo $DonMemberAantal5;?> </td>
-				<td><?php echo number_format((float)$RatMember5, 2, '.', '');?> </td>
+				<td><?php echo $DonMemberNaam5;?></td>
+				<td><?php echo $DonMemberAantal5;?></td>
+				<td><?php echo number_format((float)$RatMember5, 2, '.', '');?></td>
 			</tr>
 		</tbody>
 	</table>
